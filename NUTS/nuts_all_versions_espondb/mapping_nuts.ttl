@@ -24,7 +24,7 @@ map:nuts
         rr:predicate tsn:hasSuperUnit;
         rr:objectMap [
         rr:termType rr:IRI;
-        rr:template "http://purl.org/steamer/nuts/version_{`version`}/level_{`level`}#{`code_upper`}";
+        rr:template "http://purl.org/steamer/nuts/version_{`version`}/level_{`level_up`}#{`code_up`}";
         ];
     ];
 

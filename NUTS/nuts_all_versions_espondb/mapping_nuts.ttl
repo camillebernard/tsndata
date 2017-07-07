@@ -1,17 +1,66 @@
-@prefix geof: <http://www.opengis.net/def/function/geosparql/>.
-@prefix map: <#>.
-@prefix ogc: <http://www.opengis.net/ont/geosparql#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix rr: <http://www.w3.org/ns/r2rml#>.
-@prefix rrx: <http://www.w3.org/ns/r2rml-ext#>.
-@prefix rrxf: <http://www.w3.org/ns/r2rml-ext/functions/def/>.
-@prefix strdf: <http://strdf.di.uoa.gr/ontology#>.
-@prefix vocab: <ontology#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix geof: <http://www.opengis.net/def/function/geosparql/> .
+@prefix map: <http://purl.org/steamer/nuts> .
+@prefix ogc: <http://www.opengis.net/ont/geosparql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rrx: <http://www.w3.org/ns/r2rml-ext#> .
+@prefix rrxf: <http://www.w3.org/ns/r2rml-ext/functions/def/> .
+@prefix strdf: <http://strdf.di.uoa.gr/ontology#> .
+@prefix tsn: <http://purl.org/net/tsn#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+map:nuts
+    rr:logicalTable [ rr:tableName "`nuts_all_versions_espondb`"; ];
+    rr:subjectMap [ rr:class tsn:UnitVersion; rr:template "http://purl.org/steamer/nuts/version_{`version`}/level_{`level`}#{`unit_code`}/gid/{`gid`}"; ];
+    rr:predicateObjectMap [
+        rr:predicate tsn:belongsToLevel;
+        rr:objectMap [
+          rr:termType rr:IRI;
+          rr:template "http://purl.org/steamer/nuts/version_{`version`}/level_{`level`}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate tsn:hasSuperUnit;
+        rr:objectMap [
+        rr:termType rr:IRI;
+        rr:template "http://purl.org/steamer/nuts/version_{`version`}/level_{`level`}#{`code_upper`}";
+        ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate tsn:hasIdentifier;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:column "`unit_code`";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate tsn:hasName;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:column "`unit_name`";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ogc:hasGeometry;
+        rr:objectMap [
+            rr:termType rr:IRI;
+            rr:template "http://purl.org/steamer/nuts/Geometry/{`gid`}";
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate tsn:isVersionOf;
+        rr:objectMap [
+          rr:termType rr:IRI;
+          rr:template "http://purl.org/steamer/nuts/level_{`level`}#{`unit_code`}";
+        ];
+    ];
+    .
+
 
 map:nuts_geometry
-    rr:logicalTable [ rr:tableName "`nuts`"; ];
+    rr:logicalTable [ rr:tableName "`nuts_all_versions_espondb`"; ];
     rr:subjectMap [ rr:class ogc:Geometry; rr:template "http://purl.org/steamer/nuts/Geometry/{`gid`}"; ];
 
     rr:predicateObjectMap [
@@ -67,54 +116,6 @@ map:nuts_geometry
             (
                  [ rr:column "`the_geom`"; ]
             )
-        ];
-    ];
-    .
-map:nuts
-    rr:logicalTable [ rr:tableName "`nuts`"; ];
-    rr:subjectMap [ rr:class vocab:nuts; rr:template "http://purl.org/steamer/nuts/version_{`version`}/level_{`level`}#{`unit_code`}/gid/{`gid`}"; ];
-    rr:predicateObjectMap [
-        rr:predicate tsn:belongsToLevel;
-        rr:objectMap [
-            rr:datatype xsd:string;
-            rr:column "`level`";
-        ];
-    ];
-    rr:predicateObjectMap [
-        rr:predicate tsn:hasSuperUnit;
-        rr:objectMap [
-            rr:termType rr:IRI;
-            rr:template "http://purl.org/steamer/nuts/version_{`version`}/level_{`level`}#{`code_upper`}/gid/{`gid`}";
-            #rr:datatype xsd:string;
-            #rr:column "`code_upper`";
-        ];
-    ];
-    rr:predicateObjectMap [
-        rr:predicate tsn:hasIdentifier;
-        rr:objectMap [
-            rr:datatype xsd:string;
-            rr:column "`unit_code`";
-        ];
-    ];
-    rr:predicateObjectMap [
-        rr:predicate tsn:hasName;
-        rr:objectMap [
-            rr:datatype xsd:string;
-            rr:column "`unit_name`";
-        ];
-    ];
-    rr:predicateObjectMap [
-        rr:predicate ogc:hasGeometry;
-        rr:objectMap [
-            rr:termType rr:IRI;
-            rr:template "http://purl.org/steamer/nuts/Geometry/{`gid`}";
-        ];
-    ];
-    rr:predicateObjectMap [
-        rr:predicate tsn:hasVersion;
-        rr:objectMap [
-            rr:datatype xsd:string;
-            rr:column "`version`";
         ];
     ];
     .

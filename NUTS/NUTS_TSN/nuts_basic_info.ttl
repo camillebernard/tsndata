@@ -1,0 +1,637 @@
+@prefix geof:    <http://www.opengis.net/def/function/geosparql/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ogc:     <http://www.opengis.net/ont/geosparql#> .
+@prefix strdf:   <http://strdf.di.uoa.gr/ontology#> .
+@prefix rrx:     <http://www.w3.org/ns/r2rml-ext#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix map:     <http://purl.org/steamer/nuts> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tsn:     <http://purl.org/net/tsn#> .
+@prefix time:    <http://www.w3.org/2006/time#>
+@prefix rrxf:    <http://www.w3.org/ns/r2rml-ext/functions/def/> .
+
+#################################################################
+# TSN NUTS
+#################################################################
+<http://purl.org/steamer/nuts>
+      a       tsn:Nomenclature ;
+      tsn:hasIdentifier "NUTS"^^xsd:string ;
+      tsn:hasName "Nomenclature of Territorial Units for Statistics"^^xsd:string ;
+      tsn:hasAcronym "NUTS"^^xsd:string ;
+      tsn:hasDescription "This nomenclature specification contains territorial units definition for the EU, EFTA (Norway, Switzerland, Liechtenstein and Iceland) and Candidate Countries."^^xsd:string ;
+      tsn:hasVersion <http://purl.org/steamer/nuts/version_1999> ;
+      tsn:hasVersion <http://purl.org/steamer/nuts/version_2003> ;
+      tsn:hasVersion <http://purl.org/steamer/nuts/version_2006> ;
+      tsn:hasVersion <http://purl.org/steamer/nuts/version_2010> ;
+      tsn:hasVersion <http://purl.org/steamer/nuts/version_2013> .
+
+#################################################################
+# NUTS VERSIONS
+#################################################################
+<http://purl.org/steamer/nuts/version_1999>
+      a       tsn:NomenclatureVersion ;
+      tsn:hasIdentifier "NUTS1999"^^xsd:string ;
+      tsn:hasName "Nomenclature of Territorial Units for Statistics version 1999"^^xsd:string ;
+      tsn:hasAcronym "NUTS1999"^^xsd:string   ;
+      tsn:hasDescription " The compilation of this nomenclature relates to the situation observed in January 2013. This nomenclature version derives firstly from the official NUTS 1999 nomenclature (EU15), it is prepared according to the specification from the NUTS changes files found in EUROSTAT Web site.  (URL: http://epp.eurostat.ec.europa.eu/cache/ITY_OFFPUB/CA-22-99-442-1F/FR/CA-22-99-442-1F-FR.PDF and http://epp.eurostat.ec.europa.eu/portal/page/portal/nuts_nomenclature/history_nuts). Secondly, it derives from the official EFTA & CC 1999 nomenclature, it is prepared according to the specification from the respective files Found in EUROSTAT Web site."^^xsd:string  ;
+      tsn:isVersionOf <http://purl.org/steamer/nuts> ;
+      tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2003> ;
+      tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_1995> ;
+      tsn:covers <http://purl.org/steamer/EU/version_1999> ;
+      tsn:covers <http://purl.org/steamer/EFTA/version_1999> ;
+      tsn:covers <http://purl.org/steamer/EU_CC/version_1999> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_1999/level_0> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_1999/level_1> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_1999/level_2> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_1999/level_3> ;
+      tsn:nomenclatureVersionSource dcterms:source <http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts> ;
+      tsn:referencePeriod _:nuts1999refperiod .
+
+      _:nuts1999refperiod a time:Interval ;
+      	  time:hasBeginning _:nuts1999begin ;
+          time:hasEnd _:nuts1999end .
+
+      _:nuts1999begin a time:Instant ;
+      	time:inXSDDateTime "1999-01-01T00:00:00Z"^^xsd:dateTime .
+
+      _:nuts1999end a time:Instant ;
+      	time:inXSDDateTime "2003-06-30T00:00:00Z"^^xsd:dateTime .
+
+<http://purl.org/steamer/nuts/version_2003>
+      a       tsn:NomenclatureVersion ;
+      tsn:hasIdentifier "DEA3"^^xsd:string ;
+      tsn:hasName "Münster"^^xsd:string ;
+      tsn:hasAcronym  ;
+      tsn:hasDescription  ;
+      tsn:isVersionOf ;
+      tsn:isPredecessorOf;
+      tsn:isSuccessorOf ;
+      tsn:covers ;
+      tsn:hasLevel ;
+      tsn:nomenclatureVersionSource ;
+      tsn:referencePeriod ;
+      tsn:versionRights ;
+      tsn:referencePeriod _:nuts2003refperiod .
+
+      _:nuts2003refperiod a time:Interval ;
+      	  time:hasBeginning _:nuts2003begin ;
+          time:hasEnd _:nuts2003end .
+
+      _:nuts2003begin a time:Instant ;
+      	time:inXSDDateTime "2003-07-01T00:00:00Z"^^xsd:dateTime .
+
+      _:nuts2003end a time:Instant ;
+      	time:inXSDDateTime "2007-12-31T00:00:00Z"^^xsd:dateTime .
+
+<http://purl.org/steamer/nuts/version_2006>
+      a       tsn:NomenclatureVersion ;
+      tsn:hasIdentifier "DEA3"^^xsd:string ;
+      tsn:hasName "Münster"^^xsd:string ;
+      tsn:hasAcronym  ;
+      tsn:hasDescription  ;
+      tsn:isVersionOf ;
+      tsn:isPredecessorOf;
+      tsn:isSuccessorOf ;
+      tsn:covers ;
+      tsn:hasLevel ;
+      tsn:nomenclatureVersionSource ;
+      tsn:referencePeriod ;
+      tsn:versionRights ;
+      tsn:referencePeriod _:nuts2006refperiod .
+
+      _:nuts2006refperiod a time:Interval ;
+      	  time:hasBeginning _:nuts2006begin ;
+          time:hasEnd _:nuts2006end .
+
+      _:nuts2006begin a time:Instant ;
+      	time:inXSDDateTime "2008-01-01T00:00:00Z"^^xsd:dateTime .
+
+      _:nuts2006end a time:Instant ;
+      	time:inXSDDateTime "2011-12-31T00:00:00Z"^^xsd:dateTime .
+
+<http://purl.org/steamer/nuts/version_2010>
+      a       tsn:NomenclatureVersion ;
+      tsn:hasIdentifier "DEA3"^^xsd:string ;
+      tsn:hasName "Münster"^^xsd:string ;
+      tsn:hasAcronym  ;
+      tsn:hasDescription  ;
+      tsn:isVersionOf ;
+      tsn:isPredecessorOf;
+      tsn:isSuccessorOf ;
+      tsn:covers ;
+      tsn:hasLevel ;
+      tsn:nomenclatureVersionSource ;
+      tsn:referencePeriod ;
+      tsn:versionRights ;
+      tsn:referencePeriod _:nuts2010refperiod .
+
+      _:nuts2010refperiod a time:Interval ;
+      	  time:hasBeginning _:nuts2010begin ;
+          time:hasEnd _:nuts2010end .
+
+      _:nuts2010begin a time:Instant ;
+      	time:inXSDDateTime "2012-01-01T00:00:00Z"^^xsd:dateTime .
+
+      _:nuts2010end a time:Instant ;
+      	time:inXSDDateTime "2014-12-31T00:00:00Z"^^xsd:dateTime .
+
+<http://purl.org/steamer/nuts/version_2013>
+      a       tsn:NomenclatureVersion ;
+      tsn:hasIdentifier "DEA3"^^xsd:string ;
+      tsn:hasName "Münster"^^xsd:string ;
+      tsn:hasAcronym  ;
+      tsn:hasDescription  ;
+      tsn:isVersionOf ;
+      tsn:isPredecessorOf;
+      tsn:isSuccessorOf ;
+      tsn:covers ;
+      tsn:hasLevel ;
+      tsn:nomenclatureVersionSource ;
+      tsn:referencePeriod ;
+      tsn:versionRights ;
+      tsn:referencePeriod _:nuts2013refperiod .
+
+      _:nuts2013refperiod a time:Interval ;
+      	  time:hasBeginning _:nuts2013begin ;
+          time:hasEnd _:nuts2013end .
+
+      _:nuts2013begin a time:Instant ;
+      	time:inXSDDateTime "2015-01-01T00:00:00Z"^^xsd:dateTime .
+
+      _:nuts2013end a time:Instant ;
+      	time:inXSDDateTime "2017-12-31T00:00:00Z"^^xsd:dateTime .
+
+#################################################################
+# NUTS LEVELS
+#################################################################
+<http://purl.org/steamer/nuts/level_0>
+    a       tsn:Level ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:hasVersion   .
+
+<http://purl.org/steamer/nuts/level_1>
+    a       tsn:Level ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:hasVersion   .
+
+<http://purl.org/steamer/nuts/level_2>
+    a       tsn:Level ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:hasVersion   .
+
+<http://purl.org/steamer/nuts/level_3>
+    a       tsn:Level ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:hasVersion   .
+
+#################################################################
+# NUTS LEVELS VERSIONS
+#################################################################
+################################################################# LEVEL 0
+<http://purl.org/steamer/nuts/version_1999/level_0>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion ;
+    tsn:hasLowerLevel ;
+    tsn:hasUpperLevel ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/nuts/version_2003/level_0>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion ;
+    tsn:hasLowerLevel ;
+    tsn:hasUpperLevel ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/nuts/version_2006/level_0>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion ;
+    tsn:hasLowerLevel ;
+    tsn:hasUpperLevel ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/nuts/version_2010/level_0>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion ;
+    tsn:hasLowerLevel ;
+    tsn:hasUpperLevel ;
+    tsn:referencePeriod .
+
+################################################################# LEVEL 1
+<http://purl.org/steamer/nuts/version_1999/level_1>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion ;
+    tsn:hasLowerLevel ;
+    tsn:hasUpperLevel ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/nuts/version_2003/level_1>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion ;
+    tsn:hasLowerLevel ;
+    tsn:hasUpperLevel ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/nuts/version_2006/level_1>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion ;
+    tsn:hasLowerLevel ;
+    tsn:hasUpperLevel ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/nuts/version_2010/level_1>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion ;
+    tsn:hasLowerLevel ;
+    tsn:hasUpperLevel ;
+    tsn:referencePeriod .
+
+
+################################################################# LEVEL 2
+<http://purl.org/steamer/nuts/version_1999/level_2>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion ;
+    tsn:hasLowerLevel ;
+    tsn:hasUpperLevel ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/nuts/version_2003/level_2>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion ;
+    tsn:hasLowerLevel ;
+    tsn:hasUpperLevel ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/nuts/version_2006/level_2>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion ;
+    tsn:hasLowerLevel ;
+    tsn:hasUpperLevel ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/nuts/version_2010/level_2>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion ;
+    tsn:hasLowerLevel ;
+    tsn:hasUpperLevel ;
+    tsn:referencePeriod .
+
+
+################################################################# LEVEL 3
+<http://purl.org/steamer/nuts/version_1999/level_3>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion ;
+    tsn:hasLowerLevel ;
+    tsn:hasUpperLevel ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/nuts/version_2003/level_3>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion ;
+    tsn:hasLowerLevel ;
+    tsn:hasUpperLevel ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/nuts/version_2006/level_3>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion ;
+    tsn:hasLowerLevel ;
+    tsn:hasUpperLevel ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/nuts/version_2010/level_3>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion ;
+    tsn:hasLowerLevel ;
+    tsn:hasUpperLevel ;
+    tsn:referencePeriod .
+
+#################################################################
+# NUTS TERRITORY
+#################################################################
+<http://purl.org/steamer/EU>
+    a       tsn:Territory ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription  ;
+    tsn:hasVersion .
+
+<http://purl.org/steamer/EFTA>
+    a       tsn:Territory ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription  ;
+    tsn:hasVersion .
+
+<http://purl.org/steamer/EU_CC>
+    a       tsn:Territory ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription  ;
+    tsn:hasVersion .
+
+#################################################################
+# NUTS TERRITORY VERSIONS
+#################################################################
+################################################################# European Union
+<http://purl.org/steamer/EU/version_1999>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:isCoveredBy ;
+    tsn:hasGeometry ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/EU/version_2003>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:isCoveredBy ;
+    tsn:hasGeometry ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/EU/version_2006>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:isCoveredBy ;
+    tsn:hasGeometry ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/EU/version_2010>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:isCoveredBy ;
+    tsn:hasGeometry ;
+    tsn:referencePeriod .
+
+
+################################################################# EFTA
+<http://purl.org/steamer/EFTA/version_1999>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:isCoveredBy ;
+    tsn:hasGeometry ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/EFTA/version_2003>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:isCoveredBy ;
+    tsn:hasGeometry ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/EFTA/version_2006>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:isCoveredBy ;
+    tsn:hasGeometry ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/EFTA/version_2010>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:isCoveredBy ;
+    tsn:hasGeometry ;
+    tsn:referencePeriod .
+
+
+################################################################# European Union CC
+<http://purl.org/steamer/EU_CC/version_1999>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:isCoveredBy ;
+    tsn:hasGeometry ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/EU_CC/version_2003>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:isCoveredBy ;
+    tsn:hasGeometry ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/EU_CC/version_2006>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:isCoveredBy ;
+    tsn:hasGeometry ;
+    tsn:referencePeriod .
+
+<http://purl.org/steamer/EU_CC/version_2010>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "DEA3"^^xsd:string ;
+    tsn:hasName "Münster"^^xsd:string ;
+    tsn:hasAcronym  ;
+    tsn:hasDescription ;
+    tsn:isVersionOf ;
+    tsn:isPredecessorOf ;
+    tsn:isSuccessorOf ;
+    tsn:isCoveredBy ;
+    tsn:hasGeometry ;
+    tsn:referencePeriod .

@@ -58,7 +58,6 @@ map:nuts
     ];
     .
 
-
 map:nuts_geometry
     rr:logicalTable [ rr:tableName "`nuts_all_versions_espondb`"; ];
     rr:subjectMap [ rr:class ogc:Geometry; rr:template "http://purl.org/steamer/nuts/Geometry/{`gid`}"; ];

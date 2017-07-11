@@ -18,7 +18,7 @@
       tsn:hasIdentifier "NUTS"^^xsd:string ;
       tsn:hasName "Nomenclature of Territorial Units for Statistics"^^xsd:string ;
       tsn:hasAcronym "NUTS"^^xsd:string ;
-      tsn:hasDescription "This nomenclature specification contains territorial units definition for the EU, EFTA (Norway, Switzerland, Liechtenstein and Iceland) and Candidate Countries."^^xsd:string ;
+      tsn:hasDescription "The NUTS classification (Nomenclature of territorial units for statistics) is a hierarchical system for dividing up the economic territory of the EU for the purpose of: collection, development and harmonisation of European regional statistics ; Socio-economic analyses of the regions ;  Framing of EU regional policies(http://ec.europa.eu/eurostat/web/nuts). This nomenclature specification contains territorial units definition for the EU, EFTA (Norway, Switzerland, Liechtenstein and Iceland) and Candidate Countries."^^xsd:string ;
       tsn:hasVersion <http://purl.org/steamer/nuts/version_1999> ;
       tsn:hasVersion <http://purl.org/steamer/nuts/version_2003> ;
       tsn:hasVersion <http://purl.org/steamer/nuts/version_2006> ;
@@ -33,7 +33,7 @@
       tsn:hasIdentifier "NUTS1999"^^xsd:string ;
       tsn:hasName "Nomenclature of Territorial Units for Statistics version 1999"^^xsd:string ;
       tsn:hasAcronym "NUTS1999"^^xsd:string   ;
-      tsn:hasDescription " The compilation of this nomenclature relates to the situation observed in January 2013. This nomenclature version derives firstly from the official NUTS 1999 nomenclature (EU15), it is prepared according to the specification from the NUTS changes files found in EUROSTAT Web site.  (URL: http://epp.eurostat.ec.europa.eu/cache/ITY_OFFPUB/CA-22-99-442-1F/FR/CA-22-99-442-1F-FR.PDF and http://epp.eurostat.ec.europa.eu/portal/page/portal/nuts_nomenclature/history_nuts). Secondly, it derives from the official EFTA & CC 1999 nomenclature, it is prepared according to the specification from the respective files Found in EUROSTAT Web site."^^xsd:string  ;
+      tsn:hasDescription " The compilation of this nomenclature relates to the situation observed in 1999. This nomenclature version derives firstly from the official NUTS 1999 nomenclature (EU15), it is prepared according to the specification from the NUTS changes files found in EUROSTAT Web site.  (URL: http://ec.europa.eu/eurostat/documents/345175/629341/1995-1999.xls and http://ec.europa.eu/eurostat/web/nuts/history). Secondly, it derives from the official EFTA & CC 1999 nomenclature, it is prepared according to the specification from the respective files Found in EUROSTAT Web site (URL: http://ec.europa.eu/eurostat/ramon/statmanuals/files/KS-41-01-616-EN-N.pdf)."^^xsd:string  ;
       tsn:isVersionOf <http://purl.org/steamer/nuts> ;
       tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2003> ;
       tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_1995> ;
@@ -59,18 +59,21 @@
 
 <http://purl.org/steamer/nuts/version_2003>
       a       tsn:NomenclatureVersion ;
-      tsn:hasIdentifier "DEA3"^^xsd:string ;
-      tsn:hasName "Münster"^^xsd:string ;
-      tsn:hasAcronym  ;
-      tsn:hasDescription  ;
-      tsn:isVersionOf ;
-      tsn:isPredecessorOf;
-      tsn:isSuccessorOf ;
-      tsn:covers ;
-      tsn:hasLevel ;
-      tsn:nomenclatureVersionSource ;
-      tsn:referencePeriod ;
-      tsn:versionRights ;
+      tsn:hasIdentifier "NUTS2003"^^xsd:string ;
+      tsn:hasName "Nomenclature of Territorial Units for Statistics version 2003"^^xsd:string ;
+      tsn:hasAcronym "NUTS2003"^^xsd:string   ;
+      tsn:hasDescription " The compilation of this nomenclature relates to the situation observed in 2003 (anticipation of the EU25 creation). This nomenclature derives firstly from the official NUTS 2003 nomenclature (EU25), it is prepared according to the specification from the NUTS changes files found in EUROSTAT Web site (URL: http://ec.europa.eu/eurostat/documents/345175/629341/1999-2003.xls and http://ec.europa.eu/eurostat/web/nuts/history). Secondly, it derives from the official EFTA & CC 2003 nomenclature, it is prepared according to the specification from the respective files Found in EUROSTAT Web site (URL: http://ec.europa.eu/eurostat/ramon/statmanuals/files/KS-41-01-616-EN-N.pdf)."^^xsd:string  ;
+      tsn:isVersionOf <http://purl.org/steamer/nuts> ;
+      tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2006> ;
+      tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_1999> ;
+      tsn:covers <http://purl.org/steamer/EU/version_2003> ;
+      tsn:covers <http://purl.org/steamer/EFTA/version_2003> ;
+      tsn:covers <http://purl.org/steamer/EU_CC/version_2003> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_2003/level_0> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_2003/level_1> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_2003/level_2> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_2003/level_3> ;
+      tsn:nomenclatureVersionSource dcterms:source <http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts> ;
       tsn:referencePeriod _:nuts2003refperiod .
 
       _:nuts2003refperiod a time:Interval ;
@@ -85,18 +88,21 @@
 
 <http://purl.org/steamer/nuts/version_2006>
       a       tsn:NomenclatureVersion ;
-      tsn:hasIdentifier "DEA3"^^xsd:string ;
-      tsn:hasName "Münster"^^xsd:string ;
-      tsn:hasAcronym  ;
-      tsn:hasDescription  ;
-      tsn:isVersionOf ;
-      tsn:isPredecessorOf;
-      tsn:isSuccessorOf ;
-      tsn:covers ;
-      tsn:hasLevel ;
-      tsn:nomenclatureVersionSource ;
-      tsn:referencePeriod ;
-      tsn:versionRights ;
+      tsn:hasIdentifier "NUTS2006"^^xsd:string ;
+      tsn:hasName "Nomenclature of Territorial Units for Statistics version 2006"^^xsd:string ;
+      tsn:hasAcronym "NUTS2006"^^xsd:string   ;
+      tsn:hasDescription " The compilation of this nomenclature relates to the situation observed in 2007. This nomenclature derives firstly from the official NUTS 2006 nomenclature (EU27), it is prepared according to the specification from the NUTS changes files found in EUROSTAT Web site (URL: http://ec.europa.eu/eurostat/documents/345175/629341/2003-2006.xls and http://ec.europa.eu/eurostat/web/nuts/history). Secondly, it derives from the official EFTA & CC 2006 nomenclature, it is prepared according to the specification from the respective files Found in EUROSTAT Web site (URL: http://ec.europa.eu/eurostat/ramon/statmanuals/files/KS-41-01-616-EN-N.pdf)."^^xsd:string  ;
+      tsn:isVersionOf <http://purl.org/steamer/nuts> ;
+      tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2010> ;
+      tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_2003> ;
+      tsn:covers <http://purl.org/steamer/EU/version_2006> ;
+      tsn:covers <http://purl.org/steamer/EFTA/version_2006> ;
+      tsn:covers <http://purl.org/steamer/EU_CC/version_2006> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_2006/level_0> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_2006/level_1> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_2006/level_2> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_2006/level_3> ;
+      tsn:nomenclatureVersionSource dcterms:source <http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts> ;
       tsn:referencePeriod _:nuts2006refperiod .
 
       _:nuts2006refperiod a time:Interval ;
@@ -111,18 +117,21 @@
 
 <http://purl.org/steamer/nuts/version_2010>
       a       tsn:NomenclatureVersion ;
-      tsn:hasIdentifier "DEA3"^^xsd:string ;
-      tsn:hasName "Münster"^^xsd:string ;
-      tsn:hasAcronym  ;
-      tsn:hasDescription  ;
-      tsn:isVersionOf ;
-      tsn:isPredecessorOf;
-      tsn:isSuccessorOf ;
-      tsn:covers ;
-      tsn:hasLevel ;
-      tsn:nomenclatureVersionSource ;
-      tsn:referencePeriod ;
-      tsn:versionRights ;
+      tsn:hasIdentifier "NUTS2010"^^xsd:string ;
+      tsn:hasName "Nomenclature of Territorial Units for Statistics version 2010"^^xsd:string ;
+      tsn:hasAcronym "NUTS2010"^^xsd:string   ;
+      tsn:hasDescription " The compilation of this nomenclature relates to the situation observed in 2011. This nomenclature derives firstly from the official NUTS 2010 nomenclature (EU27), it is prepared according to the specification from the NUTS changes files found in EUROSTAT Web site (URL: http://ec.europa.eu/eurostat/documents/345175/629341/2006-2010.xls and http://ec.europa.eu/eurostat/web/nuts/history). Secondly, it derives from the official EFTA & CC 2010 nomenclature, it is prepared according to the specification from the respective files Found in EUROSTAT Web site (URL: http://ec.europa.eu/eurostat/ramon/statmanuals/files/KS-41-01-616-EN-N.pdf)."^^xsd:string  ;
+      tsn:isVersionOf <http://purl.org/steamer/nuts> ;
+      tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2010> ;
+      tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_2003> ;
+      tsn:covers <http://purl.org/steamer/EU/version_2010> ;
+      tsn:covers <http://purl.org/steamer/EFTA/version_2010> ;
+      tsn:covers <http://purl.org/steamer/EU_CC/version_2010> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_2010/level_0> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_2010/level_1> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_2010/level_2> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_2010/level_3> ;
+      tsn:nomenclatureVersionSource dcterms:source <http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts> ;
       tsn:referencePeriod _:nuts2010refperiod .
 
       _:nuts2010refperiod a time:Interval ;
@@ -137,18 +146,21 @@
 
 <http://purl.org/steamer/nuts/version_2013>
       a       tsn:NomenclatureVersion ;
-      tsn:hasIdentifier "DEA3"^^xsd:string ;
-      tsn:hasName "Münster"^^xsd:string ;
-      tsn:hasAcronym  ;
-      tsn:hasDescription  ;
-      tsn:isVersionOf ;
-      tsn:isPredecessorOf;
-      tsn:isSuccessorOf ;
-      tsn:covers ;
-      tsn:hasLevel ;
-      tsn:nomenclatureVersionSource ;
-      tsn:referencePeriod ;
-      tsn:versionRights ;
+      tsn:hasIdentifier "NUTS2013"^^xsd:string ;
+      tsn:hasName "Nomenclature of Territorial Units for Statistics version 2013"^^xsd:string ;
+      tsn:hasAcronym "NUTS2013"^^xsd:string   ;
+      tsn:hasDescription "The compilation of this nomenclature relates to the situation observed in 2014. This nomenclature derives firstly from the official NUTS 2013 nomenclature (EU27), it is prepared according to the specification from the NUTS changes files found in EUROSTAT Web site (URL: http://ec.europa.eu/eurostat/documents/345175/629341/NUTS+2010+-+NUTS+2013.xls and http://ec.europa.eu/eurostat/web/nuts/history). Secondly, it derives from the official EFTA & CC 2013 nomenclature, it is prepared according to the specification from the respective files Found in EUROSTAT Web site (URL: http://ec.europa.eu/eurostat/ramon/statmanuals/files/KS-41-01-616-EN-N.pdf)."^^xsd:string  ;
+      tsn:isVersionOf <http://purl.org/steamer/nuts> ;
+      tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2013> ;
+      tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_2003> ;
+      tsn:covers <http://purl.org/steamer/EU/version_2013> ;
+      tsn:covers <http://purl.org/steamer/EFTA/version_2013> ;
+      tsn:covers <http://purl.org/steamer/EU_CC/version_2013> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_2013/level_0> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_2013/level_1> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_2013/level_2> ;
+      tsn:hasLevel <http://purl.org/steamer/nuts/version_2013/level_3> ;
+      tsn:nomenclatureVersionSource dcterms:source <http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts> ;
       tsn:referencePeriod _:nuts2013refperiod .
 
       _:nuts2013refperiod a time:Interval ;
@@ -166,35 +178,51 @@
 #################################################################
 <http://purl.org/steamer/nuts/level_0>
     a       tsn:Level ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:hasVersion   .
+    tsn:hasIdentifier "NUTS_level_0"^^xsd:string ;
+    tsn:hasName "NUTS Level 0"^^xsd:string ;
+    tsn:hasAcronym "NUTS_level_0"  ;
+    tsn:hasDescription "States regions.";
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_1999/level_0> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_2003/level_0> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_2006/level_0> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_2010/level_0> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_2013/level_0> .
 
 <http://purl.org/steamer/nuts/level_1>
     a       tsn:Level ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:hasVersion   .
+    tsn:hasIdentifier "NUTS_level_1"^^xsd:string ;
+    tsn:hasName "NUTS Level 1"^^xsd:string ;
+    tsn:hasAcronym "NUTS_level_1"  ;
+    tsn:hasDescription "Major socio-economic regions.";
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_1999/level_1> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_2003/level_1> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_2006/level_1> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_2010/level_1> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_2013/level_1> .
 
 <http://purl.org/steamer/nuts/level_2>
     a       tsn:Level ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:hasVersion   .
+    tsn:hasIdentifier "NUTS_level_2"^^xsd:string ;
+    tsn:hasName "NUTS Level 2"^^xsd:string ;
+    tsn:hasAcronym "NUTS_level_2"  ;
+    tsn:hasDescription "Basic regions for the application of regional policies.";
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_1999/level_2> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_2003/level_2> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_2006/level_2> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_2010/level_2> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_2013/level_2> .
 
 <http://purl.org/steamer/nuts/level_3>
     a       tsn:Level ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:hasVersion   .
+    tsn:hasIdentifier "NUTS_level_3"^^xsd:string ;
+    tsn:hasName "NUTS Level 3"^^xsd:string ;
+    tsn:hasAcronym "NUTS_level_3"  ;
+    tsn:hasDescription "Small regions for specific diagnoses.";
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_1999/level_3> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_2003/level_3> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_2006/level_3> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_2010/level_3> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/version_2013/level_3> .
 
 #################################################################
 # NUTS LEVELS VERSIONS
@@ -202,436 +230,552 @@
 ################################################################# LEVEL 0
 <http://purl.org/steamer/nuts/version_1999/level_0>
     a       tsn:LevelVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:hasUnit ;
-    tsn:belongsToNomenclatureVersion ;
-    tsn:hasLowerLevel ;
-    tsn:hasUpperLevel ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "NUTS_version_1999_level_0"^^xsd:string ;
+    tsn:hasName "NUTS version 1999 Level 0"^^xsd:string ;
+    tsn:hasAcronym "NUTS_version_1999_level_0"  ;
+    tsn:hasDescription "States regions in Europe, situation observed in 1999.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_0> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2003/level_0> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_1995/level_0> ;
+    #tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion <http://purl.org/steamer/nuts/version_1999> ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_1999/level_1>  ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_1999/level_2>  ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_1999/level_3>  ;
+    #tsn:hasUpperLevel ;
+    #tsn:referencePeriod
+    .
 
 <http://purl.org/steamer/nuts/version_2003/level_0>
     a       tsn:LevelVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:hasUnit ;
-    tsn:belongsToNomenclatureVersion ;
-    tsn:hasLowerLevel ;
-    tsn:hasUpperLevel ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "NUTS_version_2003_level_0"^^xsd:string ;
+    tsn:hasName "NUTS version 2003 Level 0"^^xsd:string ;
+    tsn:hasAcronym "NUTS_version_2003_level_0"  ;
+    tsn:hasDescription "States regions in Europe, situation observed in 2003.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_0> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2006/level_0> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_1999/level_0> ;
+    #tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion <http://purl.org/steamer/nuts/version_2003> ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_2003/level_1>  ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_2003/level_2>  ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_2003/level_3>  ;
+    #tsn:hasUpperLevel ;
+    #tsn:referencePeriod
+    .
 
 <http://purl.org/steamer/nuts/version_2006/level_0>
     a       tsn:LevelVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:hasUnit ;
-    tsn:belongsToNomenclatureVersion ;
-    tsn:hasLowerLevel ;
-    tsn:hasUpperLevel ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "NUTS_version_2006_level_0"^^xsd:string ;
+    tsn:hasName "NUTS version 2006 Level 0"^^xsd:string ;
+    tsn:hasAcronym "NUTS_version_2006_level_0"  ;
+    tsn:hasDescription "States regions in Europe, situation observed in 2007.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_0> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2010/level_0> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_2003/level_0> ;
+    #tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion <http://purl.org/steamer/nuts/version_2006> ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_2006/level_1>  ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_2006/level_2>  ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_2006/level_3>  ;
+    #tsn:hasUpperLevel ;
+    #tsn:referencePeriod
+    .
 
 <http://purl.org/steamer/nuts/version_2010/level_0>
     a       tsn:LevelVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:hasUnit ;
-    tsn:belongsToNomenclatureVersion ;
-    tsn:hasLowerLevel ;
-    tsn:hasUpperLevel ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "NUTS_version_2010_level_0"^^xsd:string ;
+    tsn:hasName "NUTS version 2010 Level 0"^^xsd:string ;
+    tsn:hasAcronym "NUTS_version_2010_level_0"  ;
+    tsn:hasDescription "States regions in Europe, situation observed in 2011.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_0> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2013/level_0> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_2006/level_0> ;
+    #tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion <http://purl.org/steamer/nuts/version_2010> ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_2010/level_1>  ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_2010/level_2>  ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_2010/level_3>  ;
+    #tsn:hasUpperLevel ;
+    #tsn:referencePeriod
+    .
 
 ################################################################# LEVEL 1
 <http://purl.org/steamer/nuts/version_1999/level_1>
     a       tsn:LevelVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:hasUnit ;
-    tsn:belongsToNomenclatureVersion ;
-    tsn:hasLowerLevel ;
-    tsn:hasUpperLevel ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "NUTS_version_1999_level_1"^^xsd:string ;
+    tsn:hasName "NUTS version 1999 Level 1"^^xsd:string ;
+    tsn:hasAcronym "NUTS_version_1999_level_1"  ;
+    tsn:hasDescription "Major socio-economic in Europe, situation observed in 1999.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_1> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2003/level_1> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_1995/level_1> ;
+    #tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion <http://purl.org/steamer/nuts/version_1999> ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_1999/level_2>  ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_1999/level_3>  ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_1999/level_0> ;
+    #tsn:referencePeriod
+    .
 
 <http://purl.org/steamer/nuts/version_2003/level_1>
     a       tsn:LevelVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:hasUnit ;
-    tsn:belongsToNomenclatureVersion ;
-    tsn:hasLowerLevel ;
-    tsn:hasUpperLevel ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "NUTS_version_2003_level_1"^^xsd:string ;
+    tsn:hasName "NUTS version 2003 Level 1"^^xsd:string ;
+    tsn:hasAcronym "NUTS_version_2003_level_1"  ;
+    tsn:hasDescription "Major socio-economic in Europe, situation observed in 2003.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_1> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2006/level_1> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_1999/level_1> ;
+    #tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion <http://purl.org/steamer/nuts/version_2003> ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_2003/level_2>  ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_2003/level_3>  ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_2003/level_0> ;
+    #tsn:referencePeriod
+    .
 
 <http://purl.org/steamer/nuts/version_2006/level_1>
     a       tsn:LevelVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:hasUnit ;
-    tsn:belongsToNomenclatureVersion ;
-    tsn:hasLowerLevel ;
-    tsn:hasUpperLevel ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "NUTS_version_2006_level_1"^^xsd:string ;
+    tsn:hasName "NUTS version 2006 Level 1"^^xsd:string ;
+    tsn:hasAcronym "NUTS_version_2006_level_1"  ;
+    tsn:hasDescription "Major socio-economic in Europe, situation observed in 2007.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_1> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2010/level_1> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_2003/level_1> ;
+    #tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion <http://purl.org/steamer/nuts/version_2006> ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_2006/level_2>  ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_2006/level_3>  ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_2006/level_0> ;
+    #tsn:referencePeriod
+    .
 
 <http://purl.org/steamer/nuts/version_2010/level_1>
     a       tsn:LevelVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:hasUnit ;
-    tsn:belongsToNomenclatureVersion ;
-    tsn:hasLowerLevel ;
-    tsn:hasUpperLevel ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "NUTS_version_2010_level_1"^^xsd:string ;
+    tsn:hasName "NUTS version 2010 Level 1"^^xsd:string ;
+    tsn:hasAcronym "NUTS_version_2010_level_1"  ;
+    tsn:hasDescription "Major socio-economic in Europe, situation observed in 2011.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_1> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2013/level_1> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_2006/level_1> ;
+    #tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion <http://purl.org/steamer/nuts/version_2010> ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_2010/level_2>  ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_2010/level_3>  ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_2010/level_0> ;
+    #tsn:referencePeriod
+    .
 
 
 ################################################################# LEVEL 2
 <http://purl.org/steamer/nuts/version_1999/level_2>
     a       tsn:LevelVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:hasUnit ;
-    tsn:belongsToNomenclatureVersion ;
-    tsn:hasLowerLevel ;
-    tsn:hasUpperLevel ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "NUTS_version_1999_level_2"^^xsd:string ;
+    tsn:hasName "NUTS version 1999 Level 2"^^xsd:string ;
+    tsn:hasAcronym "NUTS_version_1999_level_2"  ;
+    tsn:hasDescription "Basic regions for the application of regional policies in Europe, situation observed in 1999.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_2> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2003/level_2> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_1995/level_2> ;
+    #tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion <http://purl.org/steamer/nuts/version_1999> ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_1999/level_3>  ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_1999/level_0> ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_1999/level_1> ;
+    #tsn:referencePeriod
+    .
 
 <http://purl.org/steamer/nuts/version_2003/level_2>
     a       tsn:LevelVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:hasUnit ;
-    tsn:belongsToNomenclatureVersion ;
-    tsn:hasLowerLevel ;
-    tsn:hasUpperLevel ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "NUTS_version_2003_level_2"^^xsd:string ;
+    tsn:hasName "NUTS version 2003 Level 2"^^xsd:string ;
+    tsn:hasAcronym "NUTS_version_2003_level_2"  ;
+    tsn:hasDescription "Basic regions for the application of regional policies in Europe, situation observed in 2003.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_2> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2006/level_2> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_1999/level_2> ;
+    #tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion <http://purl.org/steamer/nuts/version_2003> ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_2003/level_3>  ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_2003/level_0> ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_2003/level_1> ;
+    #tsn:referencePeriod
+    .
 
 <http://purl.org/steamer/nuts/version_2006/level_2>
     a       tsn:LevelVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:hasUnit ;
-    tsn:belongsToNomenclatureVersion ;
-    tsn:hasLowerLevel ;
-    tsn:hasUpperLevel ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "NUTS_version_2006_level_2"^^xsd:string ;
+    tsn:hasName "NUTS version 2006 Level 2"^^xsd:string ;
+    tsn:hasAcronym "NUTS_version_2006_level_2"  ;
+    tsn:hasDescription "Basic regions for the application of regional policies in Europe, situation observed in 2007.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_2> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2010/level_2> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_2006/level_2> ;
+    #tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion <http://purl.org/steamer/nuts/version_2006> ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_2006/level_3>  ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_2006/level_0> ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_2006/level_1> ;
+    #tsn:referencePeriod
+    .
 
 <http://purl.org/steamer/nuts/version_2010/level_2>
     a       tsn:LevelVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:hasUnit ;
-    tsn:belongsToNomenclatureVersion ;
-    tsn:hasLowerLevel ;
-    tsn:hasUpperLevel ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "NUTS_version_2010_level_2"^^xsd:string ;
+    tsn:hasName "NUTS version 2010 Level 2"^^xsd:string ;
+    tsn:hasAcronym "NUTS_version_2010_level_2"  ;
+    tsn:hasDescription "Basic regions for the application of regional policies in Europe, situation observed in 2011.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_2> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2013/level_2> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_2006/level_2> ;
+    #tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion <http://purl.org/steamer/nuts/version_2010> ;
+    tsn:hasLowerLevel <http://purl.org/steamer/nuts/version_2010/level_3>  ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_2010/level_0> ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_2010/level_1> ;
+    #tsn:referencePeriod
+    .
 
 
 ################################################################# LEVEL 3
 <http://purl.org/steamer/nuts/version_1999/level_3>
     a       tsn:LevelVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:hasUnit ;
-    tsn:belongsToNomenclatureVersion ;
-    tsn:hasLowerLevel ;
-    tsn:hasUpperLevel ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "NUTS_version_1999_level_3"^^xsd:string ;
+    tsn:hasName "NUTS version 1999 Level 3"^^xsd:string ;
+    tsn:hasAcronym "NUTS_version_1999_level_3"  ;
+    tsn:hasDescription "Small regions for specific diagnoses in Europe, situation observed in 1999.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_3> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2003/level_3> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_1995/level_3> ;
+    #tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion <http://purl.org/steamer/nuts/version_1999> ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_1999/level_0> ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_1999/level_1> ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_1999/level_2>  ;
+    #tsn:referencePeriod
+    .
 
 <http://purl.org/steamer/nuts/version_2003/level_3>
     a       tsn:LevelVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:hasUnit ;
-    tsn:belongsToNomenclatureVersion ;
-    tsn:hasLowerLevel ;
-    tsn:hasUpperLevel ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "NUTS_version_2003_level_3"^^xsd:string ;
+    tsn:hasName "NUTS version 2003 Level 3"^^xsd:string ;
+    tsn:hasAcronym "NUTS_version_2003_level_3"  ;
+    tsn:hasDescription "Small regions for specific diagnoses in Europe, situation observed in 2003.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_3> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2006/level_3> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_1999/level_3> ;
+    #tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion <http://purl.org/steamer/nuts/version_2003> ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_2003/level_0> ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_2003/level_1> ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_2003/level_2>  ;
+    #tsn:referencePeriod
+    .
 
 <http://purl.org/steamer/nuts/version_2006/level_3>
     a       tsn:LevelVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:hasUnit ;
-    tsn:belongsToNomenclatureVersion ;
-    tsn:hasLowerLevel ;
-    tsn:hasUpperLevel ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "NUTS_version_2006_level_3"^^xsd:string ;
+    tsn:hasName "NUTS version 2006 Level 3"^^xsd:string ;
+    tsn:hasAcronym "NUTS_version_2006_level_3"  ;
+    tsn:hasDescription "Small regions for specific diagnoses in Europe, situation observed in 2007.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_3> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2010/level_3> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_2003/level_3> ;
+    #tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion <http://purl.org/steamer/nuts/version_2006> ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_2006/level_0> ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_2006/level_1> ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_2006/level_2>  ;
+    #tsn:referencePeriod
+    .
 
 <http://purl.org/steamer/nuts/version_2010/level_3>
     a       tsn:LevelVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:hasUnit ;
-    tsn:belongsToNomenclatureVersion ;
-    tsn:hasLowerLevel ;
-    tsn:hasUpperLevel ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "NUTS_version_2010_level_3"^^xsd:string ;
+    tsn:hasName "NUTS version 2010 Level 3"^^xsd:string ;
+    tsn:hasAcronym "NUTS_version_2010_level_3"  ;
+    tsn:hasDescription "Small regions for specific diagnoses in Europe, situation observed in 2011.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_3> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/nuts/version_2013/level_3> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/nuts/version_2006/level_3> ;
+    #tsn:hasUnit ;
+    tsn:belongsToNomenclatureVersion <http://purl.org/steamer/nuts/version_2010> ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_2010/level_0> ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_2010/level_1> ;
+    tsn:hasUpperLevel <http://purl.org/steamer/nuts/version_2010/level_2>  ;
+    #tsn:referencePeriod
+    .
 
 #################################################################
 # NUTS TERRITORY
 #################################################################
 <http://purl.org/steamer/EU>
     a       tsn:Territory ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription  ;
-    tsn:hasVersion .
+    tsn:hasIdentifier "EU"^^xsd:string ;
+    tsn:hasName "European Union"^^xsd:string ;
+    tsn:hasAcronym  "EU"^^xsd:string ;
+    tsn:hasDescription "The European Union (EU) is a political and economic union of member states that are located primarily in Europe."^^xsd:string ;
+    tsn:hasVersion <http://purl.org/steamer/EU/version_1999> ;
+    tsn:hasVersion <http://purl.org/steamer/EU/version_2003> ;
+    tsn:hasVersion <http://purl.org/steamer/EU/version_2006> ;
+    tsn:hasVersion <http://purl.org/steamer/EU/version_2010> ;
+    tsn:hasVersion <http://purl.org/steamer/EU/version_2013> .
 
 <http://purl.org/steamer/EFTA>
     a       tsn:Territory ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription  ;
-    tsn:hasVersion .
+    tsn:hasIdentifier "EFTA"^^xsd:string ;
+    tsn:hasName "European Free Trade Association"^^xsd:string ;
+    tsn:hasAcronym "EFTA"^^xsd:string ;
+    tsn:hasDescription "The European Free Trade Association (EFTA) is a regional trade organisation and free trade area consisting of four European states: Iceland, Liechtenstein, Norway, and Switzerland. The organisation operates in parallel with the European Union (EU), and all four member states participate in the European single market (Source: https://en.wikipedia.org/wiki/European_Free_Trade_Association)."  ;
+    tsn:hasVersion <http://purl.org/steamer/EFTA/version_1999> ;
+    tsn:hasVersion <http://purl.org/steamer/EFTA/version_2003> ;
+    tsn:hasVersion <http://purl.org/steamer/EFTA/version_2006> ;
+    tsn:hasVersion <http://purl.org/steamer/EFTA/version_2010> ;
+    tsn:hasVersion <http://purl.org/steamer/EFTA/version_2013> .
 
 <http://purl.org/steamer/EU_CC>
     a       tsn:Territory ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription  ;
-    tsn:hasVersion .
+    tsn:hasIdentifier "EU_CC"^^xsd:string ;
+    tsn:hasName "European Union Candidate Countries"^^xsd:string ;
+    tsn:hasAcronym "EU_CC"^^xsd:string ;
+    tsn:hasDescription "EU candidate countries are those whose EU membership application has been accepted by the EU, and are moving toward or actually negotiating their accessions (Source: http://www.euintheus.org/what-we-do/policy-areas/european-enlargement-neighborhood/)."  ;
+    tsn:hasVersion <http://purl.org/steamer/EU_CC/version_1999> ;
+    tsn:hasVersion <http://purl.org/steamer/EU_CC/version_2003> ;
+    tsn:hasVersion <http://purl.org/steamer/EU_CC/version_2006> ;
+    tsn:hasVersion <http://purl.org/steamer/EU_CC/version_2010> ;
+    tsn:hasVersion <http://purl.org/steamer/EU_CC/version_2013> .
 
 #################################################################
 # NUTS TERRITORY VERSIONS
 #################################################################
 ################################################################# European Union
-<http://purl.org/steamer/EU/version_1999>
+<http://purl.org/steamer/EU/EU15/1995_2004>
     a       tsn:TerritoryVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:isCoveredBy ;
-    tsn:hasGeometry ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "EU15_1995_2004"^^xsd:string ;
+    tsn:hasName "European Union 15 from 1995 to 2004"^^xsd:string ;
+    tsn:hasAcronym  "EU15_1995_2004"^^xsd:string ;
+    tsn:hasDescription "The European Union 15 (EU15) territory relates to the situation of the EU territory observed  from 1995 to 2004. The 1995 enlargement of the European Union saw  Austria (AT), Finland (FI) and Sweden (SE) join the European Union. EU15 was the number of member countries in the European Union prior to the accession of ten candidate countries on 1 May 2004. The EU15 comprised the following 15 countries:  Belgium (BE), Denmark (DK), France (FR), Germany (DE), Greece (EL), Ireland (IE), Italy (IT), Luxembourg (LU), Netherlands (NL), Portugal (PT), Spain (ES), United Kingdom (UK), Austria (AT), Finland (FI), Sweden (SE) (Source: https://stats.oecd.org/glossary/detail.asp?ID=6805). "^^xsd:string ;
+    tsn:isVersionOf <http://purl.org/steamer/EU> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/EU/EU25/2004_2007> ;
+    tsn:isSuccessorOf  <http://purl.org/steamer/EU/EU12/1993_1994> ;
+    tsn:isCoveredBy <http://purl.org/steamer/nuts/version_1999> ;
+    #tsn:hasGeometry ;
+    tsn:referencePeriod _:EU1999refperiod .
 
-<http://purl.org/steamer/EU/version_2003>
-    a       tsn:TerritoryVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:isCoveredBy ;
-    tsn:hasGeometry ;
-    tsn:referencePeriod .
+    _:EU1999refperiod a time:Interval ;
+        time:hasBeginning _:EU1999begin ;
+        time:hasEnd _:EU1999end .
 
-<http://purl.org/steamer/EU/version_2006>
-    a       tsn:TerritoryVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:isCoveredBy ;
-    tsn:hasGeometry ;
-    tsn:referencePeriod .
+    _:EU1999begin a time:Instant ;
+      time:inXSDDateTime "1995-01-01T00:00:00Z"^^xsd:dateTime .
 
-<http://purl.org/steamer/EU/version_2010>
+    _:EU1999end a time:Instant ;
+      time:inXSDDateTime "2004-05-01T00:00:00Z"^^xsd:dateTime .
+
+<http://purl.org/steamer/EU/EU25/2004_2007>
     a       tsn:TerritoryVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:isCoveredBy ;
-    tsn:hasGeometry ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "EU25_2004_2007"^^xsd:string ;
+    tsn:hasName "European Union 25 from 2004 to 2007"^^xsd:string ;
+    tsn:hasAcronym  "EU25_2004_2007"^^xsd:string ;
+    tsn:hasDescription "The European Union 25 (EU25) territory relates to the situation of the EU territory observed in 2004 (EU25, from 2004 to 2007). The 2004 enlargement of the European Union saw Cyprus (CY), Czech Republic (CZ), Estonia (EE), Hungary (HU), Latvia (LV), Lithuania (LT), Malta (MT), Poland (PL), Slovakia (SK) and Slovenia (SI)Austria (AT), Finland (FI) and Sweden (SE) join the European Union. The EU25 comprised the following 25 countries: Belgium (BE), Denmark (DK), France (FR), Germany (DE), Greece (EL), Ireland (IE), Italy (IT), Luxembourg (LU), Netherlands (NL), Portugal (PT), Spain (ES), United Kingdom (UK), Austria (AT), Finland (FI), Sweden (SE), Cyprus (CY), Czech Republic (CZ), Estonia (EE), Hungary (HU), Latvia (LV), Lithuania (LT), Malta (MT), Poland (PL), Slovakia (SK), Slovenia (SI). "^^xsd:string ;
+    tsn:isVersionOf <http://purl.org/steamer/EU> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/EU/EU27/2007_2013> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/EU/EU15/1995_2004> ;
+    tsn:isCoveredBy <http://purl.org/steamer/nuts/version_2003> ;
+    #tsn:hasGeometry ;
+    tsn:referencePeriod _:EU2003refperiod .
+
+    _:EU2003refperiod a time:Interval ;
+        time:hasBeginning _:EU2003begin ;
+        time:hasEnd _:EU2003end .
+
+    _:EU2003begin a time:Instant ;
+      time:inXSDDateTime "2004-05-01T00:00:00Z"^^xsd:dateTime .
+
+    _:EU2003end a time:Instant ;
+      time:inXSDDateTime "2007-01-01T00:00:00Z"^^xsd:dateTime .
+
+<http://purl.org/steamer/EU/EU27/2007_2013>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "EU27_2007_2013"^^xsd:string ;
+    tsn:hasName "European Union 27 from 2007 to 2013"^^xsd:string ;
+    tsn:hasAcronym  "EU27_2007_2013"^^xsd:string ;
+    tsn:hasDescription "The European Union 27 (EU27) territory relates to the situation of the EU territory observed from 2007 to 2013. The 2007 enlargement of the European Union saw Bulgaria and Romania join the European Union. The EU27 comprised the following 27 countries: Belgium (BE), Denmark (DK), France (FR), Germany (DE), Greece (EL), Ireland (IE), Italy (IT), Luxembourg (LU), Netherlands (NL), Portugal (PT), Spain (ES), United Kingdom (UK), Austria (AT), Finland (FI), Sweden (SE), Cyprus (CY), Czech Republic (CZ), Estonia (EE), Hungary (HU), Latvia (LV), Lithuania (LT), Malta (MT), Poland (PL), Slovakia (SK), Slovenia (SI), Bulgaria (BG), Romania (RO). "^^xsd:string ;
+    tsn:isVersionOf <http://purl.org/steamer/EU> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/EU/EU28/2013_2018>;
+    tsn:isSuccessorOf <http://purl.org/steamer/EU/EU25/2004_2007> ;
+    tsn:isCoveredBy <http://purl.org/steamer/nuts/version_2006> ;
+    tsn:isCoveredBy <http://purl.org/steamer/nuts/version_2010> ;
+    #tsn:hasGeometry ;
+    tsn:referencePeriod _:EU2006refperiod .
+
+    _:EU2006refperiod a time:Interval ;
+        time:hasBeginning _:EU2006begin ;
+        time:hasEnd _:EU2006end .
+
+    _:EU2006begin a time:Instant ;
+      time:inXSDDateTime "2007-01-01T00:00:00Z"^^xsd:dateTime .
+
+    _:EU2006end a time:Instant ;
+      time:inXSDDateTime "2013-06-30T00:00:00Z"^^xsd:dateTime .
+
+<http://purl.org/steamer/EU/EU28/2013_2018>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "EU28_2013_2018"^^xsd:string ;
+    tsn:hasName "European Union 28 from 2013 to 2018"^^xsd:string ;
+    tsn:hasAcronym  "EU28_2013_2018"^^xsd:string ;
+    tsn:hasDescription "The European Union 28 (EU28) territory relates to the situation of the EU territory observed from 2013 to 2018. The 2013 enlargement of the European Union saw Croatia (HR) join the European Union. The EU28 comprised the following 28 countries: Belgium (BE), Denmark (DK), France (FR), Germany (DE), Greece (EL), Ireland (IE), Italy (IT), Luxembourg (LU), Netherlands (NL), Portugal (PT), Spain (ES), United Kingdom (UK), Austria (AT), Finland (FI), Sweden (SE), Cyprus (CY), Czech Republic (CZ), Estonia (EE), Hungary (HU), Latvia (LV), Lithuania (LT), Malta (MT), Poland (PL), Slovakia (SK), Slovenia (SI), Bulgaria (BG), Romania (RO), Croatia (HR). "^^xsd:string ;
+    tsn:isVersionOf <http://purl.org/steamer/EU> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/EU/EU27/2007_2013>;
+    #tsn:isSuccessorOf <http://purl.org/steamer/EU/EU25/2004_2007> ;
+    tsn:isCoveredBy <http://purl.org/steamer/nuts/version_2013> ;
+    #tsn:hasGeometry ;
+    tsn:referencePeriod _:EU2013refperiod .
+
+    _:EU2013refperiod a time:Interval ;
+        time:hasBeginning _:EU2013begin ;
+        time:hasEnd _:EU2013end .
+
+    _:EU2013begin a time:Instant ;
+      time:inXSDDateTime "2013-07-01T00:00:00Z"^^xsd:dateTime .
+
+    _:EU2013end a time:Instant ;
+      time:inXSDDateTime "2018-01-01T00:00:00Z"^^xsd:dateTime .
 
 
 ################################################################# EFTA
-<http://purl.org/steamer/EFTA/version_1999>
+<http://purl.org/steamer/EFTA/EFTA4/1995>
     a       tsn:TerritoryVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:isCoveredBy ;
-    tsn:hasGeometry ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "EFTA4_1995"^^xsd:string ;
+    tsn:hasName "European Free Trade Association from 1995 to now"^^xsd:string ;
+    tsn:hasAcronym  "EFTA4_1995"^^xsd:string ;
+    tsn:hasDescription "The European Free Trade Association (EFTA) is a regional trade organisation and free trade area consisting of four European states: Iceland, Liechtenstein, Norway, and Switzerland. The organisation operates in parallel with the European Union (EU), and all four member states participate in the European single market (Source: https://en.wikipedia.org/wiki/European_Free_Trade_Association). In 1995 Austria, Finland and Sweden leave EFTA to join the EU. Liechtenstein becomes a full participant in the EEA Agreement together with Iceland and Norway (Source: http://www.efta.int/about-efta/history). "^^xsd:string ;
+    tsn:isVersionOf <http://purl.org/steamer/EFTA> ;
+    tsn:isCoveredBy <http://purl.org/steamer/nuts/version_1999> ;
+    tsn:isCoveredBy <http://purl.org/steamer/nuts/version_2003> ;
+    tsn:isCoveredBy <http://purl.org/steamer/nuts/version_2006> ;
+    tsn:isCoveredBy <http://purl.org/steamer/nuts/version_2010> ;
+    tsn:isCoveredBy <http://purl.org/steamer/nuts/version_2013> ;
+    #tsn:hasGeometry ;
+    tsn:referencePeriod _:EFTA4refperiod .
 
-<http://purl.org/steamer/EFTA/version_2003>
-    a       tsn:TerritoryVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:isCoveredBy ;
-    tsn:hasGeometry ;
-    tsn:referencePeriod .
+    _:EFTA4refperiod a time:Interval ;
+        time:hasBeginning _:EFTA4begin ;
+        time:hasEnd _:EFTA4end .
 
-<http://purl.org/steamer/EFTA/version_2006>
-    a       tsn:TerritoryVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:isCoveredBy ;
-    tsn:hasGeometry ;
-    tsn:referencePeriod .
-
-<http://purl.org/steamer/EFTA/version_2010>
-    a       tsn:TerritoryVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:isCoveredBy ;
-    tsn:hasGeometry ;
-    tsn:referencePeriod .
-
+    _:EFTA4begin a time:Instant ;
+      time:inXSDDateTime "1995-01-01T00:00:00Z"^^xsd:dateTime .
 
 ################################################################# European Union CC
-<http://purl.org/steamer/EU_CC/version_1999>
+<http://purl.org/steamer/EU_CC/EU_CC13/1999_2003>
     a       tsn:TerritoryVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:isCoveredBy ;
-    tsn:hasGeometry ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "EU_CC13_1999_2003"^^xsd:string ;
+    tsn:hasName "European Union Candidate Countries from 1999 to 2003"^^xsd:string ;
+    tsn:hasAcronym  "EU_CC13_1999_2003"^^xsd:string ;
+    tsn:hasDescription "The European Union Candidate Countries 13 (EU_CC13) territory relates to the situation of the EU territory observed from 1999 to 2003 (Warning: the countries cited here are not necessarily candidates throughout the all period). The EU_CC13 comprised the following 13 countries: Turkey (TR), Slovenia (SI), Czech Republic (CZ), Bulgaria (BG), Lithuania (LT), Estonia (EE), Latvia (LV), Slovakia (SK), Romania (RO), Poland (PL), Hungary (HU), Malta (MT), Cyprus (CY). "^^xsd:string ;
+    tsn:isVersionOf <http://purl.org/steamer/EU_CC> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/EU_CC/EU_CC5/2003_2007> ;
+    #tsn:isSuccessorOf  <http://purl.org/steamer/EU/EU12/1993_1994> ;
+    tsn:isCoveredBy <http://purl.org/steamer/nuts/version_1999> ;
+    #tsn:hasGeometry ;
+    tsn:referencePeriod _:EUCC1999refperiod .
 
-<http://purl.org/steamer/EU_CC/version_2003>
-    a       tsn:TerritoryVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:isCoveredBy ;
-    tsn:hasGeometry ;
-    tsn:referencePeriod .
+    _:EUCC1999refperiod a time:Interval ;
+        time:hasBeginning _:EUCC1999begin ;
+        time:hasEnd _:EUCC1999end .
 
-<http://purl.org/steamer/EU_CC/version_2006>
-    a       tsn:TerritoryVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:isCoveredBy ;
-    tsn:hasGeometry ;
-    tsn:referencePeriod .
+    _:EUCC1999begin a time:Instant ;
+      time:inXSDDateTime "1999-01-01T00:00:00Z"^^xsd:dateTime .
 
-<http://purl.org/steamer/EU_CC/version_2010>
+    _:EUCC1999end a time:Instant ;
+      time:inXSDDateTime "2003-06-30T00:00:00Z"^^xsd:dateTime .
+
+<http://purl.org/steamer/EU_CC/EU_CC5/2003_2007>
     a       tsn:TerritoryVersion ;
-    tsn:hasIdentifier "DEA3"^^xsd:string ;
-    tsn:hasName "Münster"^^xsd:string ;
-    tsn:hasAcronym  ;
-    tsn:hasDescription ;
-    tsn:isVersionOf ;
-    tsn:isPredecessorOf ;
-    tsn:isSuccessorOf ;
-    tsn:isCoveredBy ;
-    tsn:hasGeometry ;
-    tsn:referencePeriod .
+    tsn:hasIdentifier "EU_CC5_2003_2007"^^xsd:string ;
+    tsn:hasName "European Union Candidate Countries from 2003 to 2007"^^xsd:string ;
+    tsn:hasAcronym  "EU_CC5_2003_2007"^^xsd:string ;
+    tsn:hasDescription "The European Union Candidate Countries 5 (EU_CC5) territory relates to the situation of the EU territory observed from 2003 to 2007 (Warning: the countries cited here are not necessarily candidates throughout the all period). The EU_CC5 comprised the following 5 countries: Turkey (TR), Bulgaria (BG), Romania (RO), CROATIA (HR). "^^xsd:string ;
+    tsn:isVersionOf <http://purl.org/steamer/EU_CC> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/EU_CC/EU_CC3/2007_2013> ;
+    tsn:isSuccessorOf  <http://purl.org/steamer/EU_CC/EU_CC13/1999_2003> ;
+    tsn:isCoveredBy <http://purl.org/steamer/nuts/version_2003> ;
+    #tsn:hasGeometry ;
+    tsn:referencePeriod _:EUCC2003refperiod .
+
+    _:EUCC2003refperiod a time:Interval ;
+        time:hasBeginning _:EUCC2003begin ;
+        time:hasEnd _:EUCC2003end .
+
+    _:EUCC2003begin a time:Instant ;
+      time:inXSDDateTime "2003-07-01T00:00:00Z"^^xsd:dateTime .
+
+    _:EUCC2003end a time:Instant ;
+      time:inXSDDateTime "2007-12-31T00:00:00Z"^^xsd:dateTime .
+
+<http://purl.org/steamer/EU_CC/EU_CC3/2008_2011>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "EU_CC3_2008_2011"^^xsd:string ;
+    tsn:hasName "European Union Candidate Countries from 2008 to 2011"^^xsd:string ;
+    tsn:hasAcronym  "EU_CC3_2008_2011"^^xsd:string ;
+    tsn:hasDescription "The European Union Candidate Countries 3 (EU_CC3) territory relates to the situation of the EU territory observed from 2008 to 2011 (Warning: the countries cited here are not necessarily candidates throughout the all period). The EU_CC3 comprised the following 3 countries: Turkey (TR), CROATIA (HR), Macedonia (MK). "^^xsd:string ;
+    tsn:isVersionOf <http://purl.org/steamer/EU_CC> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/EU_CC/EU_CC7/2012_2014> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/EU_CC/EU_CC5/2003_2007> ;
+    tsn:isCoveredBy <http://purl.org/steamer/nuts/version_2006> ;
+    #tsn:hasGeometry ;
+    tsn:referencePeriod _:EUCC2008refperiod .
+
+    _:EUCC2008refperiod a time:Interval ;
+        time:hasBeginning _:EUCC2008begin ;
+        time:hasEnd _:EUCC2008end .
+
+    _:EUCC2008begin a time:Instant ;
+      time:inXSDDateTime "2008-01-01T00:00:00Z"^^xsd:dateTime .
+
+    _:EUCC2008end a time:Instant ;
+      time:inXSDDateTime "2011-12-31T00:00:00Z"^^xsd:dateTime .
+
+<http://purl.org/steamer/EU_CC/EU_CC7/2012_2014>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "EU_CC7_2012_2014"^^xsd:string ;
+    tsn:hasName "European Union Candidate Countries from 2012 to 2014"^^xsd:string ;
+    tsn:hasAcronym  "EU_CC7_2012_2014"^^xsd:string ;
+    tsn:hasDescription "The European Union Candidate Countries 7 (EU_CC7) territory relates to the situation of the EU territory observed from 2012 to 2014 (Warning: the countries cited here are not necessarily candidates throughout the all period). The EU_CC7 comprised the following 7 countries: Turkey (TR), CROATIA (HR), Macedonia (MK), Montenegro (ME), Albania (AL), Serbia (RS), Iceland (IS)."^^xsd:string ;
+    tsn:isVersionOf <http://purl.org/steamer/EU_CC> ;
+    tsn:isPredecessorOf <http://purl.org/steamer/EU_CC/EU_CC5/2015> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/EU_CC/EU_CC3/2008_2011> ;
+    tsn:isCoveredBy <http://purl.org/steamer/nuts/version_2010> ;
+    #tsn:hasGeometry ;
+    tsn:referencePeriod _:EUCC2012refperiod .
+
+    _:EUCC2012refperiod a time:Interval ;
+        time:hasBeginning _:EUCC2012begin ;
+        time:hasEnd _:EUCC2012end .
+
+    _:EUCC2012begin a time:Instant ;
+      time:inXSDDateTime "2012-01-01T00:00:00Z"^^xsd:dateTime .
+
+    _:EUCC2012end a time:Instant ;
+      time:inXSDDateTime "2014-12-31T00:00:00Z"^^xsd:dateTime .
+
+<http://purl.org/steamer/EU_CC/EU_CC5/2015>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "EU_CC5_2015"^^xsd:string ;
+    tsn:hasName "European Union Candidate Countries from 2015"^^xsd:string ;
+    tsn:hasAcronym  "EU_CC5_2015"^^xsd:string ;
+    tsn:hasDescription "The European Union Candidate Countries 5 (EU_CC5) territory relates to the situation of the EU territory observed from 2015 (Warning: the countries cited here are not necessarily candidates throughout the all period). The EU_CC5 comprised the following 5 countries: Montenegro (ME), The former Yugoslav Republic of Macedonia (MK), Albania (AL), Serbia (RS), Turkey (TR)."^^xsd:string ;
+    tsn:isVersionOf <http://purl.org/steamer/EU_CC> ;
+    tsn:isSuccessorOf <http://purl.org/steamer/EU_CC/EU_CC7/2012_2014> ;
+    tsn:isCoveredBy <http://purl.org/steamer/nuts/version_2013> ;
+    #tsn:hasGeometry ;
+    tsn:referencePeriod _:EUCC2015refperiod .
+
+    _:EUCC2015refperiod a time:Interval ;
+        time:hasBeginning _:EUCC2015begin .
+
+    _:EUCC2015begin a time:Instant ;
+      time:inXSDDateTime "2015-01-01T00:00:00Z"^^xsd:dateTime .

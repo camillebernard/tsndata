@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.steamer</groupId>
+	<artifactId>tsndatasite</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<name>Maven</name>
+	<url>http://maven.apache.org/maven2</url>
+	<inceptionYear>2001</inceptionYear>
+	<distributionManagement>
+		<site>
+			<id>website</id>
+			<url>http://steamer.imag.fr</url>
+		</site>
+	</distributionManagement>
+
+	<organization>
+		<name>LIG STeamer</name>
+		<url>http://steamer.imag.fr</url>
+	</organization>
+	<!-- for french accentuated characters -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<developers>
+
+
+		<developer>
+			<id>cbernard</id>
+			<name>Camille BERNARD</name>
+			<email>camille.bernard@imag.fr</email>
+			<organization>LIG STeamer</organization>
+			<organizationUrl>http://steamer.imag.fr</organizationUrl>
+			<url>http://lig-membres.imag.fr/bernardc/</url>
+			<roles>
+				<role>Main Writer</role>
+			</roles>
+			<timezone>1</timezone>
+		</developer>
+		<developer>
+			<id>mvo</id>
+			<name>Marlène Villanova Oliver</name>
+			<email>marlene.villanova-oliver@imag.fr</email>
+			<organization>LIG STeamer</organization>
+			<organizationUrl>http://steamer.imag.fr</organizationUrl>
+			<roles>
+				<role>Director</role>
+			</roles>
+			<timezone>1</timezone>
+		</developer>
+		<developer>
+		<name>Jérôme Gensel</name>
+			<email>jerome.gensel@imag.fr</email>
+			<url>http://steamer.imag.fr/?permanent=jerome-gensel</url>
+			<organization>LIG STeamer</organization>
+			<organizationUrl>http://steamer.imag.fr</organizationUrl>
+			<roles>
+				<role>Director</role>
+			</roles>
+		</developer>
+		<developer>
+		<name>Hy Dao</name>
+			<email>Hy.Dao@unige.ch</email>
+			<organization>UNEP GRID</organization>
+			<organizationUrl>http://www.grid.unep.ch/index.php?lang=en</organizationUrl>
+			<roles>
+				<role>Director</role>
+			</roles>
+		</developer>
+	</developers>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-site-plugin</artifactId>
+				<configuration>
+					<locales>en,fr</locales>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

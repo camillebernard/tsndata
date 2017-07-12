@@ -1,0 +1,23 @@
+ ---
+ Territorial Statistical Nomenclature Change  Ontology
+ ---
+ camille (with bworld-myApt)
+ ---
+ 2017-07-12
+
+Territorial Statistical Nomenclature Change Ontology (TSN-Change)
+
+
+
+* {Definition}
+
+ The TSN-Change ontology aims at describing changes that occured from one version of a Territorial Statistical Nomenclature (TSN) (i.e., partition of the territory) and its subsequent (e.g., change in territorial units boundaries to reflect an administrative reorganisation).
+ 
+* {Documentation}
+
+
+ Please consult the online documentation of the ontology {{http://purl.org/net/tsnchange}}. 
+ 
+* {Main concepts}
+
+[./images/tsn_change_main_concepts.png]

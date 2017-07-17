@@ -1,0 +1,78 @@
+@prefix geof:    <http://www.opengis.net/def/function/geosparql/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ogc:     <http://www.opengis.net/ont/geosparql#> .
+@prefix strdf:   <http://strdf.di.uoa.gr/ontology#> .
+@prefix rrx:     <http://www.w3.org/ns/r2rml-ext#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix map:     <http://purl.org/steamer/nuts> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tsn:     <http://purl.org/net/tsn#> .
+@prefix tsnchange:     <http://purl.org/net/tsnchange#> .
+@prefix time:    <http://www.w3.org/2006/time#> .
+@prefix rrxf:    <http://www.w3.org/ns/r2rml-ext/functions/def/> .
+
+
+#################################################################
+# NUTS CHANGE 1999 - 2003
+#################################################################
+
+################################################################# Change_bridge
+<http://purl.org/steamer/nuts/version_1999>
+  tsnchange:inputNomenclatureVersion <http://purl.org/steamer/nuts/change/1999_2003/730_change> .
+<http://purl.org/steamer/nuts/version_2003>
+  tsnchange:outputNomenclatureVersion <http://purl.org/steamer/nuts/change/1999_2003/730_change> .
+
+<http://purl.org/steamer/nuts/version_1999/level_2>
+  tsnchange:inputLevelVersion <http://purl.org/steamer/nuts/change/1999_2003/730_change_level_2> .
+<http://purl.org/steamer/nuts/version_2003/level_2>
+  tsnchange:outputLevelVersion <http://purl.org/steamer/nuts/change/1999_2003/730_change_level_2> .
+
+<http://purl.org/steamer/nuts/version_1999/level_2#ES63>
+    tsnchange:inputUnitVersion
+      <http://purl.org/steamer/nuts/change/1999_2003/730_change_ES63>,
+      <http://purl.org/steamer/nuts/change/1999_2003/730_change_ES63_geometry>,
+      <http://purl.org/steamer/nuts/change/1999_2003/730_change_ES63_name> .
+
+<http://purl.org/steamer/nuts/version_2003/level_2#ES63>
+    tsnchange:outputUnitVersion
+        <http://purl.org/steamer/nuts/change/1999_2003/730_change_ES63>,
+        <http://purl.org/steamer/nuts/change/1999_2003/730_change_ES63_geometry>,
+        <http://purl.org/steamer/nuts/change/1999_2003/730_change_ES63_name> .
+
+<http://purl.org/steamer/nuts/version_2003/level_2#ES64>
+    tsnchange:outputUnitVersion
+        <http://purl.org/steamer/nuts/change/1999_2003/730_change_ES64> .
+################################################################# ES_63
+
+<http://purl.org/steamer/nuts/change/1999_2003/730_change> a tsnchange:StructureChange, tsnchange:GeometryRestructuration, tsnchange:Split .
+
+<http://purl.org/steamer/nuts/change/1999_2003/730_change>
+  tsnchange:nomenclatureVersionBefore  <http://purl.org/steamer/nuts/version_1999> ;
+  tsnchange:nomenclatureVersionAfter  <http://purl.org/steamer/nuts/version_2003> ;
+  tsnchange:causes <http://purl.org/steamer/nuts/change/1999_2003/730_change_level_2> .
+
+<http://purl.org/steamer/nuts/change/1999_2003/730_change_level_2> a tsnchange:Extraction ;
+  tsnchange:levelVersionBefore <http://purl.org/steamer/nuts/version_1999/level_2> ;
+  tsnchange:levelVersionAfter <http://purl.org/steamer/nuts/version_2003/level_2> ;
+  tsnchange:causes <http://purl.org/steamer/nuts/change/1999_2003/730_change_ES63> ;
+  tsnchange:causes <http://purl.org/steamer/nuts/change/1999_2003/730_change_ES64> .
+
+<http://purl.org/steamer/nuts/change/1999_2003/730_change_ES63>
+  a tsnchange:FeatureChange, tsnchange:UnitChange ;
+  tsnchange:unitVersionBefore  <http://purl.org/steamer/nuts/version_1999/level_2#ES63> ;
+  tsnchange:unitVersionAfter  <http://purl.org/steamer/nuts/version_2003/level_2#ES63> ;
+  tsnchange:causes <http://purl.org/steamer/nuts/change/1999_2003/730_change_ES63_geometry> ;
+  tsnchange:causes <http://purl.org/steamer/nuts/change/1999_2003/730_change_ES63_name> .
+
+<http://purl.org/steamer/nuts/change/1999_2003/730_change_ES63_geometry>
+  a tsnchange:GeometryChange, tsnchange:Contraction .
+
+<http://purl.org/steamer/nuts/change/1999_2003/730_change_ES63_name>
+  a tsnchange:IdentificationChange, tsnchange:NameChange .
+
+<http://purl.org/steamer/nuts/change/1999_2003/730_change_ES64>
+  a tsnchange:FeatureChange, tsnchange:UnitChange, tsnchange:Appearance  ;
+  tsnchange:unitVersionAfter  <http://purl.org/steamer/nuts/version_2003/level_2#ES64> .
+
+
+################################################################# IT31

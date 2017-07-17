@@ -10,7 +10,10 @@ Territorial Statistical Nomenclature Ontology (TSN)
 
 * {Definition}
 
- The TSN ontology allows describing any Territorial Statistical Nomenclature (TSN) (i.e., partition of the territory) used as a support to socio-economic data (statistical data that describe territory in terms of population, unemployement rate, transport access, etc.).
+ The TSN ontology allows describing any partition of the territory used in statistics, called <<Territorial Statistical Nomenclature (TSN)>> or 
+ 
+ used as a support to socio-economic data 
+ (statistical data that describe territory in terms of population, unemployement rate, transport access, etc.).
 
 * {Documentation}
 

@@ -7,7 +7,7 @@
 @prefix map:     <http://purl.org/steamer/nuts> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix tsn:     <http://purl.org/net/tsn#> .
-@prefix time:    <http://www.w3.org/2006/time#>
+@prefix time:    <http://www.w3.org/2006/time#> .
 @prefix rrxf:    <http://www.w3.org/ns/r2rml-ext/functions/def/> .
 
 #################################################################
@@ -44,7 +44,7 @@
       tsn:hasLevel <http://purl.org/steamer/nuts/version_1999/level_1> ;
       tsn:hasLevel <http://purl.org/steamer/nuts/version_1999/level_2> ;
       tsn:hasLevel <http://purl.org/steamer/nuts/version_1999/level_3> ;
-      tsn:nomenclatureVersionSource dcterms:source <http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts> ;
+      tsn:nomenclatureVersionSource <http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts> ;
       tsn:referencePeriod _:nuts1999refperiod .
 
       _:nuts1999refperiod a time:Interval ;
@@ -73,7 +73,7 @@
       tsn:hasLevel <http://purl.org/steamer/nuts/version_2003/level_1> ;
       tsn:hasLevel <http://purl.org/steamer/nuts/version_2003/level_2> ;
       tsn:hasLevel <http://purl.org/steamer/nuts/version_2003/level_3> ;
-      tsn:nomenclatureVersionSource dcterms:source <http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts> ;
+      tsn:nomenclatureVersionSource <http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts> ;
       tsn:referencePeriod _:nuts2003refperiod .
 
       _:nuts2003refperiod a time:Interval ;
@@ -102,7 +102,7 @@
       tsn:hasLevel <http://purl.org/steamer/nuts/version_2006/level_1> ;
       tsn:hasLevel <http://purl.org/steamer/nuts/version_2006/level_2> ;
       tsn:hasLevel <http://purl.org/steamer/nuts/version_2006/level_3> ;
-      tsn:nomenclatureVersionSource dcterms:source <http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts> ;
+      tsn:nomenclatureVersionSource <http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts> ;
       tsn:referencePeriod _:nuts2006refperiod .
 
       _:nuts2006refperiod a time:Interval ;
@@ -131,7 +131,7 @@
       tsn:hasLevel <http://purl.org/steamer/nuts/version_2010/level_1> ;
       tsn:hasLevel <http://purl.org/steamer/nuts/version_2010/level_2> ;
       tsn:hasLevel <http://purl.org/steamer/nuts/version_2010/level_3> ;
-      tsn:nomenclatureVersionSource dcterms:source <http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts> ;
+      tsn:nomenclatureVersionSource <http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts> ;
       tsn:referencePeriod _:nuts2010refperiod .
 
       _:nuts2010refperiod a time:Interval ;
@@ -160,7 +160,7 @@
       tsn:hasLevel <http://purl.org/steamer/nuts/version_2013/level_1> ;
       tsn:hasLevel <http://purl.org/steamer/nuts/version_2013/level_2> ;
       tsn:hasLevel <http://purl.org/steamer/nuts/version_2013/level_3> ;
-      tsn:nomenclatureVersionSource dcterms:source <http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts> ;
+      tsn:nomenclatureVersionSource <http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts> ;
       tsn:referencePeriod _:nuts2013refperiod .
 
       _:nuts2013refperiod a time:Interval ;

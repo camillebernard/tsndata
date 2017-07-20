@@ -834,6 +834,8 @@
 
 <http://purl.org/steamer/nuts/change/1999_2003#IT120_identifierChange>
   a tsnchange:IdentifierChange ;
+  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_1999/level_3#IT120> ;
+  tsnchange:unitVersionAfter <http://purl.org/steamer/nuts/version_2003/level_3#ITC20> ;
   tsnchange:lowerChange <http://purl.org/steamer/nuts/change/1999_2003#897_IT120_disappearance> ;
   tsnchange:lowerChange <http://purl.org/steamer/nuts/change/1999_2003#897_ITC20_appearance> .
 
@@ -2416,30 +2418,63 @@
   tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_level2_structureChange> ;
   tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_level3_reallocation>  .
 
-# IT LEVEL1 REALLOCATION 2010 #################
+############################## IT LEVEL1 REALLOCATION 2010 #################
 <http://purl.org/steamer/nuts/change/2006_2010#1011_level1_reallocation>
   a tsnchange:Reallocation ;
-  tsnchange:levelVersionBefore <http://purl.org/steamer/nuts/version_2006/level1> ;
-  tsnchange:levelVersionAfter <http://purl.org/steamer/nuts/version_2010/level1> ;
-  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level1#ITD> ;
-  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2010/level1#ITE> ;
-  tsnchange:unitVersionAfter <http://purl.org/steamer/nuts/version_2010/level1#ITH> ;
-  tsnchange:unitVersionAfter <http://purl.org/steamer/nuts/version_2010/level1#ITI> ;
-  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD_disappearance> ;
-  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE_disappearance> ;
+  tsnchange:levelVersionBefore <http://purl.org/steamer/nuts/version_2006/level_1> ;
+  tsnchange:levelVersionAfter <http://purl.org/steamer/nuts/version_2010/level_1> ;
+  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_1#ITD> ;
+  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2010/level_1#ITE> ;
+  tsnchange:unitVersionAfter <http://purl.org/steamer/nuts/version_2010/level_1#ITH> ;
+  tsnchange:unitVersionAfter <http://purl.org/steamer/nuts/version_2010/level_1#ITI> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD_unitChange> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE_unitChange> ;
   tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITH_appearance> ; #doit aparaitre ici et pas au niveau de ITD, car parfois il y aura des cas de reallocation, où l'on ne pourra pas bien dire d'où provient l'UT.
   tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITI_appearance> .
+
+#-------------- ITD reallocation - Disappearance
+<http://purl.org/steamer/nuts/change/2006_2010#1011_ITD_unitChange>
+  a tsnchange:UnitChange ;
+  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_1#ITD> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD_identifierChange> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD_geometryChange> .
+
+<http://purl.org/steamer/nuts/change/2006_2010#1011_ITD_geometryChange>
+  a tsnchange:GeometryChange ;
+  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_1#ITD> .
+  # ici préciser le pourcentage de changement de surface ? mais par rapport à quelle TU, si pas le même code, difficile de faire ce lien ...
+
+<http://purl.org/steamer/nuts/change/2006_2010#1011_ITD_identifierChange>
+  a tsnchange:IdentifierChange ;
+  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_1#ITD> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD_disappearance> .
 
 <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD_disappearance>
   a tsnchange:Disappearance ;
   tsnchange:unitVersionBefore  <http://purl.org/steamer/nuts/version_2006/level_1#ITD> .
-  #tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD_contraction> ;
-  #tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD_codeChange> .
+
+#-------------- ITE reallocation - Disappearance
+<http://purl.org/steamer/nuts/change/2006_2010#1011_ITE_unitChange>
+  a tsnchange:UnitChange ;
+  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_1#ITE> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE_identifierChange> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE_geometryChange> .
+
+<http://purl.org/steamer/nuts/change/2006_2010#1011_ITE_geometryChange>
+  a tsnchange:GeometryChange ;
+  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_1#ITE> .
+  # ici préciser le pourcentage de changement de surface ? mais par rapport à quelle TU, si pas le même code, difficile de faire ce lien ...
+
+<http://purl.org/steamer/nuts/change/2006_2010#1011_ITE_identifierChange>
+  a tsnchange:IdentifierChange ;
+  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_1#ITE> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE_disappearance> .
 
 <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE_disappearance>
   a tsnchange:Disappearance ;
   tsnchange:unitVersionBefore  <http://purl.org/steamer/nuts/version_2006/level_1#ITE> .
 
+# ------------------ ITH and ITI Appearance due to reallocation
 <http://purl.org/steamer/nuts/change/2006_2010#1011_ITH_appearance>
   a tsnchange:Appearance ;
   tsnchange:unitVersionAfter  <http://purl.org/steamer/nuts/version_2010/level_1#ITH> .
@@ -2447,54 +2482,233 @@
 <http://purl.org/steamer/nuts/change/2006_2010#1011_ITI_appearance>
   a tsnchange:Appearance ;
   tsnchange:unitVersionAfter  <http://purl.org/steamer/nuts/version_2010/level_1#ITI> .
+#################### END IT LEVEL1 REALLOCATION 2010 #################
 
-# IT LEVEL2 REALLOCATION 2010 #################
+######################## IT LEVEL2 REALLOCATION 2010 #################
 <http://purl.org/steamer/nuts/change/2006_2010#1011_level2_structureChange>
   a tsnchange:StructureChange ;
-  tsnchange:levelVersionBefore <http://purl.org/steamer/nuts/version_2006/level2> ;
-  tsnchange:levelVersionAfter <http://purl.org/steamer/nuts/version_2010/level2> ;
+  tsnchange:levelVersionBefore <http://purl.org/steamer/nuts/version_2006/level_2> ;
+  tsnchange:levelVersionAfter <http://purl.org/steamer/nuts/version_2010/level_2> ;
   tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_level2_identificationRestructuration> ;
   tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_level2_reallocation> .
 
+#--------------------- ITD5 and ITE3 Reallocation ---------------------------
+<http://purl.org/steamer/nuts/change/2006_2010#1011_level2_reallocation>
+   a tsnchange:Reallocation ;
+   tsnchange:levelVersionBefore <http://purl.org/steamer/nuts/version_2006/level_2> ;
+   tsnchange:levelVersionAfter <http://purl.org/steamer/nuts/version_2010/level_2> ;
+   tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_2#ITD5> ;
+   tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2010/level_2#ITE3> ;
+   tsnchange:unitVersionAfter <http://purl.org/steamer/nuts/version_2010/level_2#ITH5> ;
+   tsnchange:unitVersionAfter <http://purl.org/steamer/nuts/version_2010/level_2#ITI3> ;
+   tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD5_unitChange> ;
+   tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE3_unitChange> ;
+   tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITH5_appearance> ;
+   tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITI3_appearance> .
+
+ #-------------- ITD5 reallocation - Disappearance
+ <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD5_unitChange>
+ a tsnchange:UnitChange ;
+ tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_2#ITD5> ;
+ tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD5_identifierChange> ;
+ tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD5_geometryChange> .
+
+ <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD5_geometryChange>
+ a tsnchange:GeometryChange ;
+ tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_2#ITD5> .
+ # ici préciser le pourcentage de changement de surface ? mais par rapport à quelle TU, si pas le même code, difficile de faire ce lien ...
+
+ <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD5_identifierChange>
+ a tsnchange:IdentifierChange ;
+ tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_2#ITD5> ;
+ tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD5_disappearance> .
+
+ <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD5_disappearance>
+ a tsnchange:Disappearance ;
+ tsnchange:unitVersionBefore  <http://purl.org/steamer/nuts/version_2006/level_2#ITD5> .
+
+ #-------------- ITE3 reallocation - Disappearance
+ <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE3_unitChange>
+ a tsnchange:UnitChange ;
+ tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_2#ITE3> ;
+ tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE3_identifierChange> ;
+ tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE3_geometryChange> .
+
+ <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE3_geometryChange>
+ a tsnchange:GeometryChange ;
+ tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_2#ITE3> .
+ # ici préciser le pourcentage de changement de surface ? mais par rapport à quelle TU, si pas le même code, difficile de faire ce lien ...
+
+ <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE3_identifierChange>
+ a tsnchange:IdentifierChange ;
+ tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_2#ITE3> ;
+ tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE3_disappearance> .
+
+ <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE3_disappearance>
+ a tsnchange:Disappearance ;
+ tsnchange:unitVersionBefore  <http://purl.org/steamer/nuts/version_2006/level_2#ITE3> .
+
+
+ # ------------------ ITH5 and ITI3 Appearance due to reallocation
+ <http://purl.org/steamer/nuts/change/2006_2010#1011_ITH5_appearance>
+ a tsnchange:Appearance ;
+ tsnchange:unitVersionAfter  <http://purl.org/steamer/nuts/version_2010/level_2#ITH5> .
+
+ <http://purl.org/steamer/nuts/change/2006_2010#1011_ITI3_appearance>
+ a tsnchange:Appearance ;
+ tsnchange:unitVersionAfter  <http://purl.org/steamer/nuts/version_2010/level_2#ITI3> .
+
+# ---------------------------- END REALLOCATION ITD5 and ITE3 ---------------------------
+
+# ---------------------------- IT LEVEL 2 IDENTIFICATION RESTRUCTURATION ---------------------------
 <http://purl.org/steamer/nuts/change/2006_2010#1011_level2_identificationRestructuration>
   a tsnchange:IdentificationRestructuration ;
-  tsnchange:levelVersionBefore <http://purl.org/steamer/nuts/version_1999/level_3> ;
-  tsnchange:levelVersionAfter <http://purl.org/steamer/nuts/version_2003/level_3> ;
-  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/1999_2003#897_IT111_identifierChange> ;
-  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/1999_2003#897_IT112_identifierChange> ;
-  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/1999_2003#897_IT113_identifierChange> ;
-  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/1999_2003#897_IT114_identifierChange> ;
-  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/1999_2003#897_IT115_identifierChange> ;
-  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/1999_2003#897_IT116_identifierChange> ;
-  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/1999_2003#897_IT117_identifierChange> ;
-  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/1999_2003#897_IT118_identifierChange> ;
-  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/1999_2003#897_IT120_identificationChange> .
+  tsnchange:levelVersionBefore <http://purl.org/steamer/nuts/version_2006/level_2> ;
+  tsnchange:levelVersionAfter <http://purl.org/steamer/nuts/version_2010/level_2> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD1_identificationChange> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD2_identificationChange> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD3_identifierChange> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD4_identifierChange> ;     tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE1_identifierChange> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE2_identifierChange> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE4_identifierChange> .
 
-#--------------------------------------- code change and name change
-<http://purl.org/steamer/nuts/change/1999_2003#897_IT120_identificationChange>
+#-------------- code change and name change ITD1 - ITH1 -----------------------
+<http://purl.org/steamer/nuts/change/2006_2010#1011_ITD1_identificationChange>
   a tsnchange:IdentificationChange ;
-  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_1999/level_3#IT120> ;
-  tsnchange:unitVersionAfter <http://purl.org/steamer/nuts/version_2003/level_3#ITC20> ;
-  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/1999_2003#IT120_identifierChange> ;
-  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/1999_2003#IT120_nameChange> .
+  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_2#ITD1> ;
+  tsnchange:unitVersionAfter <http://purl.org/steamer/nuts/version_2010/level_2#ITH1> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#ITD1_identifierChange> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#ITD1_nameChange> .
 
-<http://purl.org/steamer/nuts/change/1999_2003#IT120_nameChange>
+<http://purl.org/steamer/nuts/change/2006_2010#ITD1_nameChange>
   a tsnchange:NameChange ;
-  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_1999/level_3#IT120> ;
-  tsnchange:unitVersionAfter <http://purl.org/steamer/nuts/version_2003/level_3#ITC20> .
+  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_2#ITD1> ;
+  tsnchange:unitVersionAfter <http://purl.org/steamer/nuts/version_2010/level_2#ITH1> .
 
-<http://purl.org/steamer/nuts/change/1999_2003#IT120_identifierChange>
+<http://purl.org/steamer/nuts/change/2006_2010#ITD1_identifierChange>
   a tsnchange:IdentifierChange ;
-  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/1999_2003#897_IT120_disappearance> ;
-  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/1999_2003#897_ITC20_appearance> .
 
-  <http://purl.org/steamer/nuts/change/1999_2003#897_IT120_disappearance>
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD1_disappearance> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITH1_appearance> .
+
+  <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD1_disappearance>
     a tsnchange:Disappearance ;
-    tsnchange:unitVersionBefore  <http://purl.org/steamer/nuts/version_1999/level_3#IT120> .
+    tsnchange:unitVersionBefore  <http://purl.org/steamer/nuts/version_2006/level_2#ITD1> .
 
-  <http://purl.org/steamer/nuts/change/1999_2003#897_ITC20_appearance>
+  <http://purl.org/steamer/nuts/change/2006_2010#1011_ITH1_appearance>
     a tsnchange:Appearance ;
-    tsnchange:unitVersionAfter  <http://purl.org/steamer/nuts/version_2003/level_3#ITC20> .
-#--------------------------------------- end code change
+    tsnchange:unitVersionAfter  <http://purl.org/steamer/nuts/version_2010/level_2#ITH1> .
+#------------- END code change and name change ITD1 - ITH1 --------------------
 
-<http://purl.org/steamer/nuts/change/2006_2010#1011_level2_reallocation>
+#-------------- code change and name change ITD2 - ITH2 -----------------------
+<http://purl.org/steamer/nuts/change/2006_2010#1011_ITD2_identificationChange>
+  a tsnchange:IdentificationChange ;
+  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_2#ITD2> ;
+  tsnchange:unitVersionAfter <http://purl.org/steamer/nuts/version_2010/level_2#ITH2> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#ITD2_identifierChange> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#ITD2_nameChange> .
+
+<http://purl.org/steamer/nuts/change/2006_2010#ITD2_nameChange>
+  a tsnchange:NameChange ;
+  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_2#ITD2> ;
+  tsnchange:unitVersionAfter <http://purl.org/steamer/nuts/version_2010/level_2#ITH2> .
+
+<http://purl.org/steamer/nuts/change/2006_2010#ITD2_identifierChange>
+  a tsnchange:IdentifierChange ;
+
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD2_disappearance> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITH2_appearance> .
+
+  <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD2_disappearance>
+    a tsnchange:Disappearance ;
+    tsnchange:unitVersionBefore  <http://purl.org/steamer/nuts/version_2006/level_2#ITD2> .
+
+  <http://purl.org/steamer/nuts/change/2006_2010#1011_ITH2_appearance>
+    a tsnchange:Appearance ;
+    tsnchange:unitVersionAfter  <http://purl.org/steamer/nuts/version_2010/level_2#ITH2> .
+#------------- END code change and name change ITD2 - ITH2 -----------------------------
+
+#---------------------- CODE CHANGE ITD3 - ITH3 ----------------------------------------
+<http://purl.org/steamer/nuts/change/2006_2010#1011_ITD3_identifierChange>
+  a tsnchange:IdentifierChange ;
+  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_2#ITD3> ;
+  tsnchange:unitVersionAfter <http://purl.org/steamer/nuts/version_2010/level_2#ITH3> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD3_disappearance> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITH3_appearance> .
+
+  <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD3_disappearance>
+    a tsnchange:Disappearance ;
+    tsnchange:unitVersionBefore  <http://purl.org/steamer/nuts/version_2006/level_2#ITD3> .
+
+  <http://purl.org/steamer/nuts/change/2006_2010#1011_ITH3_appearance>
+    a tsnchange:Appearance ;
+    tsnchange:unitVersionAfter  <http://purl.org/steamer/nuts/version_2010/level_2#ITH3> .
+#---------------------------- END CODE CHANGE ITD3 - ITH3 ------------------------------
+
+#---------------------- CODE CHANGE ITD4 - ITH4 ----------------------------------------
+<http://purl.org/steamer/nuts/change/2006_2010#1011_ITD4_identifierChange>
+  a tsnchange:IdentifierChange ;
+  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_2#ITD4> ;
+  tsnchange:unitVersionAfter <http://purl.org/steamer/nuts/version_2010/level_2#ITH4> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD4_disappearance> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITH4_appearance> .
+
+  <http://purl.org/steamer/nuts/change/2006_2010#1011_ITD4_disappearance>
+    a tsnchange:Disappearance ;
+    tsnchange:unitVersionBefore  <http://purl.org/steamer/nuts/version_2006/level_2#ITD4> .
+
+  <http://purl.org/steamer/nuts/change/2006_2010#1011_ITH4_appearance>
+    a tsnchange:Appearance ;
+    tsnchange:unitVersionAfter  <http://purl.org/steamer/nuts/version_2010/level_2#ITH4> .
+#---------------------------- END CODE CHANGE ITD4 - ITH4 -------------------------------
+
+#---------------------- CODE CHANGE ITE1 - ITI1 ----------------------------------------
+<http://purl.org/steamer/nuts/change/2006_2010#1011_ITE1_identifierChange>
+  a tsnchange:IdentifierChange ;
+  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_2#ITE1> ;
+  tsnchange:unitVersionAfter <http://purl.org/steamer/nuts/version_2010/level_2#ITI1> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE1_disappearance> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITI1_appearance> .
+
+  <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE1_disappearance>
+    a tsnchange:Disappearance ;
+    tsnchange:unitVersionBefore  <http://purl.org/steamer/nuts/version_2006/level_2#ITE1> .
+
+  <http://purl.org/steamer/nuts/change/2006_2010#1011_ITI1_appearance>
+    a tsnchange:Appearance ;
+    tsnchange:unitVersionAfter  <http://purl.org/steamer/nuts/version_2010/level_2#ITI1> .
+#---------------------------- END CODE CHANGE ITE1 - ITI1 -------------------------------
+
+#---------------------- CODE CHANGE ITE2 - ITI2 ----------------------------------------
+<http://purl.org/steamer/nuts/change/2006_2010#1011_ITE2_identifierChange>
+  a tsnchange:IdentifierChange ;
+  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_2#ITE2> ;
+  tsnchange:unitVersionAfter <http://purl.org/steamer/nuts/version_2010/level_2#ITI2> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE2_disappearance> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITI2_appearance> .
+
+  <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE2_disappearance>
+    a tsnchange:Disappearance ;
+    tsnchange:unitVersionBefore  <http://purl.org/steamer/nuts/version_2006/level_2#ITE2> .
+
+  <http://purl.org/steamer/nuts/change/2006_2010#1011_ITI2_appearance>
+    a tsnchange:Appearance ;
+    tsnchange:unitVersionAfter  <http://purl.org/steamer/nuts/version_2010/level_2#ITI2> .
+#---------------------------- END CODE CHANGE ITE2 - ITI2 -------------------------------
+
+#---------------------- CODE CHANGE ITE4 - ITI4 ----------------------------------------
+<http://purl.org/steamer/nuts/change/2006_2010#1011_ITE4_identifierChange>
+  a tsnchange:IdentifierChange ;
+  tsnchange:unitVersionBefore <http://purl.org/steamer/nuts/version_2006/level_2#ITE4> ;
+  tsnchange:unitVersionAfter <http://purl.org/steamer/nuts/version_2010/level_2#ITI4> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE4_disappearance> ;
+  tsnchange:lowerChange <http://purl.org/steamer/nuts/change/2006_2010#1011_ITI4_appearance> .
+
+  <http://purl.org/steamer/nuts/change/2006_2010#1011_ITE4_disappearance>
+    a tsnchange:Disappearance ;
+    tsnchange:unitVersionBefore  <http://purl.org/steamer/nuts/version_2006/level_2#ITE4> .
+
+  <http://purl.org/steamer/nuts/change/2006_2010#1011_ITI4_appearance>
+    a tsnchange:Appearance ;
+    tsnchange:unitVersionAfter  <http://purl.org/steamer/nuts/version_2010/level_2#ITI4> .
+#---------------------------- END CODE CHANGE ITE4 - ITI4 -------------------------------

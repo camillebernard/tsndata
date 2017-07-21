@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:tsn="http://purl.org/net/tsn#"
+	xmlns:tsnchange="http://purl.org/net/tsnchange#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:map="http://purl.org/steamer/nuts"
+	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions#">
+
+<rdf:Description rdf:about="http://purl.org/steamer/nuts/version_2006/level_2#ES63">
+	<tsn:isPredecessorOf rdf:resource="http://purl.org/steamer/nuts/version_2010/level_2#ES63"/>
+	<tsn:isSuccessorOf rdf:resource="http://purl.org/steamer/nuts/version_2003/level_2#ES63"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/steamer/nuts/version_1999/level_2#ES63">
+	<tsnchange:inputUnitVersion rdf:resource="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_unitChange"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/steamer/nuts/version_2003/level_2#ES63">
+	<tsnchange:outputUnitVersion rdf:resource="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_unitChange"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_unitChange">
+	<rdf:type rdf:resource="http://purl.org/net/tsnchange#UnitChange"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/steamer/nuts/version_1999/level_2#ES63">
+	<tsn:isPredecessorOf rdf:resource="http://purl.org/steamer/nuts/version_2003/level_2#ES63"/>
+	<tsnchange:inputUnitVersion rdf:resource="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_geometryChange"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/steamer/nuts/version_2003/level_2#ES63">
+	<tsnchange:outputUnitVersion rdf:resource="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_geometryChange"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_geometryChange">
+	<rdf:type rdf:resource="http://purl.org/net/tsnchange#Contraction"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/steamer/nuts/version_1999/level_2#ES63">
+	<tsnchange:inputUnitVersion rdf:resource="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_nameChange"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/steamer/nuts/version_2003/level_2#ES63">
+	<tsnchange:outputUnitVersion rdf:resource="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_nameChange"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_nameChange">
+	<rdf:type rdf:resource="http://purl.org/net/tsnchange#NameChange"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/steamer/nuts/version_2003/level_2#ES63">
+	<tsn:isPredecessorOf rdf:resource="http://purl.org/steamer/nuts/version_2006/level_2#ES63"/>
+	<tsn:isSuccessorOf rdf:resource="http://purl.org/steamer/nuts/version_1999/level_2#ES63"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/steamer/nuts/version_2010/level_2#ES63">
+	<tsn:isSuccessorOf rdf:resource="http://purl.org/steamer/nuts/version_2006/level_2#ES63"/>
+</rdf:Description>
+
+</rdf:RDF>

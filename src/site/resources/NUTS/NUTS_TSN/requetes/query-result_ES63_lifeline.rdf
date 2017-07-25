@@ -4,61 +4,180 @@
 	xmlns:tsnchange="http://purl.org/net/tsnchange#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-	xmlns:map="http://purl.org/steamer/nuts"
+	xmlns:map="nuts"
+	xmlns:time="http://www.w3.org/2006/time#"
+	xmlns:ogc="http://www.opengis.net/ont/geosparql#"
 	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions#">
 
-<rdf:Description rdf:about="http://purl.org/steamer/nuts/version_2006/level_2#ES63">
-	<tsn:isPredecessorOf rdf:resource="http://purl.org/steamer/nuts/version_2010/level_2#ES63"/>
-	<tsn:isSuccessorOf rdf:resource="http://purl.org/steamer/nuts/version_2003/level_2#ES63"/>
+<rdf:Description rdf:about="nuts/version_2003/level_2#ES63">
+	<tsn:belongsToLevel rdf:resource="nuts/version_2003/level_2"/>
+	<tsn:referencePeriod rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2003refperiod"/>
+	<ogc:hasGeometry rdf:resource="nuts/Geometry/3515"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/steamer/nuts/version_1999/level_2#ES63">
-	<tsnchange:inputUnitVersion rdf:resource="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_unitChange"/>
+<rdf:Description rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2003refperiod">
+	<time:hasBeginning rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2003begin"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/steamer/nuts/version_2003/level_2#ES63">
-	<tsnchange:outputUnitVersion rdf:resource="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_unitChange"/>
+<rdf:Description rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2003begin">
+	<time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-07-01T00:00:00Z</time:inXSDDateTime>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_unitChange">
+<rdf:Description rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2003refperiod">
+	<time:hasEnd rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2003end"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2003end">
+	<time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-12-31T00:00:00Z</time:inXSDDateTime>
+</rdf:Description>
+
+<rdf:Description rdf:about="nuts/Geometry/3515">
+	<ogc:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">&lt;http://www.opengis.net/def/crs/EPSG/0/3035&gt; MULTIPOLYGON (((2935713.7566 1553394.7182, 2927636.0394 1552695.9137, 2925317.534 1560095.0882, 2932858.2028 1560843.9206, 2935713.7566 1553394.7182)))</ogc:asWKT>
+</rdf:Description>
+
+<rdf:Description rdf:about="nuts/version_2006/level_2#ES63">
+	<tsn:belongsToLevel rdf:resource="nuts/version_2006/level_2"/>
+	<tsn:belongsToNomenclatureVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NUTS2006</tsn:belongsToNomenclatureVersion>
+	<tsn:referencePeriod rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2006refperiod"/>
+	<ogc:hasGeometry rdf:resource="nuts/Geometry/3513"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="nuts/Geometry/3513">
+	<ogc:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">&lt;http://www.opengis.net/def/crs/EPSG/0/3035&gt; MULTIPOLYGON (((2935713.7566 1553394.7182, 2927636.0394 1552695.9137, 2925317.534 1560095.0882, 2932858.2028 1560843.9206, 2935713.7566 1553394.7182)))</ogc:asWKT>
+</rdf:Description>
+
+<rdf:Description rdf:about="nuts/version_2003/level_2#ES63">
+	<tsn:isPredecessorOf rdf:resource="nuts/version_2006/level_2#ES63"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="nuts/version_1999/level_2#ES63">
+	<tsn:belongsToLevel rdf:resource="nuts/version_1999/level_2"/>
+	<tsn:belongsToNomenclatureVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NUTS1999</tsn:belongsToNomenclatureVersion>
+	<tsn:referencePeriod rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts1999refperiod"/>
+	<ogc:hasGeometry rdf:resource="nuts/Geometry/3514"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="nuts/Geometry/3514">
+	<ogc:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">&lt;http://www.opengis.net/def/crs/EPSG/0/3035&gt; MULTIPOLYGON (((3146983.482 1457939.5962, 3139894.7914 1455745.1522, 3137734.8595 1465691.7553, 3143081.9253 1466630.2895, 3143289.6094 1466167.6982, 3145636.1675 1460940.8487, 3146983.482 1457939.5962)), ((2935713.7566 1553394.7185, 2927636.0379 1552695.9155, 2925317.5342 1560095.088, 2932858.2024 1560843.9207, 2935713.7566 1553394.7185)))</ogc:asWKT>
+</rdf:Description>
+
+<rdf:Description rdf:about="nuts/version_2003/level_2#ES63">
+	<tsn:isSuccessorOf rdf:resource="nuts/version_1999/level_2#ES63"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2006refperiod">
+	<time:hasBeginning rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2006begin"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2006begin">
+	<time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-01-01T00:00:00Z</time:inXSDDateTime>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2006refperiod">
+	<time:hasEnd rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2006end"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2006end">
+	<time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-12-31T00:00:00Z</time:inXSDDateTime>
+</rdf:Description>
+
+<rdf:Description rdf:about="nuts/version_2010/level_2#ES63">
+	<tsn:belongsToLevel rdf:resource="nuts/version_2010/level_2"/>
+	<tsn:belongsToNomenclatureVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NUTS2010</tsn:belongsToNomenclatureVersion>
+	<tsn:referencePeriod rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2010refperiod"/>
+	<ogc:hasGeometry rdf:resource="nuts/Geometry/3512"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="nuts/Geometry/3512">
+	<ogc:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">&lt;http://www.opengis.net/def/crs/EPSG/0/3035&gt; MULTIPOLYGON (((2935713.7566 1553394.7182, 2927636.0394 1552695.9137, 2925317.534 1560095.0882, 2932858.2028 1560843.9206, 2935713.7566 1553394.7182)))</ogc:asWKT>
+</rdf:Description>
+
+<rdf:Description rdf:about="nuts/version_2006/level_2#ES63">
+	<tsn:isPredecessorOf rdf:resource="nuts/version_2010/level_2#ES63"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="nuts/version_2003/level_2#ES63">
+	<tsn:belongsToNomenclatureVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NUTS2003</tsn:belongsToNomenclatureVersion>
+</rdf:Description>
+
+<rdf:Description rdf:about="nuts/version_2006/level_2#ES63">
+	<tsn:isSuccessorOf rdf:resource="nuts/version_2003/level_2#ES63"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2010refperiod">
+	<time:hasBeginning rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2010begin"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2010begin">
+	<time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-01-01T00:00:00Z</time:inXSDDateTime>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2010refperiod">
+	<time:hasEnd rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2010end"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts2010end">
+	<time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-12-31T00:00:00Z</time:inXSDDateTime>
+</rdf:Description>
+
+<rdf:Description rdf:about="nuts/version_2010/level_2#ES63">
+	<tsn:isSuccessorOf rdf:resource="nuts/version_2006/level_2#ES63"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="nuts/version_1999/level_2#ES63">
+	<tsnchange:inputUnitVersion rdf:resource="nuts/change/1999_2003#730_ES63_unitChange"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts1999refperiod">
+	<time:hasBeginning rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts1999begin"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts1999begin">
+	<time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1999-01-01T00:00:00Z</time:inXSDDateTime>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts1999refperiod">
+	<time:hasEnd rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts1999end"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-9321f4c2579245a4bf16da4304488622-nuts1999end">
+	<time:inXSDDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-06-30T00:00:00Z</time:inXSDDateTime>
+</rdf:Description>
+
+<rdf:Description rdf:about="nuts/version_2003/level_2#ES63">
+	<tsnchange:outputUnitVersion rdf:resource="nuts/change/1999_2003#730_ES63_unitChange"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="nuts/change/1999_2003#730_ES63_unitChange">
 	<rdf:type rdf:resource="http://purl.org/net/tsnchange#UnitChange"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/steamer/nuts/version_1999/level_2#ES63">
-	<tsn:isPredecessorOf rdf:resource="http://purl.org/steamer/nuts/version_2003/level_2#ES63"/>
-	<tsnchange:inputUnitVersion rdf:resource="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_geometryChange"/>
+<rdf:Description rdf:about="nuts/version_1999/level_2#ES63">
+	<tsn:isPredecessorOf rdf:resource="nuts/version_2003/level_2#ES63"/>
+	<tsnchange:inputUnitVersion rdf:resource="nuts/change/1999_2003#730_ES63_geometryChange"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/steamer/nuts/version_2003/level_2#ES63">
-	<tsnchange:outputUnitVersion rdf:resource="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_geometryChange"/>
+<rdf:Description rdf:about="nuts/version_2003/level_2#ES63">
+	<tsnchange:outputUnitVersion rdf:resource="nuts/change/1999_2003#730_ES63_geometryChange"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_geometryChange">
+<rdf:Description rdf:about="nuts/change/1999_2003#730_ES63_geometryChange">
 	<rdf:type rdf:resource="http://purl.org/net/tsnchange#Contraction"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/steamer/nuts/version_1999/level_2#ES63">
-	<tsnchange:inputUnitVersion rdf:resource="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_nameChange"/>
+<rdf:Description rdf:about="nuts/version_1999/level_2#ES63">
+	<tsnchange:inputUnitVersion rdf:resource="nuts/change/1999_2003#730_ES63_nameChange"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/steamer/nuts/version_2003/level_2#ES63">
-	<tsnchange:outputUnitVersion rdf:resource="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_nameChange"/>
+<rdf:Description rdf:about="nuts/version_2003/level_2#ES63">
+	<tsnchange:outputUnitVersion rdf:resource="nuts/change/1999_2003#730_ES63_nameChange"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_nameChange">
+<rdf:Description rdf:about="nuts/change/1999_2003#730_ES63_nameChange">
 	<rdf:type rdf:resource="http://purl.org/net/tsnchange#NameChange"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/steamer/nuts/version_2003/level_2#ES63">
-	<tsn:isPredecessorOf rdf:resource="http://purl.org/steamer/nuts/version_2006/level_2#ES63"/>
-	<tsn:isSuccessorOf rdf:resource="http://purl.org/steamer/nuts/version_1999/level_2#ES63"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://purl.org/steamer/nuts/version_2010/level_2#ES63">
-	<tsn:isSuccessorOf rdf:resource="http://purl.org/steamer/nuts/version_2006/level_2#ES63"/>
 </rdf:Description>
 
 </rdf:RDF>

@@ -40,15 +40,16 @@ map:nuts
         rr:objectMap [
             rr:datatype xsd:string;
             rr:column "`unit_name`";
+            rr:language "`language_code`" ;
         ];
     ];
-    #rr:predicateObjectMap [
-        #rr:predicate <http://dbpedia.org/ontology/languageCode>;
-        #rr:objectMap [
-            #rr:datatype xsd:string;
-            #rr:column "`language_code`";
-        #];
-    #];
+    rr:predicateObjectMap [
+        rr:predicate <http://dbpedia.org/ontology/languageCode>;
+        rr:objectMap [
+            rr:datatype xsd:string;
+            rr:column "`language_code`";
+        ];
+    ];
 
     rr:predicateObjectMap [
         rr:predicate ogc:hasGeometry;

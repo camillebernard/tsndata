@@ -24,7 +24,7 @@ map:nuts
         rr:predicate tsn:hasSuperUnit;
         rr:objectMap [
         rr:termType rr:IRI;
-        rr:template " http://purl.org/steamer/nuts#version{`version`}_level{`level_up`}_{`code_up`}";
+        rr:template "http://purl.org/steamer/nuts#version{`version`}_level{`level_up`}_{`code_up`}";
         ];
     ];
 
@@ -40,14 +40,14 @@ map:nuts
         rr:objectMap [
             rr:datatype xsd:string;
             rr:column "`unit_name`";
-            rr:language "`language_code`" ;
+            rr:language `language_c` ;
         ];
     ];
     rr:predicateObjectMap [
         rr:predicate <http://dbpedia.org/ontology/languageCode>;
         rr:objectMap [
             rr:datatype xsd:string;
-            rr:column "`language_code`";
+            rr:column "`language_c`";
         ];
     ];
 

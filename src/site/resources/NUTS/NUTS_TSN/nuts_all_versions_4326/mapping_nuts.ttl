@@ -38,9 +38,7 @@ map:nuts
     rr:predicateObjectMap [
         rr:predicate tsn:hasName;
         rr:objectMap [
-            rr:datatype xsd:string;
             rr:column "`unit_name`";
-            rr:language `language_c` ;
         ];
     ];
     rr:predicateObjectMap [

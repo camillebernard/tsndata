@@ -19,9 +19,9 @@
 
 ################################################################# Change_bridge
 <http://purl.org/steamer/nuts#V1999>
-  tsnchange:inputNomenclatureVersion <http://purl.org/steamer/nuts#change_1999-2003_730_ES_structureChange> .
+  tsnchange:inputNomenclatureVersion <http://purl.org/steamer/nuts#change_1999-2003_730_ES_split> .
 <http://purl.org/steamer/nuts#V2003>
-  tsnchange:outputNomenclatureVersion <http://purl.org/steamer/nuts#change_1999-2003_730_ES_structureChange> .
+  tsnchange:outputNomenclatureVersion <http://purl.org/steamer/nuts#change_1999-2003_730_ES_split> .
 
 <http://purl.org/steamer/nuts#V1999_L2>
   tsnchange:inputLevelVersion <http://purl.org/steamer/nuts#change_1999-2003_730_L2_extraction> .
@@ -46,7 +46,7 @@
 
 
 ################################################################# ES_63
-<http://purl.org/steamer/nuts#change_1999-2003_730_ES_structureChange>
+<http://purl.org/steamer/nuts#change_1999-2003_730_ES_split>
   a tsnchange:StructureChange, tsnchange:GeometryRestructuration, tsnchange:Split ;
   tsnchange:nomenclatureVersionBefore  <http://purl.org/steamer/nuts#V1999> ;
   tsnchange:nomenclatureVersionAfter  <http://purl.org/steamer/nuts#V2003> ;

@@ -17,7 +17,7 @@
 # NUTS CHANGE 1999 - 2003
 #################################################################
 
-################################################################# Change_bridge
+################################################################# Change_bridge ES63 1999_2003
 <http://purl.org/steamer/nuts#V1999>
   tsnchange:inputNomenclatureVersion <http://purl.org/steamer/nuts#change_1999-2003_730_ES_structureChange> .
 <http://purl.org/steamer/nuts#V2003>
@@ -44,6 +44,48 @@
     tsnchange:outputUnitVersion
         <http://purl.org/steamer/nuts#change_1999-2003_730_ES64_appearance>  .
 
+################################################################# Change_bridge IT 1999_2003
+<http://purl.org/steamer/nuts#V1999>
+  tsnchange:inputNomenclatureVersion <http://purl.org/steamer/nuts#change_1999-2003_897_IT_structureChange> .
+<http://purl.org/steamer/nuts#V2003>
+  tsnchange:outputNomenclatureVersion <http://purl.org/steamer/nuts#change_1999-2003_897_IT_structureChange> .
+
+<http://purl.org/steamer/nuts#V1999_L1>
+  tsnchange:inputLevelVersion <http://purl.org/steamer/nuts#change_1999-2003_897_L1_structureChange> .
+<http://purl.org/steamer/nuts#V2003_L1>
+  tsnchange:outputLevelVersion <http://purl.org/steamer/nuts#change_1999-2003_897_L1_structureChange> .
+
+<http://purl.org/steamer/nuts#V1999_L2>
+  tsnchange:inputLevelVersion <http://purl.org/steamer/nuts#change_1999-2003_897_L2_structureChange> .
+<http://purl.org/steamer/nuts#V2003_L2>
+  tsnchange:outputLevelVersion <http://purl.org/steamer/nuts#change_1999-2003_897_L2_structureChange> .
+
+<http://purl.org/steamer/nuts#V1999_L3>
+  tsnchange:inputLevelVersion <http://purl.org/steamer/nuts#change_1999-2003_897_L3_identificationRestructuration> .
+<http://purl.org/steamer/nuts#V2003_L3>
+  tsnchange:outputLevelVersion <http://purl.org/steamer/nuts#change_1999-2003_897_L3_identificationRestructuration> .
+
+
+################################################################# Change_bridge IT 2006_2010
+<http://purl.org/steamer/nuts#V2006>
+  tsnchange:inputNomenclatureVersion <http://purl.org/steamer/nuts#change_2006-2010_1011_IT_redistribution> .
+<http://purl.org/steamer/nuts#V2010>
+  tsnchange:outputNomenclatureVersion <http://purl.org/steamer/nuts#change_2006-2010_1011_IT_redistribution> .
+
+<http://purl.org/steamer/nuts#V2006_L1>
+  tsnchange:inputLevelVersion <http://purl.org/steamer/nuts#change_2006-2010_1011_L1_reallocation>.
+<http://purl.org/steamer/nuts#V2010_L1>
+  tsnchange:outputLevelVersion <http://purl.org/steamer/nuts#change_2006-2010_1011_L1_reallocation> .
+
+<http://purl.org/steamer/nuts#V2006_L2>
+  tsnchange:inputLevelVersion <http://purl.org/steamer/nuts#change_2006-2010_1011_L2_structureChange>.
+<http://purl.org/steamer/nuts#V2010_L2> 
+	tsnchange:outputLevelVersion <http://purl.org/steamer/nuts#change_2006-2010_1011_L2_structureChange> .
+
+<http://purl.org/steamer/nuts#V2006_L3>
+  tsnchange:inputLevelVersion <http://purl.org/steamer/nuts#change_2006-2010_1011_L3_structureChange>.
+<http://purl.org/steamer/nuts#V2010_L3> 
+	tsnchange:outputLevelVersion <http://purl.org/steamer/nuts#change_2006-2010_1011_L3_structureChange>  .
 
 ################################################################# ES_63
 <http://purl.org/steamer/nuts#change_1999-2003_730_ES_structureChange>

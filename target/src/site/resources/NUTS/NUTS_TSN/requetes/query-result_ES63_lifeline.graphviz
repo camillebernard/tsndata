@@ -1,0 +1,113 @@
+digraph {
+  charset="utf-8";
+  graph [	fontname = "Helvetica-Oblique",
+ 		fontsize = 36,
+ 		label = "\n\n\n\nObject Oriented Graphs\nStephen North, 3/19/93",
+ 		size = "12,12" ];
+ 	node [	shape = polygon,
+ 		sides = 4,
+ 		distortion = "0.0",
+ 		orientation = "0.0",
+ 		skew = "0.0",
+ 		color = white,
+ 		style = filled,
+ 		fontname = "Helvetica-Outline" ];
+  // Edges
+  "Rhttp://purl.org/steamer/nuts/version_2003/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/version_2003/level_2" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_2003/level_2#ES63" -> "B_:genid1" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_2003/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/Geometry/3515" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_2003/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/version_2006/level_2#ES63" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_2003/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/version_1999/level_2#ES63" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_2003/level_2#ES63" -> LNUTS2003 [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_2003/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/change/1999_2003#730_ES63_unitChange" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_2003/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/change/1999_2003#730_ES63_geometryChange" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_2003/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/change/1999_2003#730_ES63_nameChange" [label=""];
+  "B_:genid1" -> "B_:genid2" [label=""];
+  "B_:genid1" -> "B_:genid3" [label=""];
+  "B_:genid2" -> "L2003-07-01T00:00:00Z" [label=""];
+  "B_:genid3" -> "L2007-12-31T00:00:00Z" [label=""];
+  "Rhttp://purl.org/steamer/nuts/Geometry/3515" -> "L<http://www.opengis.net/def/crs/EPSG/0/3035> MULTIPOLYGON (((2935713.7566 1553394.7182, 2927636.0394 1552695.9137, 2925317.534 1560095.0882, 2932858.2028 1560843.9206, 2935713.7566 1553394.7182)))" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_2006/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/version_2006/level_2" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_2006/level_2#ES63" -> LNUTS2006 [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_2006/level_2#ES63" -> "B_:genid4" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_2006/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/Geometry/3513" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_2006/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/version_2010/level_2#ES63" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_2006/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/version_2003/level_2#ES63" [label=""];
+  "Rhttp://purl.org/steamer/nuts/Geometry/3513" -> "L<http://www.opengis.net/def/crs/EPSG/0/3035> MULTIPOLYGON (((2935713.7566 1553394.7182, 2927636.0394 1552695.9137, 2925317.534 1560095.0882, 2932858.2028 1560843.9206, 2935713.7566 1553394.7182)))" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_1999/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/version_1999/level_2" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_1999/level_2#ES63" -> LNUTS1999 [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_1999/level_2#ES63" -> "B_:genid5" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_1999/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/Geometry/3514" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_1999/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/change/1999_2003#730_ES63_unitChange" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_1999/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/change/1999_2003#730_ES63_geometryChange" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_1999/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/change/1999_2003#730_ES63_nameChange" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_1999/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/version_2003/level_2#ES63" [label=""];
+  "Rhttp://purl.org/steamer/nuts/Geometry/3514" -> "L<http://www.opengis.net/def/crs/EPSG/0/3035> MULTIPOLYGON (((3146983.482 1457939.5962, 3139894.7914 1455745.1522, 3137734.8595 1465691.7553, 3143081.9253 1466630.2895, 3143289.6094 1466167.6982, 3145636.1675 1460940.8487, 3146983.482 1457939.5962)), ((2935713.7566 1553394.7185, 2927636.0379 1552695.9155, 2925317.5342 1560095.088, 2932858.2024 1560843.9207, 2935713.7566 1553394.7185)))" [label=""];
+  "B_:genid4" -> "B_:genid6" [label=""];
+  "B_:genid4" -> "B_:genid7" [label=""];
+  "B_:genid6" -> "L2008-01-01T00:00:00Z" [label=""];
+  "B_:genid7" -> "L2011-12-31T00:00:00Z" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_2010/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/version_2010/level_2" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_2010/level_2#ES63" -> LNUTS2010 [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_2010/level_2#ES63" -> "B_:genid8" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_2010/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/Geometry/3512" [label=""];
+  "Rhttp://purl.org/steamer/nuts/version_2010/level_2#ES63" -> "Rhttp://purl.org/steamer/nuts/version_2006/level_2#ES63" [label=""];
+  "Rhttp://purl.org/steamer/nuts/Geometry/3512" -> "L<http://www.opengis.net/def/crs/EPSG/0/3035> MULTIPOLYGON (((2935713.7566 1553394.7182, 2927636.0394 1552695.9137, 2925317.534 1560095.0882, 2932858.2028 1560843.9206, 2935713.7566 1553394.7182)))" [label=""];
+  "B_:genid8" -> "B_:genid9" [label=""];
+  "B_:genid8" -> "B_:genid10" [label=""];
+  "B_:genid9" -> "L2012-01-01T00:00:00Z" [label=""];
+  "B_:genid10" -> "L2014-12-31T00:00:00Z" [label=""];
+  "B_:genid5" -> "B_:genid11" [label=""];
+  "B_:genid5" -> "B_:genid12" [label=""];
+  "B_:genid11" -> "L1999-01-01T00:00:00Z" [label=""];
+  "B_:genid12" -> "L2003-06-30T00:00:00Z" [label=""];
+  "Rhttp://purl.org/steamer/nuts/change/1999_2003#730_ES63_unitChange" -> "Rhttp://purl.org/net/tsnchange#UnitChange" [label="rdf:type"];
+  "Rhttp://purl.org/steamer/nuts/change/1999_2003#730_ES63_geometryChange" -> "Rhttp://purl.org/net/tsnchange#Contraction" [label="rdf:type"];
+  "Rhttp://purl.org/steamer/nuts/change/1999_2003#730_ES63_nameChange" -> "Rhttp://purl.org/net/tsnchange#NameChange" [label="rdf:type"];
+
+  // Nodes
+  "B_:genid1" [label="",shape=circle,color=green];
+  "B_:genid10" [label="",shape=circle,color=green];
+  "B_:genid11" [label="",shape=circle,color=green];
+  "B_:genid12" [label="",shape=circle,color=green];
+  "B_:genid2" [label="",shape=circle,color=green];
+  "B_:genid3" [label="",shape=circle,color=green];
+  "B_:genid4" [label="",shape=circle,color=green];
+  "B_:genid5" [label="",shape=circle,color=green];
+  "B_:genid6" [label="",shape=circle,color=green];
+  "B_:genid7" [label="",shape=circle,color=green];
+  "B_:genid8" [label="",shape=circle,color=green];
+  "B_:genid9" [label="",shape=circle,color=green];
+  "L1999-01-01T00:00:00Z" [label="1999-01-01T00:00:00Z",shape=record];
+  "L2003-06-30T00:00:00Z" [label="2003-06-30T00:00:00Z",shape=record];
+  "L2003-07-01T00:00:00Z" [label="2003-07-01T00:00:00Z",shape=record];
+  "L2007-12-31T00:00:00Z" [label="2007-12-31T00:00:00Z",shape=record];
+  "L2008-01-01T00:00:00Z" [label="2008-01-01T00:00:00Z",shape=record];
+  "L2011-12-31T00:00:00Z" [label="2011-12-31T00:00:00Z",shape=record];
+  "L2012-01-01T00:00:00Z" [label="2012-01-01T00:00:00Z",shape=record];
+  "L2014-12-31T00:00:00Z" [label="2014-12-31T00:00:00Z",shape=record];
+  "L<http://www.opengis.net/def/crs/EPSG/0/3035> MULTIPOLYGON (((2935713.7566 1553394.7182, 2927636.0394 1552695.9137, 2925317.534 1560095.0882, 2932858.2028 1560843.9206, 2935713.7566 1553394.7182)))" [label="<http://www.opengis.net/def/crs/EPSG/0/3035> MULTIPOLYGON (((2935713.7566 1553394.7182, 2927636.0394 1552695.9137, 2925317.534 1560095.0882, 2932858.2028 1560843.9206, 2935713.7566 1553394.7182)))",shape=record];
+  "L<http://www.opengis.net/def/crs/EPSG/0/3035> MULTIPOLYGON (((3146983.482 1457939.5962, 3139894.7914 1455745.1522, 3137734.8595 1465691.7553, 3143081.9253 1466630.2895, 3143289.6094 1466167.6982, 3145636.1675 1460940.8487, 3146983.482 1457939.5962)), ((2935713.7566 1553394.7185, 2927636.0379 1552695.9155, 2925317.5342 1560095.088, 2932858.2024 1560843.9207, 2935713.7566 1553394.7185)))" [label="<http://www.opengis.net/def/crs/EPSG/0/3035> MULTIPOLYGON (((3146983.482 1457939.5962, 3139894.7914 1455745.1522, 3137734.8595 1465691.7553, 3143081.9253 1466630.2895, 3143289.6094 1466167.6982, 3145636.1675 1460940.8487, 3146983.482 1457939.5962)), ((2935713.7566 1553394.7185, 2927636.0379 1552695.9155, 2925317.5342 1560095.088, 2932858.2024 1560843.9207, 2935713.7566 1553394.7185)))",shape=record];
+  LNUTS1999 [label=NUTS1999,shape=record];
+  LNUTS2003 [label=NUTS2003,shape=record];
+  LNUTS2006 [label=NUTS2006,shape=record];
+  LNUTS2010 [label=NUTS2010,shape=record];
+  "Rhttp://purl.org/net/tsnchange#Contraction" [URL="http://purl.org/net/tsnchange#Contraction",label="http://purl.org/net/tsnchange#Contraction",shape=ellipse,color=blue];
+  "Rhttp://purl.org/net/tsnchange#NameChange" [URL="http://purl.org/net/tsnchange#NameChange",label="http://purl.org/net/tsnchange#NameChange",shape=ellipse,color=blue];
+  "Rhttp://purl.org/net/tsnchange#UnitChange" [URL="http://purl.org/net/tsnchange#UnitChange",label="http://purl.org/net/tsnchange#UnitChange",shape=ellipse,color=blue];
+  "Rhttp://purl.org/steamer/nuts/Geometry/3512" [URL="http://purl.org/steamer/nuts/Geometry/3512",label="http://purl.org/steamer/nuts/Geometry/3512",shape=ellipse,color=blue];
+  "Rhttp://purl.org/steamer/nuts/Geometry/3513" [URL="http://purl.org/steamer/nuts/Geometry/3513",label="http://purl.org/steamer/nuts/Geometry/3513",shape=ellipse,color=blue];
+  "Rhttp://purl.org/steamer/nuts/Geometry/3514" [URL="http://purl.org/steamer/nuts/Geometry/3514",label="http://purl.org/steamer/nuts/Geometry/3514",shape=ellipse,color=blue];
+  "Rhttp://purl.org/steamer/nuts/Geometry/3515" [URL="http://purl.org/steamer/nuts/Geometry/3515",label="http://purl.org/steamer/nuts/Geometry/3515",shape=ellipse,color=blue];
+  "Rhttp://purl.org/steamer/nuts/change/1999_2003#730_ES63_geometryChange" [URL="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_geometryChange",label="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_geometryChange",shape=ellipse,color=blue];
+  "Rhttp://purl.org/steamer/nuts/change/1999_2003#730_ES63_nameChange" [URL="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_nameChange",label="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_nameChange",shape=ellipse,color=blue];
+  "Rhttp://purl.org/steamer/nuts/change/1999_2003#730_ES63_unitChange" [URL="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_unitChange",label="http://purl.org/steamer/nuts/change/1999_2003#730_ES63_unitChange",shape=ellipse,color=blue];
+  "Rhttp://purl.org/steamer/nuts/version_1999/level_2" [URL="http://purl.org/steamer/nuts/version_1999/level_2",label="http://purl.org/steamer/nuts/version_1999/level_2",shape=ellipse,color=blue];
+  "Rhttp://purl.org/steamer/nuts/version_1999/level_2#ES63" [URL="http://purl.org/steamer/nuts/version_1999/level_2#ES63",label="http://purl.org/steamer/nuts/version_1999/level_2#ES63",shape=ellipse,color=blue];
+  "Rhttp://purl.org/steamer/nuts/version_2003/level_2" [URL="http://purl.org/steamer/nuts/version_2003/level_2",label="http://purl.org/steamer/nuts/version_2003/level_2",shape=ellipse,color=blue];
+  "Rhttp://purl.org/steamer/nuts/version_2003/level_2#ES63" [URL="http://purl.org/steamer/nuts/version_2003/level_2#ES63",label="http://purl.org/steamer/nuts/version_2003/level_2#ES63",shape=ellipse,color=blue];
+  "Rhttp://purl.org/steamer/nuts/version_2006/level_2" [URL="http://purl.org/steamer/nuts/version_2006/level_2",label="http://purl.org/steamer/nuts/version_2006/level_2",shape=ellipse,color=blue];
+  "Rhttp://purl.org/steamer/nuts/version_2006/level_2#ES63" [URL="http://purl.org/steamer/nuts/version_2006/level_2#ES63",label="http://purl.org/steamer/nuts/version_2006/level_2#ES63",shape=ellipse,color=blue];
+  "Rhttp://purl.org/steamer/nuts/version_2010/level_2" [URL="http://purl.org/steamer/nuts/version_2010/level_2",label="http://purl.org/steamer/nuts/version_2010/level_2",shape=ellipse,color=blue];
+  "Rhttp://purl.org/steamer/nuts/version_2010/level_2#ES63" [URL="http://purl.org/steamer/nuts/version_2010/level_2#ES63",label="http://purl.org/steamer/nuts/version_2010/level_2#ES63",shape=ellipse,color=blue];
+}

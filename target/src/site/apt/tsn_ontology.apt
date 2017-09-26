@@ -1,0 +1,31 @@
+ ---
+ Territorial Statistical Nomenclature Ontology
+ ---
+ camille (with bworld-myApt)
+ ---
+ 2017-07-12
+
+Territorial Statistical Nomenclature Ontology (TSN)
+
+
+* {Definition}
+
+ The TSN ontology allows describing any partition of the territory used in statistics, called <<Territorial Statistical Nomenclature (TSN)>> or 
+ 
+ used as a support to socio-economic data 
+ (statistical data that describe territory in terms of population, unemployement rate, transport access, etc.).
+
+* {Documentation}
+
+ Please consult the online documentation of the ontology {{http://purl.org/net/tsn}}. 
+ 
+* {Main concepts}
+
+** {Main concepts without versioning (i.e., time) consideration}
+
+[./images/tsn_main_concepts_outreach.png]
+
+** {Main concepts - Versioning consideration}
+ 
+[./images/tsn_main_concepts.png]
+ 

@@ -1,0 +1,48 @@
+digraph ES_63 {
+  charset="utf-8";
+
+  // Edges
+  "Rnuts/version_2003/level_2#ES63" -> "Rnuts/version_2003/level_2" [label="tsn:belongsToLevel"];
+  "Rnuts/version_2003/level_2#ES63" -> "Rnuts/version_2006/level_2#ES63" [label="tsn:isPredecessorOf"];
+  "Rnuts/version_2003/level_2#ES63" -> "Rnuts/version_1999/level_2#ES63" [label=""];
+  "Rnuts/version_2003/level_2#ES63" -> LNUTS2003 [label=""];
+  "Rnuts/version_2003/level_2#ES63" -> "Rnuts/change/1999_2003#730_ES63_unitChange" [label=""];
+  "Rnuts/version_2003/level_2#ES63" -> "Rnuts/change/1999_2003#730_ES63_geometryChange" [label=""];
+  "Rnuts/version_2003/level_2#ES63" -> "Rnuts/change/1999_2003#730_ES63_nameChange" [label=""];
+  "Rnuts/version_2006/level_2#ES63" -> "Rnuts/version_2006/level_2" [label=""];
+  "Rnuts/version_2006/level_2#ES63" -> LNUTS2006 [label=""];
+  "Rnuts/version_2006/level_2#ES63" -> "Rnuts/version_2010/level_2#ES63" [label=""];
+  "Rnuts/version_2006/level_2#ES63" -> "Rnuts/version_2003/level_2#ES63" [label=""];
+  "Rnuts/version_1999/level_2#ES63" -> "Rnuts/version_1999/level_2" [label=""];
+  "Rnuts/version_1999/level_2#ES63" -> LNUTS1999 [label=""];
+  "Rnuts/version_1999/level_2#ES63" -> "Rnuts/change/1999_2003#730_ES63_unitChange" [label=""];
+  "Rnuts/version_1999/level_2#ES63" -> "Rnuts/change/1999_2003#730_ES63_geometryChange" [label=""];
+  "Rnuts/version_1999/level_2#ES63" -> "Rnuts/change/1999_2003#730_ES63_nameChange" [label=""];
+  "Rnuts/version_1999/level_2#ES63" -> "Rnuts/version_2003/level_2#ES63" [label=""];
+  "Rnuts/version_2010/level_2#ES63" -> "Rnuts/version_2010/level_2" [label=""];
+  "Rnuts/version_2010/level_2#ES63" -> LNUTS2010 [label=""];
+  "Rnuts/version_2010/level_2#ES63" -> "Rnuts/version_2006/level_2#ES63" [label=""];
+  "Rnuts/change/1999_2003#730_ES63_unitChange" -> "Rhttp://purl.org/net/tsnchange#UnitChange" [label="rdf:type"];
+  "Rnuts/change/1999_2003#730_ES63_geometryChange" -> "Rhttp://purl.org/net/tsnchange#Contraction" [label="rdf:type"];
+  "Rnuts/change/1999_2003#730_ES63_nameChange" -> "Rhttp://purl.org/net/tsnchange#NameChange" [label="rdf:type"];
+
+  // Nodes
+  LNUTS1999 [label=NUTS1999,shape=record];
+  LNUTS2003 [label=NUTS2003,shape=record];
+  LNUTS2006 [label=NUTS2006,shape=record];
+  LNUTS2010 [label=NUTS2010,shape=record];
+  "Rhttp://purl.org/net/tsnchange#Contraction" [URL="http://purl.org/net/tsnchange#Contraction",label="http://purl.org/net/tsnchange#Contraction",shape=ellipse,color=blue];
+  "Rhttp://purl.org/net/tsnchange#NameChange" [URL="http://purl.org/net/tsnchange#NameChange",label="http://purl.org/net/tsnchange#NameChange",shape=ellipse,color=blue];
+  "Rhttp://purl.org/net/tsnchange#UnitChange" [URL="http://purl.org/net/tsnchange#UnitChange",label="http://purl.org/net/tsnchange#UnitChange",shape=ellipse,color=blue];
+  "Rnuts/change/1999_2003#730_ES63_geometryChange" [URL="nuts/change/1999_2003#730_ES63_geometryChange",label="nuts/change/1999_2003#730_ES63_geometryChange",shape=ellipse,color=blue];
+  "Rnuts/change/1999_2003#730_ES63_nameChange" [URL="nuts/change/1999_2003#730_ES63_nameChange",label="nuts/change/1999_2003#730_ES63_nameChange",shape=ellipse,color=blue];
+  "Rnuts/change/1999_2003#730_ES63_unitChange" [URL="nuts/change/1999_2003#730_ES63_unitChange",label="nuts/change/1999_2003#730_ES63_unitChange",shape=ellipse,color=blue];
+  "Rnuts/version_1999/level_2" [URL="nuts/version_1999/level_2",label="nuts/version_1999/level_2",shape=ellipse,color=blue];
+  "Rnuts/version_1999/level_2#ES63" [URL="nuts/version_1999/level_2#ES63",label="nuts/version_1999/level_2#ES63",shape=ellipse,color=blue];
+  "Rnuts/version_2003/level_2" [URL="nuts/version_2003/level_2",label="nuts/version_2003/level_2",shape=ellipse,color=blue];
+  "Rnuts/version_2003/level_2#ES63" [URL="nuts/version_2003/level_2#ES63",label="nuts/version_2003/level_2#ES63",shape=ellipse,color=blue];
+  "Rnuts/version_2006/level_2" [URL="nuts/version_2006/level_2",label="nuts/version_2006/level_2",shape=ellipse,color=blue];
+  "Rnuts/version_2006/level_2#ES63" [URL="nuts/version_2006/level_2#ES63",label="nuts/version_2006/level_2#ES63",shape=ellipse,color=blue];
+  "Rnuts/version_2010/level_2" [URL="nuts/version_2010/level_2",label="nuts/version_2010/level_2",shape=ellipse,color=blue];
+  "Rnuts/version_2010/level_2#ES63" [URL="nuts/version_2010/level_2#ES63",label="nuts/version_2010/level_2#ES63",shape=ellipse,color=blue];
+}

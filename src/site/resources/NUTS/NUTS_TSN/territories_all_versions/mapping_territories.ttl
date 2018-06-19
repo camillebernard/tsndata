@@ -1,5 +1,5 @@
 @prefix geof: <http://www.opengis.net/def/function/geosparql/>.
-@prefix map: <http://purl.org/steamer/territory> .
+@prefix map: <http://purl.org/steamer/nuts/> .
 @prefix ogc: <http://www.opengis.net/ont/geosparql#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -12,7 +12,7 @@
 
 map:territories_all_versions_geometry
     rr:logicalTable [ rr:tableName "`territories_all_versions`"; ];
-    rr:subjectMap [ rr:class ogc:Geometry; rr:template "http://purl.org/steamer/territory/Geometry/{`gid`}"; ];
+    rr:subjectMap [ rr:class ogc:Geometry; rr:template "http://purl.org/steamer/nuts/territory/Geometry/{`gid`}"; ];
 
     rr:predicateObjectMap [
         rr:predicate ogc:is3D;
@@ -73,7 +73,7 @@ map:territories_all_versions_geometry
     .
 map:territories_all_versions
     rr:logicalTable [ rr:tableName "`territories_all_versions`"; ];
-    rr:subjectMap [ rr:class vocab:territories_all_versions; rr:template "http://purl.org/steamer/territory/{`id`}/{`id`}/{`version`}/{`gid`}"; ];
+    rr:subjectMap [ rr:class vocab:territories_all_versions; rr:template "http://purl.org/steamer/nuts/V{`version`}_Territory_{`id`}/gid/{`gid`}"; ];
     rr:predicateObjectMap [
         rr:predicate vocab:has_version;
         rr:objectMap [
@@ -85,7 +85,7 @@ map:territories_all_versions
         rr:predicate ogc:hasGeometry;
         rr:objectMap [
             rr:termType rr:IRI;
-            rr:template "http://purl.org/steamer/territory/Geometry/{`gid`}";
+            rr:template "http://purl.org/steamer/nuts/territory/Geometry/{`gid`}";
         ];
     ];
     rr:predicateObjectMap [

@@ -1,6 +1,6 @@
 @prefix geof: <http://www.opengis.net/def/function/geosparql/> .
-@prefix map: <http://purl.org/steamer/nuts#> .
-@prefix ogc: <http://www.opengis.net/ont/geosparql#> .
+@prefix map: <http://purl.org/steamer/nuts/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
@@ -10,21 +10,23 @@
 @prefix tsn: <http://purl.org/net/tsn#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+#<http://purl.org/steamer/nuts/V2010_L1_ITI>
+
 map:nuts
-    rr:logicalTable [ rr:tableName "`nuts_all_versions_4326`"; ]; #<http://purl.org/steamer/nuts#version2010_level1_ITI>
-    rr:subjectMap [ rr:class tsn:UnitVersion; rr:template "http://purl.org/steamer/nuts#version{`version`}_level{`level`}_{`unit_code`}/gid/{`gid`}"; ];
+    rr:logicalTable [ rr:tableName "`nuts_all_versions_4326`"; ]; 
+    rr:subjectMap [ rr:class tsn:UnitVersion; rr:template "http://purl.org/steamer/nuts/V{`version`}_L{`level`}_{`unit_code`}/gid/{`gid`}"; ];
     rr:predicateObjectMap [
-        rr:predicate tsn:belongsToLevel;
+        rr:predicate tsn:isMemberOf;
         rr:objectMap [
           rr:termType rr:IRI;
-          rr:template "http://purl.org/steamer/nuts#version{`version`}_level{`level`}";
+          rr:template "http://purl.org/steamer/nuts/V{`version`}_L{`level`}";
         ];
     ];
     rr:predicateObjectMap [
-        rr:predicate tsn:hasSuperUnit;
+        rr:predicate tsn:hasSuperFeature;
         rr:objectMap [
         rr:termType rr:IRI;
-        rr:template "http://purl.org/steamer/nuts#version{`version`}_level{`level_up`}_{`code_up`}";
+        rr:template "http://purl.org/steamer/nuts/V{`version`}_L{`level_up`}_{`code_up`}";
         ];
     ];
 
@@ -50,29 +52,29 @@ map:nuts
     ];
 
     rr:predicateObjectMap [
-        rr:predicate ogc:hasGeometry;
+        rr:predicate geo:hasGeometry;
         rr:objectMap [
             rr:termType rr:IRI;
-            rr:template "http://purl.org/steamer/nuts#Geometry_{`gid`}";
+            rr:template "http://purl.org/steamer/nuts/Geometry_{`gid`}";
         ];
     ];
     rr:predicateObjectMap [
         rr:predicate tsn:isVersionOf;
         rr:objectMap [
           rr:termType rr:IRI;
-          rr:template "http://purl.org/steamer/nuts#level{`level`}_{`unit_code`}";
+          rr:template "http://purl.org/steamer/nuts/L{`level`}_{`unit_code`}";
         ];
     ];
     .
 
 map:nuts_geometry
     rr:logicalTable [ rr:tableName "`nuts_all_versions_4326`"; ];
-    rr:subjectMap [ rr:class ogc:Geometry; rr:template "http://purl.org/steamer/nuts#Geometry_{`gid`}"; ];
+    rr:subjectMap [ rr:class geo:Geometry; rr:template "http://purl.org/steamer/nuts/Geometry_{`gid`}"; ];
 
     rr:predicateObjectMap [
-        rr:predicate ogc:asWKT;
+        rr:predicate geo:asWKT;
         rr:objectMap [
-            rr:datatype ogc:wktLiteral;
+            rr:datatype geo:wktLiteral;
             rrx:function rrxf:asWKT;
             rrx:argumentMap
             (
@@ -81,7 +83,7 @@ map:nuts_geometry
         ];
     ];
     rr:predicateObjectMap [
-        rr:predicate ogc:spatialDimension;
+        rr:predicate geo:spatialDimension;
         rr:objectMap [
             rr:datatype xsd:integer;
             rrx:function rrxf:spatialDimension;
@@ -92,7 +94,7 @@ map:nuts_geometry
         ];
     ];
     rr:predicateObjectMap [
-        rr:predicate ogc:isEmpty;
+        rr:predicate geo:isEmpty;
         rr:objectMap [
             rr:datatype xsd:boolean;
             rrx:function rrxf:isEmpty;
@@ -103,7 +105,7 @@ map:nuts_geometry
         ];
     ];
     rr:predicateObjectMap [
-        rr:predicate ogc:is3D;
+        rr:predicate geo:is3D;
         rr:objectMap [
             rr:datatype xsd:boolean;
             rrx:function rrxf:is3D;
@@ -114,7 +116,7 @@ map:nuts_geometry
         ];
     ];
     rr:predicateObjectMap [
-        rr:predicate ogc:isSimple;
+        rr:predicate geo:isSimple;
         rr:objectMap [
             rr:datatype xsd:boolean;
             rrx:function rrxf:isSimple;

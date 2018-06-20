@@ -10,6 +10,7 @@
 @prefix tsn:     <http://purl.org/net/tsn#> .
 @prefix time:    <http://www.w3.org/2006/time#> .
 @prefix rrxf:    <http://www.w3.org/ns/r2rml-ext/functions/def/> .
+@prefix map:     <http://purl.org/steamer/nuts/> .
 
 #################################################################
 # TSN NUTS
@@ -41,6 +42,7 @@
       tsn:covers <http://purl.org/steamer/nuts/V1999_Territory_EU> ; 
       tsn:covers <http://purl.org/steamer/nuts/V1999_Territory_EFTA> ; 
       tsn:covers <http://purl.org/steamer/nuts/V1999_Territory_CC> ; 
+      tsn:hasDivision <http://purl.org/steamer/nuts/V1999_L_Territory> ;
       tsn:hasDivision <http://purl.org/steamer/nuts/V1999_L0> ;
       tsn:hasDivision <http://purl.org/steamer/nuts/V1999_L1> ;
       tsn:hasDivision <http://purl.org/steamer/nuts/V1999_L2> ;
@@ -70,6 +72,7 @@
       tsn:covers <http://purl.org/steamer/nuts/V2003_Territory_EU> ; 
       tsn:covers <http://purl.org/steamer/nuts/V2003_Territory_EFTA> ; 
       tsn:covers <http://purl.org/steamer/nuts/V2003_Territory_CC> ; 
+      tsn:hasDivision <http://purl.org/steamer/nuts/V2003_L_Territory> ;
       tsn:hasDivision <http://purl.org/steamer/nuts/V2003_L0> ;
       tsn:hasDivision <http://purl.org/steamer/nuts/V2003_L1> ;
       tsn:hasDivision <http://purl.org/steamer/nuts/V2003_L2> ;
@@ -99,6 +102,7 @@
        tsn:covers <http://purl.org/steamer/nuts/V2006_Territory_EU> ; 
       tsn:covers <http://purl.org/steamer/nuts/V2006_Territory_EFTA> ; 
       tsn:covers <http://purl.org/steamer/nuts/V2006_Territory_CC> ; 
+      tsn:hasDivision <http://purl.org/steamer/nuts/V2006_L_Territory> ;
       tsn:hasDivision <http://purl.org/steamer/nuts/V2006_L0> ;
       tsn:hasDivision <http://purl.org/steamer/nuts/V2006_L1> ;
       tsn:hasDivision <http://purl.org/steamer/nuts/V2006_L2> ;
@@ -128,6 +132,7 @@
        tsn:covers <http://purl.org/steamer/nuts/V2010_Territory_EU> ; 
       tsn:covers <http://purl.org/steamer/nuts/V2010_Territory_EFTA> ; 
       tsn:covers <http://purl.org/steamer/nuts/V2010_Territory_CC> ; 
+      tsn:hasDivision <http://purl.org/steamer/nuts/V2010_L_Territory> ;
       tsn:hasDivision <http://purl.org/steamer/nuts/V2010_L0> ;
       tsn:hasDivision <http://purl.org/steamer/nuts/V2010_L1> ;
       tsn:hasDivision <http://purl.org/steamer/nuts/V2010_L2> ;
@@ -157,6 +162,7 @@
       tsn:covers <http://purl.org/steamer/nuts/V2013_Territory_EU> ; 
       tsn:covers <http://purl.org/steamer/nuts/V2013_Territory_EFTA> ; 
       tsn:covers <http://purl.org/steamer/nuts/V2013_Territory_CC> ; 
+      tsn:hasDivision <http://purl.org/steamer/nuts/V2013_L_Territory> ;
       tsn:hasDivision <http://purl.org/steamer/nuts/V2013_L0> ;
       tsn:hasDivision <http://purl.org/steamer/nuts/V2013_L1> ;
       tsn:hasDivision <http://purl.org/steamer/nuts/V2013_L2> ;
@@ -177,6 +183,19 @@
 #################################################################
 # NUTS LEVELS
 #################################################################
+<http://purl.org/steamer/nuts/level_territory>
+    a       tsn:Level ;
+    tsn:hasIdentifier "NUTS_L_Territory"^^xsd:string ;
+    tsn:hasName "NUTS Level Territories"^^xsd:string ;
+    tsn:hasAcronym "NUTS_L_Territory"  ;
+    tsn:hasDescription "Territories Level";
+    tsn:hasVersion <http://purl.org/steamer/nuts/V1999_L_Territory> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/V2003_L_Territory> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/V2006_L_Territory> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/V2010_L_Territory> ;
+    tsn:hasVersion <http://purl.org/steamer/nuts/V2013_L_Territory> .
+
+
 <http://purl.org/steamer/nuts/level0>
     a       tsn:Level ;
     tsn:hasIdentifier "NUTS_L0"^^xsd:string ;
@@ -228,7 +247,85 @@
 #################################################################
 # NUTS LEVELS VERSIONS
 #################################################################
+################################################################# LEVEL Terrritory
+<http://purl.org/steamer/nuts/V1999_L_Territory>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "NUTS_V1999_L_Territory"^^xsd:string ;
+    tsn:hasName "NUTS version 1999 Level Territory"^^xsd:string ;
+    tsn:hasAcronym "NUTS_V1999_L_Territory"  ;
+    tsn:hasDescription "Territories in Europe.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_territory> ;
+    tsnchange:hasNextVersion <http://purl.org/steamer/nuts/V2003_L_Territory> ;
+    tsnchange:hasPreviousVersion <http://purl.org/steamer/nuts/V1995_L_Territory> ;
+    tsn:isDivisionOf <http://purl.org/steamer/nuts/V1999> ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V1999_L0>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V1999_L1>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V1999_L2>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V1999_L3> .
+
+<http://purl.org/steamer/nuts/V2003_L_Territory>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "NUTS_V2003_L_Territory"^^xsd:string ;
+    tsn:hasName "NUTS version 2003 Level Territory"^^xsd:string ;
+    tsn:hasAcronym "NUTS_V2003_L_Territory"  ;
+    tsn:hasDescription "Territories in Europe.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_territory> ;
+    tsnchange:hasNextVersion <http://purl.org/steamer/nuts/V2006_L_Territory> ;
+    tsnchange:hasPreviousVersion <http://purl.org/steamer/nuts/V1999_L_Territory> ;
+    tsn:isDivisionOf <http://purl.org/steamer/nuts/V2003> ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2003_L0>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2003_L1>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2003_L2>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2003_L3> .
+
+<http://purl.org/steamer/nuts/V2006_L_Territory>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "NUTS_V2006_L_Territory"^^xsd:string ;
+    tsn:hasName "NUTS version 2006 Level Territory"^^xsd:string ;
+    tsn:hasAcronym "NUTS_V2006_L_Territory"  ;
+    tsn:hasDescription "Territories in Europe.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_territory> ;
+    tsnchange:hasNextVersion <http://purl.org/steamer/nuts/V2010_L_Territory> ;
+    tsnchange:hasPreviousVersion <http://purl.org/steamer/nuts/V2003_L_Territory> ;
+    tsn:isDivisionOf <http://purl.org/steamer/nuts/V2006> ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2006_L0>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2006_L1>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2006_L2>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2006_L3> .
+
+<http://purl.org/steamer/nuts/V2010_L_Territory>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "NUTS_V2010_L_Territory"^^xsd:string ;
+    tsn:hasName "NUTS version 2010 Level Territory"^^xsd:string ;
+    tsn:hasAcronym "NUTS_V2010_L_Territory"  ;
+    tsn:hasDescription "Territories in Europe.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_territory> ;
+    tsnchange:hasNextVersion <http://purl.org/steamer/nuts/V2013_L_Territory> ;
+    tsnchange:hasPreviousVersion <http://purl.org/steamer/nuts/V2006_L_Territory> ;
+    tsn:isDivisionOf <http://purl.org/steamer/nuts/V2010> ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2010_L0>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2010_L1>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2010_L2>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2010_L3> .
+
+<http://purl.org/steamer/nuts/V2013_L_Territory>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "NUTS_V2013_L_Territory"^^xsd:string ;
+    tsn:hasName "NUTS version 2013 Level Territory"^^xsd:string ;
+    tsn:hasAcronym "NUTS_V2013_L_Territory"  ;
+    tsn:hasDescription "Territories in Europe.";
+    tsn:isVersionOf <http://purl.org/steamer/nuts/level_territory> ;
+    tsnchange:hasNextVersion <http://purl.org/steamer/nuts/V2016_L_Territory> ;
+    tsnchange:hasPreviousVersion <http://purl.org/steamer/nuts/V2010_L_Territory> ;
+    tsn:isDivisionOf <http://purl.org/steamer/nuts/V2013> ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2013_L0>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2013_L1>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2013_L2>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2013_L3> .
+
 ################################################################# LEVEL 0
+
+
 <http://purl.org/steamer/nuts/V1999_L0>
     a       tsn:LevelVersion ;
     tsn:hasIdentifier "NUTS_V1999_L0"^^xsd:string ;
@@ -238,14 +335,11 @@
     tsn:isVersionOf <http://purl.org/steamer/nuts/level0> ;
     tsnchange:hasNextVersion <http://purl.org/steamer/nuts/V2003_L0> ;
     tsnchange:hasPreviousVersion <http://purl.org/steamer/nuts/V1995_L0> ;
-    #tsn:hasUnit ;
     tsn:isDivisionOf <http://purl.org/steamer/nuts/V1999> ;
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V1999_L1>  ;
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V1999_L2>  ;
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V1999_L3>  ;
-    #tsn:hasSuperFeature ;
-    #tsn:referencePeriod
-    .
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V1999_L_Territory>  .
 
 <http://purl.org/steamer/nuts/V2003_L0>
     a       tsn:LevelVersion ;
@@ -260,10 +354,8 @@
     tsn:isDivisionOf <http://purl.org/steamer/nuts/V2003> ;
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V2003_L1>  ;
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V2003_L2>  ;
-    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2003_L3>  ;
-    #tsn:hasSuperFeature ;
-    #tsn:referencePeriod
-    .
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2003_L3> ;
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2003_L_Territory>  .
 
 <http://purl.org/steamer/nuts/V2006_L0>
     a       tsn:LevelVersion ;
@@ -278,10 +370,8 @@
     tsn:isDivisionOf <http://purl.org/steamer/nuts/V2006> ;
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V2006_L1>  ;
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V2006_L2>  ;
-    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2006_L3>  ;
-    #tsn:hasSuperFeature ;
-    #tsn:referencePeriod
-    .
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2006_L3> ;
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2006_L_Territory>  .
 
 <http://purl.org/steamer/nuts/V2010_L0>
     a       tsn:LevelVersion ;
@@ -296,10 +386,8 @@
     tsn:isDivisionOf <http://purl.org/steamer/nuts/V2010> ;
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V2010_L1>  ;
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V2010_L2>  ;
-    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2010_L3>  ;
-    #tsn:hasSuperFeature ;
-    #tsn:referencePeriod
-    .
+    tsn:hasSubFeature <http://purl.org/steamer/nuts/V2010_L3>;
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2010_L_Territory>  .
 
 ################################################################# LEVEL 1
 <http://purl.org/steamer/nuts/V1999_L1>
@@ -316,8 +404,7 @@
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V1999_L2>  ;
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V1999_L3>  ;
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V1999_L0> ;
-    #tsn:referencePeriod
-    .
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V1999_L_Territory>  .
 
 <http://purl.org/steamer/nuts/V2003_L1>
     a       tsn:LevelVersion ;
@@ -333,8 +420,7 @@
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V2003_L2>  ;
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V2003_L3>  ;
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2003_L0> ;
-    #tsn:referencePeriod
-    .
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2003_L_Territory>  .
 
 <http://purl.org/steamer/nuts/V2006_L1>
     a       tsn:LevelVersion ;
@@ -350,8 +436,7 @@
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V2006_L2>  ;
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V2006_L3>  ;
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2006_L0> ;
-    #tsn:referencePeriod
-    .
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2006_L_Territory>  .
 
 <http://purl.org/steamer/nuts/V2010_L1>
     a       tsn:LevelVersion ;
@@ -366,9 +451,8 @@
     tsn:isDivisionOf <http://purl.org/steamer/nuts/V2010> ;
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V2010_L2>  ;
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V2010_L3>  ;
-    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2010_L0> ;
-    #tsn:referencePeriod
-    .
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2010_L0>;
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2010_L_Territory>  .
 
 
 ################################################################# LEVEL 2
@@ -386,8 +470,7 @@
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V1999_L3>  ;
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V1999_L0> ;
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V1999_L1> ;
-    #tsn:referencePeriod
-    .
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V1999_L_Territory>  .
 
 <http://purl.org/steamer/nuts/V2003_L2>
     a       tsn:LevelVersion ;
@@ -403,8 +486,7 @@
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V2003_L3>  ;
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2003_L0> ;
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2003_L1> ;
-    #tsn:referencePeriod
-    .
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2003_L_Territory>  .
 
 <http://purl.org/steamer/nuts/V2006_L2>
     a       tsn:LevelVersion ;
@@ -420,8 +502,7 @@
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V2006_L3>  ;
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2006_L0> ;
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2006_L1> ;
-    #tsn:referencePeriod
-    .
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2006_L_Territory>  .
 
 <http://purl.org/steamer/nuts/V2010_L2>
     a       tsn:LevelVersion ;
@@ -437,8 +518,7 @@
     tsn:hasSubFeature <http://purl.org/steamer/nuts/V2010_L3>  ;
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2010_L0> ;
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2010_L1> ;
-    #tsn:referencePeriod
-    .
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2010_L_Territory>  .
 
 
 ################################################################# LEVEL 3
@@ -456,8 +536,7 @@
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V1999_L0> ;
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V1999_L1> ;
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V1999_L2>  ;
-    #tsn:referencePeriod
-    .
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V1999_L_Territory>  .
 
 <http://purl.org/steamer/nuts/V2003_L3>
     a       tsn:LevelVersion ;
@@ -472,9 +551,8 @@
     tsn:isDivisionOf <http://purl.org/steamer/nuts/V2003> ;
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2003_L0> ;
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2003_L1> ;
-    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2003_L2>  ;
-    #tsn:referencePeriod
-    .
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2003_L2> ;
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2003_L_Territory>  .
 
 <http://purl.org/steamer/nuts/V2006_L3>
     a       tsn:LevelVersion ;
@@ -489,9 +567,8 @@
     tsn:isDivisionOf <http://purl.org/steamer/nuts/V2006> ;
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2006_L0> ;
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2006_L1> ;
-    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2006_L2>  ;
-    #tsn:referencePeriod
-    .
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2006_L2>;
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2006_L_Territory>  .
 
 <http://purl.org/steamer/nuts/V2010_L3>
     a       tsn:LevelVersion ;
@@ -506,9 +583,8 @@
     tsn:isDivisionOf <http://purl.org/steamer/nuts/V2010> ;
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2010_L0> ;
     tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2010_L1> ;
-    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2010_L2>  ;
-    #tsn:referencePeriod
-    .
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2010_L2> ;
+    tsn:hasSuperFeature <http://purl.org/steamer/nuts/V2010_L_Territory>  .
 
 #################################################################
 # NUTS TERRITORY
@@ -535,7 +611,7 @@
     tsn:hasVersion <http://purl.org/steamer/nuts/V2003_Territory_EFTA>  ;
     tsn:hasVersion <http://purl.org/steamer/nuts/V2006_Territory_EFTA>  ;
     tsn:hasVersion <http://purl.org/steamer/nuts/V2010_Territory_EFTA>  ;
-    tsn:hasVersion <http://purl.org/steamer/nuts/V2013_Territory_EFTA>  . .
+    tsn:hasVersion <http://purl.org/steamer/nuts/V2013_Territory_EFTA>  . 
 
 <http://purl.org/steamer/nuts/Territory_CC>
     a       tsn:Territory ;
@@ -559,8 +635,12 @@
     tsn:hasName "European Union 15 from 1995 to 2004"^^xsd:string ;
     tsn:hasAcronym  "V1999_Territory_EU »^^xsd:string ;
     tsn:hasDescription "The European Union 15 (EU15) territory relates to the situation of the EU territory observed  from 1995 to 2004. The 1995 enlargement of the European Union saw  Austria (AT), Finland (FI) and Sweden (SE) join the European Union. EU15 was the number of member countries in the European Union prior to the accession of ten candidate countries on 1 May 2004. The EU15 comprised the following 15 countries:  Belgium (BE), Denmark (DK), France (FR), Germany (DE), Greece (EL), Ireland (IE), Italy (IT), Luxembourg (LU), Netherlands (NL), Portugal (PT), Spain (ES), United Kingdom (UK), Austria (AT), Finland (FI), Sweden (SE) (Source: https://stats.oecd.org/glossary/detail.asp?ID=6805). "^^xsd:string ;
-    tsn:isVersionOf <http://purl.org/steamer/nuts/Territory_EU> ;
-    tsn:isCoveredBy <http://purl.org/steamer/nuts/V1999> ;
+     tsn:isMemberOf map:V1999_L_Territory ;
+     tsn:isVersionOf map:Territory_EU ;
+     geo:hasGeometry map:Geometry_29 ;
+     tsn:isCoveredBy <http://purl.org/steamer/nuts/V1999> ;
+     <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
     tsn:referencePeriod _:EU1999refperiod .
 
     _:EU1999refperiod a time:Interval ;
@@ -574,25 +654,6 @@
       time:inXSDDateTime "2004-05-01T00:00:00Z"^^xsd:dateTime .
 
 
-######################
-<http://purl.org/steamer/nuts/V1999_Territory_EU>
-      a       tsn:UnitVersion ;
-      <http://dbpedia.org/ontology/languageCode>
-              "en"^^xsd:string ;
-      tsn:hasIdentifier "NUTS_V1999_EU"^^xsd:string ;
-      tsn:hasName "European Union 15" ;
-      
-      tsn:isMemberOf map:V1999_Territory ;
-      tsn:isVersionOf map:Territory_EU ;
-      geo:hasGeometry map:Geometry_29 .
-
-######################
-
-
-
-
-
-
 
 <http://purl.org/steamer/nuts/V2003_Territory_EU>
     a       tsn:TerritoryVersion ;
@@ -600,7 +661,11 @@
     tsn:hasName "European Union 25 from 2004 to 2007"^^xsd:string ;
     tsn:hasAcronym  "V2003_Territory_EU"^^xsd:string ;
     tsn:hasDescription "The European Union 25 (EU25) territory relates to the situation of the EU territory observed in 2004 (EU25, from 2004 to 2007). The 2004 enlargement of the European Union saw Cyprus (CY), Czech Republic (CZ), Estonia (EE), Hungary (HU), Latvia (LV), Lithuania (LT), Malta (MT), Poland (PL), Slovakia (SK) and Slovenia (SI)Austria (AT), Finland (FI) and Sweden (SE) join the European Union. The EU25 comprised the following 25 countries: Belgium (BE), Denmark (DK), France (FR), Germany (DE), Greece (EL), Ireland (IE), Italy (IT), Luxembourg (LU), Netherlands (NL), Portugal (PT), Spain (ES), United Kingdom (UK), Austria (AT), Finland (FI), Sweden (SE), Cyprus (CY), Czech Republic (CZ), Estonia (EE), Hungary (HU), Latvia (LV), Lithuania (LT), Malta (MT), Poland (PL), Slovakia (SK), Slovenia (SI). "^^xsd:string ;
-    tsn:isVersionOf <http://purl.org/steamer/nuts/Territory_EU> ;
+     <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+    tsn:isMemberOf map:V2003_L_Territory ;
+    tsn:isVersionOf map:Territory_EU ;
+    geo:hasGeometry map:Geometry_30 ;
     tsn:isCoveredBy <http://purl.org/steamer/nuts/V2003> ;
     tsn:referencePeriod _:EU2003refperiod .
 
@@ -614,20 +679,6 @@
     _:EU2003end a time:Instant ;
       time:inXSDDateTime "2007-01-01T00:00:00Z"^^xsd:dateTime .
 
-######################
-<http://purl.org/steamer/nuts/V2003_Territory_EU>
-      a       tsn:UnitVersion ;
-      <http://dbpedia.org/ontology/languageCode>
-              "en"^^xsd:string ;
-      tsn:hasIdentifier "NUTS_V2003_EU"^^xsd:string ;
-      tsn:hasName "European Union 25" ;
-      
-      tsn:isMemberOf map:V2003_Territory ;
-      tsn:isVersionOf map:Territory_EU ;
-      geo:hasGeometry map:Geometry_30 .
-######################
-
-
 
 
 
@@ -638,7 +689,11 @@
     tsn:hasName "European Union 27 from 2007 to 2013"^^xsd:string ;
     tsn:hasAcronym  "V2006_Territory_EU"^^xsd:string ;
     tsn:hasDescription "The European Union 27 (EU27) territory relates to the situation of the EU territory observed from 2007 to 2013. The 2007 enlargement of the European Union saw Bulgaria and Romania join the European Union. The EU27 comprised the following 27 countries: Belgium (BE), Denmark (DK), France (FR), Germany (DE), Greece (EL), Ireland (IE), Italy (IT), Luxembourg (LU), Netherlands (NL), Portugal (PT), Spain (ES), United Kingdom (UK), Austria (AT), Finland (FI), Sweden (SE), Cyprus (CY), Czech Republic (CZ), Estonia (EE), Hungary (HU), Latvia (LV), Lithuania (LT), Malta (MT), Poland (PL), Slovakia (SK), Slovenia (SI), Bulgaria (BG), Romania (RO). "^^xsd:string ;
-    tsn:isVersionOf <http://purl.org/steamer/nuts/Territory_EU> ;
+    <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V2006_L_Territory ;
+      tsn:isVersionOf map:Territory_EU ;
+      geo:hasGeometry map:Geometry_31 ;
     tsn:isCoveredBy <http://purl.org/steamer/nuts/V2006> ;
     tsn:isCoveredBy <http://purl.org/steamer/nuts/V2010> ;
     tsn:referencePeriod _:EU2006refperiod .
@@ -652,23 +707,6 @@
 
     _:EU2006end a time:Instant ;
       time:inXSDDateTime "2013-06-30T00:00:00Z"^^xsd:dateTime .
-
-
-######################
-<http://purl.org/steamer/nuts/V2006_Territory_EU>
-      a       tsn:UnitVersion ;
-      <http://dbpedia.org/ontology/languageCode>
-              "en"^^xsd:string ;
-      tsn:hasIdentifier "NUTS_V2006_EU"^^xsd:string ;
-      tsn:hasName "European Union 27" ;
-      
-      tsn:isMemberOf map:V2006_Territory ;
-      tsn:isVersionOf map:Territory_EU ;
-      geo:hasGeometry map:Geometry_31 .
-######################
-
-
-
 
 
 
@@ -679,7 +717,11 @@
     tsn:hasName "European Union 27 from 2007 to 2013"^^xsd:string ;
     tsn:hasAcronym  "V2010_Territory_EU"^^xsd:string ;
     tsn:hasDescription "The European Union 27 (EU27) territory relates to the situation of the EU territory observed from 2007 to 2013. The 2007 enlargement of the European Union saw Bulgaria and Romania join the European Union. The EU27 comprised the following 27 countries: Belgium (BE), Denmark (DK), France (FR), Germany (DE), Greece (EL), Ireland (IE), Italy (IT), Luxembourg (LU), Netherlands (NL), Portugal (PT), Spain (ES), United Kingdom (UK), Austria (AT), Finland (FI), Sweden (SE), Cyprus (CY), Czech Republic (CZ), Estonia (EE), Hungary (HU), Latvia (LV), Lithuania (LT), Malta (MT), Poland (PL), Slovakia (SK), Slovenia (SI), Bulgaria (BG), Romania (RO). "^^xsd:string ;
-    tsn:isVersionOf <http://purl.org/steamer/nuts/Territory_EU> ;
+     <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V2010_L_Territory ;
+      tsn:isVersionOf map:Territory_EU ;
+      geo:hasGeometry map:Geometry_32 ;
     tsn:isCoveredBy <http://purl.org/steamer/nuts/V2006> ;
     tsn:isCoveredBy <http://purl.org/steamer/nuts/V2010> ;
     tsn:referencePeriod _:EU2006refperiod .
@@ -693,26 +735,6 @@
 
     _:EU2006end a time:Instant ;
       time:inXSDDateTime "2013-06-30T00:00:00Z"^^xsd:dateTime .
-
-######################
-<http://purl.org/steamer/nuts/V2010_Territory_EU>
-      a       tsn:UnitVersion ;
-      <http://dbpedia.org/ontology/languageCode>
-              "en"^^xsd:string ;
-      tsn:hasIdentifier "NUTS_V2010_EU"^^xsd:string ;
-      tsn:hasName "European Union 27" ;
-      
-      tsn:isMemberOf map:V2010_Territory ;
-      tsn:isVersionOf map:Territory_EU ;
-      geo:hasGeometry map:Geometry_32 .
-######################
-
-
-
-
-
-
-
 
 
 
@@ -745,7 +767,11 @@
     tsn:hasName "European Free Trade Association from 1995 to now"^^xsd:string ;
     tsn:hasAcronym  "V1999_Territory_EFTA"^^xsd:string ;
     tsn:hasDescription "The European Free Trade Association (EFTA) is a regional trade organisation and free trade area consisting of four European states: Iceland, Liechtenstein, Norway, and Switzerland. The organisation operates in parallel with the European Union (EU), and all four member states participate in the European single market (Source: https://en.wikipedia.org/wiki/European_Free_Trade_Association). In 1995 Austria, Finland and Sweden leave EFTA to join the EU. Liechtenstein becomes a full participant in the EEA Agreement together with Iceland and Norway (Source: http://www.efta.int/about-efta/history). "^^xsd:string ;
-    tsn:isVersionOf <http://purl.org/steamer/nuts/Territory_EFTA> ;
+    <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V1999_L_Territory ;
+      tsn:isVersionOf map:Territory_EFTA ;
+      geo:hasGeometry map:Geometry_11 ;
     tsn:isCoveredBy <http://purl.org/steamer/nuts/V1999> ;
     tsn:referencePeriod _:EFTA4refperiod .
 
@@ -756,24 +782,6 @@
     _:EFTA4begin a time:Instant ;
       time:inXSDDateTime "1995-01-01T00:00:00Z"^^xsd:dateTime .
 
-######################
-<http://purl.org/steamer/nuts/V1999_Territory_EFTA>
-      a       tsn:UnitVersion ;
-      <http://dbpedia.org/ontology/languageCode>
-              "en"^^xsd:string ;
-      tsn:hasIdentifier "EFTA"^^xsd:string ;
-      tsn:hasName "European Free Trade Association" ;
-      
-      tsn:isMemberOf map:V1999_Territory ;
-      tsn:isVersionOf map:Territory_EFTA ;
-      geo:hasGeometry map:Geometry_11 .
-######################
-
-
-
-
-
-
 
 
 <http://purl.org/steamer/nuts/V2003_Territory_EFTA>
@@ -782,7 +790,11 @@
     tsn:hasName "European Free Trade Association from 1995 to now"^^xsd:string ;
     tsn:hasAcronym  "V2003_Territory_EFTA"^^xsd:string ;
     tsn:hasDescription "The European Free Trade Association (EFTA) is a regional trade organisation and free trade area consisting of four European states: Iceland, Liechtenstein, Norway, and Switzerland. The organisation operates in parallel with the European Union (EU), and all four member states participate in the European single market (Source: https://en.wikipedia.org/wiki/European_Free_Trade_Association). In 1995 Austria, Finland and Sweden leave EFTA to join the EU. Liechtenstein becomes a full participant in the EEA Agreement together with Iceland and Norway (Source: http://www.efta.int/about-efta/history). "^^xsd:string ;
-    tsn:isVersionOf <http://purl.org/steamer/nuts/Territory_EFTA> ;
+     <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V2003_L_Territory ;
+      tsn:isVersionOf map:Territory_EFTA ;
+      geo:hasGeometry map:Geometry_17 ;
     tsn:isCoveredBy <http://purl.org/steamer/nuts/V2003> ;
     tsn:referencePeriod _:EFTA4refperiod .
 
@@ -793,24 +805,6 @@
     _:EFTA4begin a time:Instant ;
       time:inXSDDateTime "1995-01-01T00:00:00Z"^^xsd:dateTime .
 
-######################
-<http://purl.org/steamer/nuts/V2003_Territory_EFTA>
-      a       tsn:UnitVersion ;
-      <http://dbpedia.org/ontology/languageCode>
-              "en"^^xsd:string ;
-      tsn:hasIdentifier "EFTA"^^xsd:string ;
-      tsn:hasName "European Free Trade Association" ;
-      
-      tsn:isMemberOf map:V2003_Territory ;
-      tsn:isVersionOf map:Territory_EFTA ;
-      geo:hasGeometry map:Geometry_17 .
-######################
-
-
-
-
-
-
 
 
 <http://purl.org/steamer/nuts/V2006_Territory_EFTA>
@@ -819,7 +813,11 @@
     tsn:hasName "European Free Trade Association from 1995 to now"^^xsd:string ;
     tsn:hasAcronym  "V2006_Territory_EFTA"^^xsd:string ;
     tsn:hasDescription "The European Free Trade Association (EFTA) is a regional trade organisation and free trade area consisting of four European states: Iceland, Liechtenstein, Norway, and Switzerland. The organisation operates in parallel with the European Union (EU), and all four member states participate in the European single market (Source: https://en.wikipedia.org/wiki/European_Free_Trade_Association). In 1995 Austria, Finland and Sweden leave EFTA to join the EU. Liechtenstein becomes a full participant in the EEA Agreement together with Iceland and Norway (Source: http://www.efta.int/about-efta/history). "^^xsd:string ;
-    tsn:isVersionOf <http://purl.org/steamer/nuts/Territory_EFTA> ;
+    <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V2006_L_Territory ;
+      tsn:isVersionOf map:Territory_EFTA ;
+      geo:hasGeometry map:Geometry_23 ;
     tsn:isCoveredBy <http://purl.org/steamer/nuts/V2006> ;
     tsn:referencePeriod _:EFTA4refperiod .
 
@@ -830,24 +828,6 @@
     _:EFTA4begin a time:Instant ;
       time:inXSDDateTime "1995-01-01T00:00:00Z"^^xsd:dateTime .
 
-######################
-<http://purl.org/steamer/nuts/V2006_Territory_EFTA>
-      a       tsn:UnitVersion ;
-      <http://dbpedia.org/ontology/languageCode>
-              "en"^^xsd:string ;
-      tsn:hasIdentifier "EFTA"^^xsd:string ;
-      tsn:hasName "European Free Trade Association" ;
-      
-      tsn:isMemberOf map:V2006_Territory ;
-      tsn:isVersionOf map:Territory_EFTA ;
-      geo:hasGeometry map:Geometry_23 .
-######################
-
-
-
-
-
-
 
 
 <http://purl.org/steamer/nuts/V2010_Territory_EFTA>
@@ -856,7 +836,11 @@
     tsn:hasName "European Free Trade Association from 1995 to now"^^xsd:string ;
     tsn:hasAcronym  "V2010_Territory_EFTA"^^xsd:string ;
     tsn:hasDescription "The European Free Trade Association (EFTA) is a regional trade organisation and free trade area consisting of four European states: Iceland, Liechtenstein, Norway, and Switzerland. The organisation operates in parallel with the European Union (EU), and all four member states participate in the European single market (Source: https://en.wikipedia.org/wiki/European_Free_Trade_Association). In 1995 Austria, Finland and Sweden leave EFTA to join the EU. Liechtenstein becomes a full participant in the EEA Agreement together with Iceland and Norway (Source: http://www.efta.int/about-efta/history). "^^xsd:string ;
-    tsn:isVersionOf <http://purl.org/steamer/nuts/Territory_EFTA> ;
+    <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V2010_L_Territory ;
+      tsn:isVersionOf map:Territory_EFTA ;
+      geo:hasGeometry map:Geometry_28 ;
     tsn:isCoveredBy <http://purl.org/steamer/nuts/V2010> ;
     tsn:referencePeriod _:EFTA4refperiod .
 
@@ -866,22 +850,6 @@
 
     _:EFTA4begin a time:Instant ;
       time:inXSDDateTime "1995-01-01T00:00:00Z"^^xsd:dateTime .
-
-
-######################
-<http://purl.org/steamer/nuts/V2010_Territory_EFTA>
-      a       tsn:UnitVersion ;
-      <http://dbpedia.org/ontology/languageCode>
-              "en"^^xsd:string ;
-      tsn:hasIdentifier "EFTA"^^xsd:string ;
-      tsn:hasName "European Free Trade Association" ;
-      
-      tsn:isMemberOf map:V2010_Territory ;
-      tsn:isVersionOf map:Territory_EFTA ;
-      geo:hasGeometry map:Geometry_28 .
-######################
-
-
 
 
 
@@ -903,9 +871,6 @@
     _:EFTA4begin a time:Instant ;
       time:inXSDDateTime "1995-01-01T00:00:00Z"^^xsd:dateTime .
 
-######################
-######################
-
 
 ################################################################# European Union CC
 <http://purl.org/steamer/nuts/V1999_Territory_CC>
@@ -914,7 +879,11 @@
     tsn:hasName "European Union Candidate Countries from 1999 to 2003"^^xsd:string ;
     tsn:hasAcronym  "V1999_Territory_CC"^^xsd:string ;
     tsn:hasDescription "The European Union Candidate Countries 13 (EUCC13) territory relates to the situation of the EU territory observed from 1999 to 2003 (Warning: the countries cited here are not necessarily candidates throughout the all period). The EUCC13 comprised the following 13 countries: Turkey (TR), Slovenia (SI), Czech Republic (CZ), Bulgaria (BG), Lithuania (LT), Estonia (EE), Latvia (LV), Slovakia (SK), Romania (RO), Poland (PL), Hungary (HU), Malta (MT), Cyprus (CY). "^^xsd:string ;
-    tsn:isVersionOf <http://purl.org/steamer/nuts/Territory_CC> ;
+     <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V1999_L_Territory ;
+      tsn:isVersionOf map:Territory_CC ;
+      geo:hasGeometry map:Geometry_1 ;
     tsn:isCoveredBy <http://purl.org/steamer/nuts/V1999> ;
     tsn:referencePeriod _:EUCC1999refperiod .
 
@@ -928,13 +897,6 @@
     _:EUCC1999end a time:Instant ;
       time:inXSDDateTime "2003-06-30T00:00:00Z"^^xsd:dateTime .
 
-######################
-######################
-
-
-
-
-
 
 
 
@@ -944,7 +906,11 @@
     tsn:hasName "European Union Candidate Countries from 2003 to 2007"^^xsd:string ;
     tsn:hasAcronym  "V2003_Territory_CC"^^xsd:string ;
     tsn:hasDescription "The European Union Candidate Countries 5 (EUCC5) territory relates to the situation of the EU territory observed from 2003 to 2007 (Warning: the countries cited here are not necessarily candidates throughout the all period). The EUCC5 comprised the following 5 countries: Turkey (TR), Bulgaria (BG), Romania (RO), CROATIA (HR). "^^xsd:string ;
-    tsn:isVersionOf <http://purl.org/steamer/nuts/Territory_CC> ;
+    <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V2003_L_Territory ;
+      tsn:isVersionOf map:Territory_CC ;
+      geo:hasGeometry map:Geometry_5 ;
     tsn:isCoveredBy <http://purl.org/steamer/nuts/V2003> ;
     tsn:referencePeriod _:EUCC2003refperiod .
 
@@ -958,13 +924,6 @@
     _:EUCC2003end a time:Instant ;
       time:inXSDDateTime "2007-12-31T00:00:00Z"^^xsd:dateTime .
 
-######################
-######################
-
-
-
-
-
 
 
 
@@ -974,7 +933,11 @@
     tsn:hasName "European Union Candidate Countries from 2008 to 2011"^^xsd:string ;
     tsn:hasAcronym  "V2006_Territory_CC"^^xsd:string ;
     tsn:hasDescription "The European Union Candidate Countries 3 (EUCC3) territory relates to the situation of the EU territory observed from 2008 to 2011 (Warning: the countries cited here are not necessarily candidates throughout the all period). The EUCC3 comprised the following 3 countries: Turkey (TR), CROATIA (HR), Macedonia (MK). "^^xsd:string ;
-    tsn:isVersionOf <http://purl.org/steamer/nuts/Territory_CC> ;
+     <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V2006_L_Territory ;
+      tsn:isVersionOf map:Territory_CC ;
+      geo:hasGeometry map:Geometry_2 ;
     tsn:isCoveredBy <http://purl.org/steamer/nuts/V2006> ;
     tsn:referencePeriod _:EUCC2008refperiod .
 
@@ -988,13 +951,6 @@
     _:EUCC2008end a time:Instant ;
       time:inXSDDateTime "2011-12-31T00:00:00Z"^^xsd:dateTime .
 
-######################
-######################
-
-
-
-
-
 
 
 <http://purl.org/steamer/nuts/V2010_Territory_CC>
@@ -1003,7 +959,11 @@
     tsn:hasName "European Union Candidate Countries from 2012 to 2014"^^xsd:string ;
     tsn:hasAcronym  "V2010_Territory_CC"^^xsd:string ;
     tsn:hasDescription "The European Union Candidate Countries 7 (EUCC7) territory relates to the situation of the EU territory observed from 2012 to 2014 (Warning: the countries cited here are not necessarily candidates throughout the all period). The EUCC7 comprised the following 7 countries: Turkey (TR), CROATIA (HR), Macedonia (MK), Montenegro (ME), Albania (AL), Serbia (RS), Iceland (IS)."^^xsd:string ;
-    tsn:isVersionOf <http://purl.org/steamer/nuts/Territory_CC> ;
+     <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V2010_L_Territory ;
+      tsn:isVersionOf map:Territory_CC ;
+      geo:hasGeometry map:Geometry_7558 ;
     tsn:isCoveredBy <http://purl.org/steamer/nuts/V2010> ;
     tsn:referencePeriod _:EUCC2012refperiod .
 
@@ -1016,13 +976,6 @@
 
     _:EUCC2012end a time:Instant ;
       time:inXSDDateTime "2014-12-31T00:00:00Z"^^xsd:dateTime .
-
-######################
-######################
-
-
-
-
 
 
 
@@ -1041,11 +994,6 @@
 
     _:EUCC2015begin a time:Instant ;
       time:inXSDDateTime "2015-01-01T00:00:00Z"^^xsd:dateTime .
-
-
-######################
-######################
-
 
 
 
@@ -1129,6 +1077,44 @@ map:Geometry_23
 map:Geometry_28
       a       geo:Geometry ;
       geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> MULTIPOLYGON (((8.773927620565031 47.72171643925577, 8.841190283728142 47.68056070440566, 8.992632846159994 47.70753919488475, 9.179686141152146 47.670959490594974, 9.387749800056515 47.626243851046866, 9.551615191435122 47.553830268922276, 9.655300072871857 47.504866124255095, 9.730517402419327 47.34970736325494, 9.619534334581989 47.246187048681094, 9.614406846868205 47.24139211890142, 9.627516860165757 47.14628641085763, 9.675947371031322 47.06572085158216, 9.67594737103131 47.06572085158215, 10.184383058629745 46.845744227231904, 10.689311730273705 46.83877960730846, 10.52382541033741 46.79577564046479, 10.448284025937422 46.636733354593, 10.495945503759097 46.52909293258648, 10.293009325623961 46.5717875566822, 10.099810220747363 46.50252929036948, 10.225073710737059 46.399056739311256, 10.208813581124092 46.29526084094382, 10.062954448999145 46.304187854599974, 9.765575941562252 46.29654967597555, 9.622578609385 46.24828375319792, 9.481228477304517 46.36065963943891, 9.271583357573226 46.373477700394815, 9.288973055912113 46.24617944374048, 9.182524783121625 46.16480988837718, 9.021451328044774 46.02177632078181, 9.02024659534379 45.826283908089074, 8.94543207754214 45.892981612290825, 8.719719874228613 46.11020801158128, 8.490101011858195 46.25080150544018, 8.410728929424955 46.46619203630146, 8.217280848710827 46.33205333332091, 8.154307350821618 46.164212681034364, 7.951800170945647 46.04613628664401, 7.893058640258729 45.93265023493351, 7.602549417335001 45.99658146347184, 7.092994495669261 45.90707210125636, 6.941482418076083 46.18416656601229, 6.814967589655316 46.39200695797567, 6.576630015507161 46.421477990440515, 6.365669311219954 46.37105034957194, 6.311859508289552 46.276483932340476, 6.310660791871546 46.27437337101418, 6.365976109893326 46.21077221422071, 6.156520854435078 46.107370861246956, 6.045463482399836 46.170445725678476, 6.166810400763499 46.30878758151409, 6.217509990507092 46.36635321102824, 6.118262979934968 46.42213157409571, 6.2665683245837815 46.583880536814284, 6.480926641172606 46.86867638222799, 6.775054033085538 47.183689650280776, 7.026503578575679 47.39964961058551, 7.154103422472852 47.52158006538434, 7.213426771928428 47.44723202487713, 7.342041093893154 47.40344349136553, 7.39365812330458 47.41794959698482, 7.600977642986958 47.532677247736956, 7.70444201443653 47.58960980927061, 7.7179305622894185 47.59701613386803, 7.906326056428313 47.63653641055484, 7.935848095543219 47.631471486216384, 8.046326627798425 47.61479572755256, 8.22544999924451 47.6597926555243, 8.378353007639255 47.61461071033128, 8.443344045945814 47.626453480177666, 8.565608020669885 47.64959516710311, 8.399157562401125 47.7454778717362, 8.50973221162141 47.80709892366842, 8.578512862545777 47.84242630894304, 8.773927620565031 47.72171643925577)), ((-22.235464743097715 66.47176965248852, -21.58062651564522 66.15525875110701, -21.155974014375133 65.95139540171584, -21.300088194571288 65.62773191032305, -20.993858051193506 65.45967109904291, -20.541032414274593 65.68254326582957, -20.0658924438633 65.79170516526918, -20.256812222059473 66.04251078638019, -20.24343591791092 66.04579678283586, -19.8962461173861 66.13046457631181, -19.20964323104148 66.07813517840125, -18.656396873156904 66.1843087412133, -18.070414776295266 66.17342839041378, -17.32253207736456 65.99288459119404, -17.03561510459302 66.1717075855014, -16.322369450600956 66.20715850610193, -16.351953965804377 66.45421873313771, -15.913806525856065 66.52565622517479, -15.283695688059021 66.23620686266624, -14.851930030606916 66.31580591042459, -14.456144076627496 65.96820450883128, -14.133390840017963 65.75232159174739, -13.55011310341235 65.44070417771248, -13.816895724018865 65.20936110227062, -13.48441467867677 64.996852469381, -13.888192845533387 64.72658540012094, -14.547684517666445 64.3654783805856, -15.44996326745878 64.22575816153072, -16.50651676670213 63.861568555394705, -17.748536985102625 63.710448029523405, -17.875802523466167 63.49517347957083, -18.87329311451017 63.37273795935568, -20.04427511253461 63.56542465329816, -20.963362413966543 63.87044454764917, -22.518168216902723 63.80376078329212, -22.614251984436873 64.08330253937855, -22.080591107696282 64.02774163690619, -22.063727400014226 64.03690292968412, -21.59569102372677 64.28847309317369, -21.772904673700964 64.38506282320725, -22.259743918158374 64.64551304423293, -22.29211248381204 64.81743519279365, -23.60639523569714 64.74273639858727, -23.68716452010952 64.87567351752837, -22.609702133613222 65.04256751046636, -22.334338055402903 65.20916992785828, -22.078260280742487 65.42962438440026, -22.711856658893417 65.57407297133005, -23.624387704791815 65.43981145392887, -24.290428811316826 65.54784519755073, -23.71572195654223 65.86666721220932, -23.203479889784337 66.20720470616658, -22.747188314372618 66.20797936397736, -22.939070437862405 66.42702801877289, -22.235464743097715 66.47176965248852)), ((12.776698966279834 67.91885936144516, 12.532064339556582 67.75944578968277, 12.388468173721478 67.76437655570355, 12.665014024137859 68.04943334143721, 12.801544882794222 68.04070514461675, 12.776698966279834 67.91885936144516)), ((13.698726208313134 68.14167113315821, 13.173977749165749 67.99830240129737, 13.194873329069825 68.19992403876587, 13.672233110097752 68.29080498336059, 13.713120033318123 68.21122091740493, 13.698726208313134 68.14167113315821)), ((15.416228039199433 68.91698632311986, 15.561915045731384 68.82795740816886, 15.706356102204607 68.95243101621988, 16.000982230603658 68.91458682721019, 16.149212082754108 68.59700045981263, 16.14830313803459 68.57860966565187, 16.139296385452496 68.39463372212226, 15.662369643429178 68.3837513217107, 15.556661837007882 68.33570599212521, 14.942194227868399 68.31453908782463, 14.066903971073588 68.1846237154466, 14.268155350802227 68.3834900907522, 15.11176318304456 68.53131623827339, 15.042644726029351 68.60954867426516, 14.374388158036911 68.65022069408793, 14.719565051540238 68.89094691895748, 15.04331702398833 68.96939157811745, 15.80004552208188 69.35175695559802, 15.990232523028585 69.2671716112588, 15.416228039199433 68.91698632311986)), ((20.592094123931396 70.17425202901836, 20.354188354443572 70.14436814783389, 20.121590839955807 70.25720063670731, 20.55879107696625 70.33141372731723, 20.592094123931396 70.17425202901836)), ((22.959291399687565 70.70137792862519, 21.993128837282377 70.58035207148876, 21.800202434571773 70.75658647045938, 23.18525231500349 70.96187132266608, 23.32802513890484 70.87497019203562, 22.959291399687565 70.70137792862519)), ((28.391186119362704 70.98065112788302, 28.179085720425718 70.6010894763843, 28.897878543250993 70.86659169578837, 29.74829976864334 70.65005054589531, 30.752741610544664 70.3840111442584, 31.018215550957763 70.3117799845465, 30.677460860316163 70.22784891877056, 29.9299280284206 70.0391961997805, 29.380658568498703 69.9964127929034, 30.969037570721813 69.77406847384997, 30.93865987734357 69.68667071046502, 30.971616720048292 69.68051054383564, 30.857298319881377 69.44470342155886, 29.208384832571483 69.19716046311176, 28.853482663377857 69.01481629798985, 28.652630794367315 69.170326546106, 29.254230503800144 69.41566771195401, 29.09928729451784 69.60902314568611, 28.340964691607404 69.85549600998216, 27.842388155235593 70.07445291753895, 27.039630883415676 69.93480677375511, 26.31410807123646 69.8824598771263, 26.12279380724935 69.77010326680342, 25.79288611399299 69.67216832958307, 25.721243104816956 68.94818468606272, 25.161171199419393 68.81040388947056, 25.04207495138821 68.61175417773434, 24.793477858487318 68.55097885922831, 24.084931342770282 68.76494536715795, 23.239046735226406 68.66460408017039, 22.546510977201027 68.69583323230466, 21.931890882011757 69.0580956007905, 21.550845630717554 69.23776773587109, 21.180640969807307 69.26071614153567, 20.522306419435722 69.03361732829407, 20.134179622670594 69.0454149628172, 20.20885684152395 68.87553556955355, 19.886325010113275 68.32720950443799, 18.61058555969904 68.49843729712839, 18.001237458434034 68.45510230981719, 18.065989036488965 68.18266921449288, 17.812726608146413 67.93568108224592, 17.196874434494788 68.04881676799191, 16.568029713971264 67.80809431530838, 16.411354799802297 67.5548731885529, 16.066465863646485 67.33150171859582, 16.318630831397197 67.01069277143505, 15.30949201609583 66.43877156840415, 15.360936794726019 66.20289356096575, 14.478555191327146 66.00272584678764, 14.519964148842432 65.79165231262763, 14.313720295956061 65.10655056565463, 13.835004493328501 64.72891625428323, 13.839749258469121 64.52766315078658, 14.233957236818714 64.3472167547005, 13.982098042701981 63.99481819813612, 13.440170189354129 64.07565040770324, 12.990473262953508 64.00133140136792, 12.358266837615414 63.52142750911487, 12.144434846533867 63.129319632304025, 12.256762643988177 62.93919432766644, 12.196682927844368 62.53096572918582, 12.350433211223473 62.255216328435615, 12.353681544424669 61.97882901139669, 12.356531174667987 61.59223085062664, 12.866635882004774 61.25943670956202, 12.61435397940853 61.106207743778796, 12.472210623234018 61.01425273269371, 12.422724353379916 60.74542402273506, 12.581100673099087 60.60697111869469, 12.4313301767215 59.97221217081915, 11.889245062578082 59.84338984815517, 11.925131695902222 59.78646741250454, 11.965946469359228 59.73907690039448, 11.79509775791938 59.60752793389893, 11.974378124197719 59.30060473173653, 11.880120932141075 59.23974759264666, 11.672288737633728 58.92499217910914, 11.543517962651698 58.89678398623655, 11.402542132646618 59.059176645763856, 11.220336900162016 59.101455808360164, 11.179984838883023 59.07576404372272, 11.018728156525098 59.13531061298512, 10.789883500078371 59.219148905245206, 10.763422637175612 59.22879280372156, 10.741764096664742 59.333634172930324, 10.706761162257399 59.50161688106403, 10.688261199005625 59.504156225461315, 10.675373929555208 59.50592344385669, 10.446425029714087 59.537093052324785, 10.350354590402342 59.550044763255386, 10.476048949126762 59.324654855368536, 10.532915699588722 59.2216466789547, 10.471454362271015 59.187019397576655, 10.321715218356838 59.10226612643644, 10.011671813785487 58.92500519650509, 9.997750064531525 58.916989114849294, 9.776460863649843 59.01635336676971, 9.722741544152997 58.985165916249905, 9.407516269575915 58.80066557467798, 9.209230602582949 58.683291151232616, 8.319525606338557 58.14697134137998, 8.28028663289812 58.122830610071496, 8.24560365480173 58.10145804502549, 7.256570469660039 57.98900145660131, 6.603177794327502 58.09397268380687, 6.733307469183482 58.18167645729353, 6.798908354862031 58.225691945935324, 6.39866115888805 58.27317288188397, 6.332998788121562 58.280837797531355, 6.30823598734406 58.29174700730297, 5.564755897744015 58.61408271116946, 5.583564836646747 58.9755831817227, 5.588327308354105 58.97521505104029, 5.914419295832584 58.949599169495414, 5.973344793474107 59.003853848806564, 6.2181741594604265 59.22735289902929, 6.25342207109681 59.25927635748528, 6.224997521273768 59.26447323542551, 5.812447341273562 59.339069523002415, 5.199783077771521 59.105242167674625, 5.247640429612656 59.43308921568942, 5.563912696431611 59.586142631445796, 5.605045255578509 59.60590263507247, 6.010111641921464 59.74805185284624, 5.819348518517295 59.8224628427029, 5.665749304804159 59.88194883003626, 5.241457130192959 59.66632743837731, 5.19716240315034 59.643596229397204, 5.208892183803915 59.89926860474961, 5.764855102590007 60.073067971818844, 5.8450662383802054 60.09782796201193, 5.742171848495523 60.11445946679107, 5.444798713697063 60.16201324022072, 5.3644470842913305 60.17473209757977, 5.0666215345828745 60.22139373624732, 4.975556817584184 60.684415834939706, 5.0395210706123965 60.94574572387149, 5.143015071215684 60.94925128430765, 6.401438385890786 60.985990692359564, 6.393236733846475 61.02034222333838, 6.3602065000463055 61.15782954625667, 5.168351456829306 61.17906605956439, 5.368021279302238 61.420978193679986, 5.158056121119865 61.562700686381625, 4.8609062116145285 61.76056324694675, 5.069003170912372 61.97939936716973, 5.217187408759792 62.0677500092902, 5.4337898529522635 62.19579358447866, 5.47107947555506 62.210829207393836, 6.329034435048226 62.55052045383701, 6.465342205650436 62.58071974423549, 6.514544804603192 62.59157718586401, 6.766853691821393 62.6468929752211, 6.868909340708369 62.8446923621653, 7.019909059919173 62.8858600390193, 7.257403831350772 62.95009790033813, 7.52653770734218 63.0221431773509, 8.600849303655423 63.288623704382225, 8.767503910928351 63.328901583164885, 8.651874414594026 63.36137130397937, 8.317568580678952 63.45436426392435, 8.893865463933798 63.60981057189045, 9.4890945545079 63.569236396013125, 10.057942617211037 63.438461849618356, 10.28447622771404 63.53628558304744, 10.103334133965795 63.57634471201445, 9.571496934773268 63.69212920402536, 10.524868956239802 64.41701083138429, 10.640795276172408 64.45542771844465, 10.64894649485645 64.45812203841955, 11.348437451665934 64.68598968577128, 11.600962632364142 64.76664884782478, 11.395356194415248 64.8076223429597, 10.947215700317779 64.8956211176653, 11.606491854709859 65.0074912828871, 11.76312109625461 65.03355500271523, 11.817706752322833 65.07934714936799, 12.25202682511766 65.43787265642035, 12.266272920143564 65.56406879098444, 12.297164162575699 65.83422265513272, 12.66770282446126 66.18747101368162, 12.935623894959488 66.47516536705554, 13.134337361257504 66.63276635382041, 13.169402728586878 66.66035848479508, 13.440553934490932 66.87153870483121, 13.585087602307567 66.92510663471555, 13.661489772238399 66.95328579904216, 14.447011306725036 67.2375775399295, 14.684140006947977 67.63431217208387, 14.784821561655278 67.73023592433445, 14.918498329561844 67.85636774598943, 14.939097955217324 67.87568130058091, 14.995543530259416 67.87357979522135, 15.256845989577853 68.05605413286254, 15.956513086904192 68.22299811715934, 16.313602704100667 68.29397693068138, 16.946095936126362 68.30910259144846, 16.501155679587203 68.47336310591928, 16.533944995010604 68.56000508558124, 16.552998380083537 68.61005301900227, 16.33062315999305 68.94987869237188, 16.521057715420095 68.9624673668462, 17.04798734915788 69.39084620319316, 17.903654453261442 69.54851667050832, 19.000144934754093 70.0597621866729, 19.621102261546056 70.10835526012744, 20.455944409233553 69.80925528041966, 21.40255359231843 70.00770197911663, 21.253748691359625 70.21431529010492, 21.943637593100647 70.24792717107768, 22.05074747735619 70.25292167292906, 23.134271238340467 70.539294248219, 24.549434996543958 70.92760638374251, 25.563350023975342 71.14099931783564, 26.079000941103164 71.02575335195873, 24.923853687792455 70.23671867807455, 25.410852750358963 70.17899264516429, 26.365954111476785 70.89075526088665, 26.514848910806005 70.8870148684847, 26.531553902405594 70.38717903172154, 27.02201508329697 70.49771348154519, 27.26293422288531 71.0395804738219, 27.592862890469437 71.10527026220747, 28.391186119362704 70.98065112788302)))"^^geo:wktLiteral ;
+      geo:is3D "false"^^xsd:boolean ;
+      geo:isEmpty "false"^^xsd:boolean ;
+      geo:isSimple "true"^^xsd:boolean ;
+      geo:spatialDimension
+              2 .
+# CC 1999
+map:Geometry_1
+      a       geo:Geometry ;
+      geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> MULTIPOLYGON (((14.680905669245458 50.862298929197614, 14.76297932492164 50.83430123681671, 14.859798193145767 50.85550107220172, 14.951551704709429 51.049393529206476, 14.961420884472941 51.07014926530581, 15.007045568865832 51.17813832333213, 15.04889327423594 51.27673190912162, 14.993905766531622 51.364146110534726, 14.989768020050187 51.3878667705055, 14.982412952188538 51.4299722816529, 14.854612872269593 51.51342022414751, 14.745716058525309 51.58417898043757, 14.710871921932844 51.75381708720795, 14.696794714642422 51.987432551595106, 14.695302803076562 52.022570915997996, 14.69336508326667 52.06812582462118, 14.687406240904304 52.207610833197606, 14.693793999889378 52.32638151474569, 14.792248794359356 52.478742074248764, 14.638815816790018 52.6027487459455, 14.63089545372081 52.60912607102627, 14.508808003128747 52.67581511131624, 14.321376179372908 52.777570534584726, 14.214975492463683 52.83499845915959, 14.328031852544727 52.91010798197349, 14.516915113434157 53.044144409174756, 14.572039497900054 53.23243458181905, 14.365612215112996 53.60599603809789, 14.310052582889398 53.70537871333332, 14.310931419255262 53.70490767776605, 14.326383032165525 53.77576695923098, 14.696049108451223 53.74975801064359, 14.69754862382818 53.7516762833272, 14.455611274160967 53.95872893149641, 14.994289455994322 54.0633959300251, 15.345641329226831 54.13014533879644, 15.35972811942108 54.13279667435108, 15.925013349648056 54.23761675448534, 15.967790080914375 54.24542425870931, 16.050303520880433 54.26043511364238, 16.05690229429898 54.26478540666566, 16.44468466355928 54.51825074932378, 16.647896389211905 54.58031216445576, 17.045773645830398 54.7003462398666, 17.194921203361485 54.71561515477335, 17.69655721388561 54.76560234345624, 18.348691491095273 54.82744846985857, 18.522608071317208 54.5514270360578, 18.637475160695324 54.36703073553811, 18.80482274993246 54.372255256822044, 19.436322806916685 54.38995806439695, 19.497150131435063 54.39149537324652, 19.61851308835865 54.39447458831044, 19.692181694991476 54.45329422395109, 19.7821172376113 54.41534401532553, 19.81048865082196 54.43134516316884, 20.312997673166983 54.40308905783159, 20.31946961171693 54.40271184488971, 20.35587478500436 54.40058386323471, 21.514791356208637 54.35480665792449, 21.600620134363787 54.35098924889416, 22.398068327914245 54.35218260359205, 22.777881985616965 54.350974959117956, 22.79336905424094 54.35090133389237, 22.793369054241023 54.35090133389236, 22.80569305444348 54.50104053279092, 22.810284246350413 54.613400576809056, 22.812350778673554 54.663466002319275, 22.967325748704454 54.824850164874306, 22.701278286776247 54.97214711100348, 22.19549292420804 55.02121987317782, 21.87652203620401 55.05534148796931, 21.283654370311226 55.18932667430416, 21.249169963829797 55.25360415355908, 21.27592585037739 55.36324729101528, 21.096986231054252 55.771845661156824, 21.031667632034363 55.970519415193365, 21.01248836134055 56.028511326268685, 20.94487200982135 56.2317238577767, 20.960350610259635 56.364167478920315, 20.992256163442807 56.6336341331383, 21.015304404968848 56.82539351038997, 21.14101015797881 56.87327281433533, 21.363077987132435 56.95726448619453, 21.34389905083336 57.19484952876425, 21.341773943724217 57.22106741089385, 21.38467829742158 57.25876151048317, 21.73197616289192 57.56054355451953, 22.381513479821493 57.703872845359314, 22.52119564996378 57.73413838499276, 22.586653927399716 57.61881944321082, 22.619261628958114 57.56111616339309, 23.095987612082958 57.37722765821537, 23.131143700116883 57.363531746365794, 23.183310100421362 57.096949667241084, 23.521763089988944 56.98473603415328, 23.644235669413757 56.94376389974837, 23.707865221763964 56.97968506547657, 23.884438866357897 57.07883957296052, 23.932838138991343 57.10588326270856, 24.343742826136896 57.33316798851366, 24.3404678019963 57.36526883605838, 24.29350201531914 57.82244911386936, 24.258790687186693 57.80601135025671, 24.291368376613555 57.84307753659113, 24.28660795895726 57.88905900132228, 24.277603697156497 57.9758645293653, 24.426559768218947 58.046559104737504, 24.43780648166492 58.051878622378354, 24.433154621160806 58.06509340656921, 24.360084893738215 58.271580998877816, 24.3310639017209 58.35302927172303, 24.213960532793976 58.29273139749033, 24.04345952938983 58.204383865815174, 23.813008613459704 58.349854324860296, 23.659342920610417 58.44603184316257, 23.510967252004342 58.53827871783242, 23.50452187140003 58.731447802787876, 23.50390802559294 58.74987788253005, 23.49975708782077 58.874661844624, 23.10964591561385 58.98189280845117, 23.406933901740704 59.115640855722205, 23.761992320241824 59.27319029961808, 23.89148882351022 59.33006508350774, 24.715471427692215 59.51568801722148, 25.715303675793095 59.62360567064634, 25.841847549295906 59.60528673632873, 26.595206284224364 59.49351207732386, 27.668465542938243 59.44768737684753, 27.823496872534882 59.49182097735041, 27.992183395628235 59.5395120803838, 28.001695420802534 59.4884793864326, 28.029973626472184 59.487928323266125, 27.987512655861316 59.31599722272409, 27.756328026213364 59.039629743480944, 27.448844113449766 58.88468072149862, 27.39898919474245 58.85425828183513, 27.41456032549968 58.78658051864096, 27.558664100803647 58.45112513769779, 27.43182921317616 58.33865012573949, 27.483015472827457 58.28810683324576, 27.670984789956666 58.037197504891594, 27.56286017043675 57.894400708835875, 27.286101961000163 57.554783470005006, 27.651003298864172 57.451509068009926, 27.928586875913176 57.36088790307218, 28.089749539056267 57.03523901424555, 27.87390611111812 56.74127132935262, 28.138350609344837 56.5364623521954, 28.136439990818747 56.15491928022519, 27.590363603402075 55.91983080221937, 27.06741485029927 55.89308714859309, 26.69237150519985 55.71314101978399, 26.669346508145868 55.35223418684874, 26.773050241820382 55.32678040983231, 26.617451734632077 55.14817261145475, 25.80416868807955 54.82679821589646, 25.7536012451065 54.80646390152272, 25.7435160363812 54.636616730859814, 25.508074290927674 54.32071191701959, 25.593690264259383 54.2815891370083, 25.606305989324028 54.0918400812033, 25.275025734652303 54.243448000376354, 24.995704888611904 54.08781603310886, 24.694290045636638 54.00477866069697, 24.447222264811693 53.935905472164066, 23.537669644918243 54.08777815318583, 23.56236352642996 53.911024382877194, 23.58551710913866 53.86097315327507, 23.65376550548795 53.71280073847121, 23.76228240582602 53.475224099972635, 23.791145086094122 53.4116230712181, 23.842439661957126 53.29816255696874, 23.850426120247427 53.189167205283326, 23.852443572221542 53.16160293732617, 23.873789439560774 52.869203935277085, 23.880475165353786 52.777341418553334, 23.88711309837593 52.686004512056826, 23.350484219158453 52.51413957160748, 23.156745660295556 52.29524705275717, 23.143092338737215 52.2797228444527, 23.60661277940595 52.06837687942814, 23.52252662552417 51.67042140542355, 23.60181333087472 51.542372965367726, 23.7782764608506 51.263862806899645, 23.830609585508334 51.180620652026654, 23.947774771284926 50.99317725475069, 24.126215800384767 50.877352808170656, 24.036125166982487 50.765942011496456, 24.024441995185228 50.4167058024988, 23.896755350461984 50.39552265287611, 23.69575448659229 50.361850041840924, 23.56495572748767 50.25132408916041, 23.542202052497768 50.2340553180952, 22.687977281527093 49.57273953636403, 22.661025773693115 49.55145587025514, 22.732332956515457 49.3731919985153, 22.872937805641524 49.01815677321762, 22.57209014917211 49.07827237583206, 22.452059961399566 48.909615371293505, 22.28010270667739 48.383048969638416, 22.975303412060914 47.986571694951266, 23.577634846671398 47.954117639876955, 24.481981160323716 47.91561677772361, 24.8193335737796 47.68044437871622, 24.93492294461554 47.701198486225735, 25.11009908268778 47.8427760639757, 25.96072227815736 47.966648737805954, 26.806392517035906 48.250690614538975, 27.07018360791194 48.076763050696, 27.385492526164455 47.56536491737843, 27.744930067684813 47.2117206180773, 27.841599730196492 47.11566469233267, 28.131635305429285 46.82504519089455, 28.332629551306 46.60437264324747, 28.254488369227296 46.335475984033394, 28.046390444830088 46.12473219905532, 28.30352660033479 45.43535441407193, 28.764069751059395 45.23591382882497, 28.842331028591666 45.32411944292932, 29.19953080795197 45.373262117348276, 29.50608122364143 45.41439595862072, 29.656036870405007 45.3163261445793, 29.65510527395926 45.27331648153781, 29.596314195651956 45.09097716541625, 29.51844387379163 44.84701954409862, 29.31818283582023 44.823594364795575, 29.177875934671434 44.80694075383419, 28.996161581993213 44.691175227419436, 28.867495300475053 44.60868984032797, 28.827241341749843 44.58279567986553, 28.760713208581258 44.476389240590386, 28.573016525261234 44.173422139118315, 28.577434756034634 43.97477094710761, 28.583473725937463 43.70876114429361, 28.58640245512099 43.581911736891655, 28.42134739074765 43.38211244456157, 28.158569675563886 43.41562123595456, 28.048139060617636 43.32827815925148, 27.87734291294074 43.19237739096906, 27.851354901072536 43.17161208312428, 27.850949249030766 43.16500395501409, 27.848767137338747 43.12939632906749, 27.83215113081209 42.855009060977004, 27.831213953468048 42.839357480832135, 27.825596191329076 42.74514327772078, 27.71906924723497 42.68145951270558, 27.36787684570016 42.46963383832521, 27.41556249564644 42.46389892885171, 27.6107543317922 42.44018616201906, 27.962914491214544 42.07094988672926, 27.948444921544812 42.00325303822887, 27.91705186818005 41.85564638344471, 28.141303177729448 41.586190282987566, 28.141623111359568 41.58580400337012, 28.191432747075382 41.52560052248301, 28.98921094247131 41.25844510208992, 28.988866977126445 41.257820627612944, 28.859877281113594 41.02251503665459, 28.33731906688691 41.06392048205731, 27.97398796836669 41.03552778721248, 27.511642376882072 40.99744360462135, 27.34652131536414 40.73530448007806, 27.028235271242266 40.597833767851036, 26.92491655046074 40.5528437809849, 26.441568951846943 40.27772272928341, 26.20328360061888 40.139033022739305, 26.132188871692186 40.09741146178669, 26.177697062363137 40.31880498907321, 26.760793617953883 40.62125032378603, 26.592526668813946 40.61703333031311, 26.082338900178318 40.60251645822189, 26.013862269128456 40.75504987161317, 26.094227035908506 40.72155679924486, 26.314346822467773 41.013900484371995, 26.310326971320006 41.2042869066246, 26.56271517493815 41.3113585951787, 26.516432550646808 41.598301542835934, 26.381426125189964 41.70994559219796, 26.11623658939809 41.698997776404745, 26.101468737041632 41.3469304807686, 25.941148919030507 41.34900084564882, 25.84109860862789 41.33250053580023, 25.297017753918336 41.2408483924152, 25.12521656252464 41.340102683249576, 24.922888917420526 41.38688746445983, 24.776505583537237 41.335623281251245, 24.7319904505046 41.39053312242671, 24.583025698665097 41.42980433568757, 24.47885227352791 41.53730031452773, 24.265383551386357 41.52765372251606, 24.213746996726403 41.56581477840328, 24.05958599115906 41.52160319684332, 24.025839709353345 41.46577076238899, 23.88838812887868 41.45473487204241, 23.637210210227288 41.35031441779275, 23.001918791670622 41.3072796690853, 23.00787925354018 41.50447041372477, 23.01571575813774 41.75808891157133, 22.886713632726043 42.00266400018289, 22.58969977491707 42.20502499303096, 22.42078921643976 42.31916023533627, 22.430826795343087 42.32643586371597, 22.569228037857677 42.42645438511522, 22.58352571401975 42.535773237253856, 22.599224115936327 42.65514191061566, 22.6115724378481 42.779997025059046, 22.622052202371663 42.88534781108929, 22.622790457778617 42.89274957861438, 22.78811907678862 42.90984229683727, 23.024278668718974 43.18379013522268, 22.733604094582184 43.399805715462584, 22.67527579156053 43.44479435221704, 22.63476932524545 43.475979404900365, 22.561729678839743 43.532092123751234, 22.519910085690523 44.026651747838585, 22.567755235204306 44.070514633788825, 22.71188710515618 44.20208181798908, 22.593366974146136 44.533726838505125, 22.73078493239991 44.52708766498607, 22.54874189036263 44.67142128064323, 22.306701037167805 44.63923921093852, 22.217046501778675 44.56852024755906, 22.07510248622978 44.62226842357575, 21.414879480914973 44.868510815353204, 21.379805193035644 44.88142055656552, 21.402376686313485 45.227935304335944, 21.104718197218173 45.35947177350528, 20.865010019961893 45.464371472285585, 20.67095433852226 45.76688297879132, 20.651492154166558 45.79703170804106, 20.29399253548735 46.092199612886674, 19.81043421449754 46.159094179002324, 19.652673420301575 46.18041859802329, 19.241840592007105 46.05150489545515, 18.842810565681024 45.924146642850275, 18.804241457270653 45.91172365054799, 18.130016134520304 45.75350332088225, 17.90808266849404 45.77579836538308, 17.8337418745902 45.783160724180284, 17.642693035258123 45.85461739715119, 17.618383086571068 45.863672723682704, 17.361830470499196 46.02447205530961, 16.904832732810018 46.30711658872393, 16.84173628330686 46.34136255278747, 16.619338605903827 46.46143865603252, 16.324824644445844 46.40666701160679, 16.250704232485624 46.38059309893094, 15.970141101567572 46.28119643585213, 15.877383171992598 46.24809549925472, 15.816845675377968 46.22642677635902, 15.647156027861469 46.13381343437104, 15.702304464223868 46.00433743703718, 15.70069780674937 45.965324319569866, 15.696160324351256 45.85471303849388, 15.43149912618855 45.756780956684274, 15.353295237788815 45.724569413075045, 15.268761927660899 45.68964257593236, 15.369510549758079 45.57862310878477, 15.337480626853802 45.55005735309483, 15.206874024435388 45.433170309724304, 15.13873603706452 45.371924123240646, 14.798980021919112 45.434568986787454, 14.563467255538315 45.59129309428274, 14.383990507932115 45.43890244620895, 14.104797446021283 45.421740889800276, 14.09066237553794 45.42148242153222, 13.560178670519324 45.410427381131356, 13.550314129979547 45.45777277593515, 13.546322540741263 45.47690644392076, 13.747935406360556 45.6054816469931, 13.749280653265563 45.563472424442224, 13.920583769065013 45.58482513263625, 13.685334729942715 45.799325107045455, 13.634365382364031 45.821420414472094, 13.643402059086673 45.93335176743521, 13.513680764862178 46.044555151357294, 13.453634791808916 46.25896267213541, 13.79566495773252 46.54883053790209, 14.481271499347297 46.40912935774845, 14.584465075922276 46.44987487101439, 14.792456042737031 46.54874180655909, 15.074222801065106 46.641762502412426, 15.436213712744578 46.68611934772947, 15.524085062470379 46.602803869206696, 15.683273247784602 46.680075716604804, 15.917148090768045 46.68348256405351, 16.000207628927146 46.67436470896044, 16.09858332730431 46.634784546765864, 16.03852183824903 46.84037906033068, 16.478302301151516 47.0073491721765, 16.451486112522986 47.323685365653006, 16.67031739622404 47.40881951352621, 16.63173924578146 47.59350610171396, 16.60335451195016 47.710841835584326, 17.114144680463912 47.64959485646269, 17.17534720263836 48.02440290348634, 17.106220333399314 48.116488584011165, 17.062227946635144 48.173744571074785, 16.9803150288518 48.24492828613792, 16.918320913840972 48.41004147955087, 16.980682786437615 48.54637067231065, 16.977500664630462 48.64572869543513, 16.545277778885396 48.73004759997529, 16.333157789228704 48.695362374091374, 16.122700624827 48.69505469903094, 15.970669897266164 48.753520043749226, 15.541663858444597 48.90788025989424, 15.00590020736794 48.993648539738366, 14.965098576227602 48.82360245360419, 14.682958984697116 48.57732597127096, 14.51664853761258 48.612772545856785, 14.101399664014933 48.603624806420946, 13.834344916201127 48.77144721537961, 13.701579553662333 48.89323092628981, 13.539595404986738 48.93557659802797, 13.46402932225494 48.96027119753491, 13.45109966657226 48.98904301232874, 13.440695918564359 49.014692692128314, 13.226251459501801 49.15422200279641, 13.024619260766125 49.354811851062856, 12.81148408661474 49.403988854926716, 12.68449071610727 49.55968987259548, 12.657882833980189 49.5923810190024, 12.619788884304786 49.63909627994498, 12.418900019707154 49.84741892390769, 12.538151733576218 49.90391633973853, 12.550208185424141 49.909614265540895, 12.569166534934057 50.00063611767884, 12.292509181014857 50.070992502890306, 12.25309016959236 50.121995768579126, 12.225511887834571 50.15760455727691, 12.154960316844267 50.248424009212854, 12.122784270601207 50.32466049162936, 12.203930423230902 50.284590959875565, 12.261756919615813 50.23914833615152, 12.314889856295133 50.19729092763037, 12.433056962178004 50.34596720238132, 12.611240626914903 50.438615913188094, 12.732098891322334 50.45893076283287, 12.818038513823092 50.4726437345371, 12.855972419244246 50.47867406822705, 12.912809769121782 50.47035059322877, 12.983361991389287 50.461134878053926, 13.20827323401293 50.54956696593629, 13.54780330509551 50.67345588470545, 13.697553285652377 50.77335610513814, 13.921601697764416 50.77169425068684, 14.00940744738214 50.79220054544381, 14.459041794519143 50.935131607781486, 14.35105717719231 51.06206725618229, 14.515754888286795 51.02925307766382, 14.599460226929663 51.01045288005576, 14.680905669245458 50.862298929197614)), ((32.72853486809836 35.151825504221854, 32.83099297997294 35.081300091324344, 33.184812362004735 35.20585810879859, 33.37155312101743 35.2091420290757, 33.513319424692405 35.06231418082846, 34.00308498029225 35.094704219262375, 34.06377997897201 34.997257076295995, 34.01522880505538 34.993503240983195, 33.90250877515662 34.984686837876616, 33.715064592863925 34.96971309563879, 33.62006408623271 34.82960212459413, 33.003792105501226 34.607971790147076, 32.97833955661926 34.61389100789351, 32.43510471703803 34.73841808327213, 32.38936990216408 34.748744801910114, 32.36750088548531 34.81483984807176, 32.28586075720076 35.06084879316793, 32.72501638311931 35.15111195951821, 32.72853486809836 35.151825504221854)), ((22.779202675556373 58.723661135385534, 22.909786714970224 58.60697439065557, 23.14089965703167 58.63226653589977, 23.098737137694894 58.44658519081365, 22.671737727109583 58.216341213273026, 22.479403682827222 58.1527156205771, 22.064453052345783 57.88125972015066, 21.83546809861915 57.904758580433594, 21.839183480921008 58.274286252031594, 21.777829805500627 58.32632355059662, 21.835770521980923 58.42079220682486, 21.901005672098186 58.52650535756959, 22.441409842615002 58.57916010838976, 22.23256076947819 58.80029843250208, 22.009697165161352 58.906874606448504, 22.122442648442455 58.94026841433169, 22.297618788037145 58.9918438504865, 22.341052535373784 59.004573519006755, 22.559602538732257 59.06827850713456, 22.58096054900077 59.074473022334345, 22.85832931162971 58.899869348086575, 22.802411146807305 58.77554559322051, 22.779202675556373 58.723661135385534)), ((14.471042859709625 36.00307559580164, 14.703821445436093 35.861520781052945, 14.609733451830525 35.68453830682315, 14.440272299545956 35.80261770874471, 14.423940943935355 35.813960445160994, 14.279055243779561 35.91430620150668, 14.349982797911245 35.94717180165532, 14.350734868588198 35.94582009096724, 14.41293722184669 35.97519686744794, 14.411888756824872 35.975789182581536, 14.471042859709625 36.00307559580164)), ((14.279017587077863 36.06157871482537, 14.216795763683935 36.03211822280023, 14.216040311292383 36.03346871355465, 14.145089471863518 36.00050746753411, 14.045593668484688 36.06880871781669, 14.195320066057398 36.17481685460776, 14.33714074167451 36.08953568191809, 14.27796678765442 36.06216948024694, 14.279017587077863 36.06157871482537)), ((43.71359856286507 40.13203481408156, 43.716797339863454 40.126857906438154, 44.357484786888215 40.04753847367781, 44.60003223220489 39.77749612146725, 44.60206299511219 39.7752254564143, 44.56334700163927 39.68667373075063, 44.43444823363416 39.38907576363065, 44.01826451927643 39.4170061797847, 44.04371637127123 39.34681829629373, 44.25252617971582 38.76788029983928, 44.394754893856664 38.399752877883984, 44.269734127129276 37.8886442176779, 44.548432222748495 37.77868184913819, 44.60963652023723 37.75438965992326, 44.78307222290014 37.21975049983653, 44.76875258248368 37.212563067695555, 44.268739890532046 36.95889228089151, 44.30529503603752 37.243382742013424, 44.01965913976252 37.33209685127093, 43.85830380868215 37.1706829440687, 43.33999504891073 37.26777108592498, 42.776023387443246 37.370019604184215, 42.522774677173445 37.14996771452096, 42.39283053778449 37.12554382917527, 42.373127885981134 37.212079797497594, 42.205436383822345 37.29448740600038, 41.916980291605526 37.15155489705304, 41.658369119865185 37.127219898680174, 41.172322238253734 37.07943798105243, 40.85099254214319 37.13420397992214, 40.167594858978696 36.905150139944766, 39.519573536099465 36.68132300059114, 39.06143200363654 36.69849018425599, 38.6936588792151 36.69081241547755, 38.41310018288383 36.89475499580128, 38.218732141314526 36.94257117479898, 38.05815876992319 36.87833911465857, 37.700037174582135 36.733519596134045, 37.55573069574441 36.70805133181614, 37.13717770440069 36.632757361525954, 36.953337496469594 36.7979699394627, 36.72886443887165 36.84960657325003, 36.70653487992835 36.854711421759184, 36.686789425801564 36.81603708816522, 36.68132481963178 36.805322856818904, 36.52451038197157 36.49581501759623, 36.698984373400826 36.3002154563371, 36.64736861367201 36.22306279791285, 36.441107763765146 36.22565016415774, 36.39677552924782 36.03556776138855, 36.214014048756425 35.97684016189517, 36.1896896553005 35.804475291840035, 35.9559020125238 35.92650603928067, 35.932388279608666 35.9387292828112, 35.95450089547466 36.0380782288049, 35.74891946118707 36.29949674602812, 36.16687064781326 36.60636717200418, 36.121033402473046 36.90583198671514, 35.98735097301973 36.83581535654866, 35.38547266336473 36.51598746016978, 35.36994301733432 36.5254851378152, 35.05925880738429 36.645658094116705, 34.89334726866949 36.73299599859539, 34.68749036928572 36.840715089083055, 34.22485145647588 36.60472703795964, 34.03543868327575 36.300299116280854, 32.772031404573085 36.02009272147289, 32.61075966515673 36.078786973470855, 32.28963350962411 36.19461712906781, 32.18545973454445 36.38417642936477, 31.32688833490435 36.76626232108428, 30.642466349279605 36.807517948860145, 30.389956856545815 36.20440171409733, 29.732258965993182 36.126179022114, 29.287203121748448 36.280144945987075, 29.10543756724921 36.342272399785905, 29.064672583302112 36.66355136265935, 28.81793652478578 36.62669638298003, 28.4664656112329 36.822038749204985, 27.979866022179998 36.537900826434736, 27.776343620929964 36.56217210242381, 27.643180725029502 36.65547952598566, 27.33056595313138 36.744494055403976, 27.910827382759678 36.813512330335094, 28.217919694906744 37.013913903200915, 27.489200635303007 36.96592331436802, 27.237905341587197 37.070689965166025, 27.489385207110576 37.135204300643444, 27.525260549334984 37.25147949208229, 27.212073055513425 37.35196411816033, 27.21085706097497 37.35584084103798, 27.12498806779015 37.628727352804596, 26.89201050359446 37.66229695431676, 26.914091246580572 37.681420390629874, 27.036433730724422 37.69624885661241, 27.0063425509935 37.761005081888634, 27.221968787333903 37.74947508642606, 27.218923804151512 37.850591776111095, 27.215413718109794 37.96774494754654, 26.808909038622595 38.162664922282694, 26.558283300121797 38.120209586226636, 26.279786142388637 38.273362259259265, 26.417208005110453 38.366003953490676, 26.43540358790365 38.653361245176285, 26.803268600192318 38.39266826268214, 26.711835552450534 38.65721079406008, 26.959937451023357 38.84455425785976, 26.737036972718915 39.15565722472121, 26.675923461866365 39.240413659423744, 26.919623246928868 39.56113680244987, 26.638797531809264 39.53153776440984, 26.11280116651066 39.47385049481173, 26.198262883339954 40.00347292197863, 26.51966386336225 40.19326725713779, 26.845213847691074 40.383174505646885, 26.897586467885507 40.41350758014977, 27.473760923293305 40.364915038523456, 27.71496284390025 40.3435774043927, 27.75269830077052 40.531851334189504, 28.10239881786749 40.4030529952669, 28.10544830935725 40.401922474370636, 29.016591007639217 40.37525921252326, 28.925120518400846 40.46724853954064, 28.834918842029914 40.55764986765387, 29.411140416840375 40.72273582645352, 29.429481540744927 40.72791894374363, 29.30013029498631 40.810720060996815, 29.039375176282316 40.97654716133934, 29.17013537638425 41.20005257128908, 29.85324243425251 41.16260575542111, 30.30044519866652 41.13558103768684, 30.96739385523016 41.091578713602004, 31.21239421945473 41.074300552078135, 31.28386580306272 41.16263060978475, 31.40399616313363 41.31031410874657, 32.042936321331034 41.63552523756724, 32.197534141044905 41.71300061966389, 32.70070201240404 41.85878340890714, 33.25403207255006 42.01522365171644, 34.213950577735496 41.96528880828651, 34.633086368587286 41.94063185713465, 35.0052159196982 42.112402788967394, 35.12595591702399 41.83149234260819, 35.47773138146103 41.65047294299651, 35.535982298874146 41.659786375882724, 35.95008039925205 41.72490127265967, 36.27977513241831 41.29972729924506, 36.550511035822225 41.27836983906822, 36.73450093817848 41.37148555934355, 37.19823656485736 41.16741274649884, 37.54668745930891 41.01193979799985, 38.07007826832834 40.94795042468369, 38.44825986737937 40.899959636625454, 39.07397863422623 41.02956932013005, 39.37989626945681 41.091211711230635, 40.17698397060322 40.849876700407385, 40.356658487074085 40.93818138615125, 41.19863482493806 41.343417716541936, 41.55107285301152 41.508909372875856, 41.84442024690135 41.42985561120568, 42.44625586954883 41.433343585855035, 42.49431845607397 41.43346317616591, 42.626960545754066 41.59292573992788, 42.89838788612069 41.55886977006967, 43.46458474812648 41.14385025041035, 43.48816930129802 41.11782783476714, 43.50044998944393 41.104268954182, 43.77480635917313 40.79978936046828, 43.56735251094456 40.36798976816719, 43.71359856286507 40.13203481408156)))"^^geo:wktLiteral ;
+      geo:is3D "false"^^xsd:boolean ;
+      geo:isEmpty "false"^^xsd:boolean ;
+      geo:isSimple "true"^^xsd:boolean ;
+      geo:spatialDimension
+              2 .
+
+# CC 2003
+map:Geometry_5
+      a       geo:Geometry ;
+      geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> MULTIPOLYGON (((27.850949249030766 43.16500395501409, 27.848767137338747 43.12939632906749, 27.83215113081209 42.855009060977004, 27.831213953468048 42.839357480832135, 27.825596191329076 42.74514327772078, 27.71906924723497 42.68145951270558, 27.36787684570016 42.46963383832521, 27.41556249564644 42.46389892885171, 27.6107543317922 42.44018616201906, 27.962914491214544 42.07094988672926, 27.948444921544812 42.00325303822887, 27.91705186818005 41.85564638344471, 28.141303177729448 41.586190282987566, 28.141623111359568 41.58580400337012, 28.191432747075382 41.52560052248301, 28.98921094247131 41.25844510208992, 28.988866977126445 41.257820627612944, 28.859877281113594 41.02251503665459, 28.33731906688691 41.06392048205731, 27.97398796836669 41.03552778721248, 27.511642376882072 40.99744360462135, 27.34652131536414 40.73530448007806, 27.028235271242266 40.597833767851036, 26.92491655046074 40.5528437809849, 26.441568951846943 40.27772272928341, 26.20328360061888 40.139033022739305, 26.132188871692186 40.09741146178669, 26.177697062363137 40.31880498907321, 26.760793617953883 40.62125032378603, 26.592526668813946 40.61703333031311, 26.082338900178318 40.60251645822189, 26.013862269128456 40.75504987161317, 26.094227035908506 40.72155679924486, 26.314346822467773 41.013900484371995, 26.310326971320006 41.2042869066246, 26.56271517493815 41.3113585951787, 26.516432550646808 41.598301542835934, 26.381426125189964 41.70994559219796, 26.11623658939809 41.698997776404745, 26.101468737041632 41.3469304807686, 25.941148919030507 41.34900084564882, 25.84109860862789 41.33250053580023, 25.297017753918336 41.2408483924152, 25.12521656252464 41.340102683249576, 24.922888917420526 41.38688746445983, 24.776505583537237 41.335623281251245, 24.7319904505046 41.39053312242671, 24.583025698665097 41.42980433568757, 24.47885227352791 41.53730031452773, 24.265383551386357 41.52765372251606, 24.213746996726403 41.56581477840328, 24.05958599115906 41.52160319684332, 24.025839709353345 41.46577076238899, 23.88838812887868 41.45473487204241, 23.637210210227288 41.35031441779275, 23.001918791670622 41.3072796690853, 22.93523446149056 41.29644026042548, 22.83020674024314 41.284377859941515, 22.778544579485278 41.1406183469603, 22.330359793807553 41.12666187356769, 22.208612096353505 41.122999138203085, 22.05181223376025 41.11806269652927, 21.985850666616713 41.1159139929339, 21.952691473257687 41.086148039394445, 21.79080626110581 40.94022050150128, 21.644636641062803 40.887612157707366, 21.018379198589148 40.851735502862965, 20.842972529209106 40.899833031417174, 20.749339651750024 40.925355327539236, 20.62819361110424 41.0637356180866, 20.443973990665977 41.27277552537995, 20.451197153954023 41.31587469652433, 20.504443146971074 41.63126444867192, 20.527075249792357 41.764070044970694, 20.525658649504535 41.77058354413616, 20.85658964483984 42.076285734593306, 21.171724115362423 42.12848895023789, 21.498185118782853 42.18143238615239, 21.60485096186555 42.19848940822902, 22.430826795343087 42.32643586371597, 22.569228037857677 42.42645438511522, 22.58352571401975 42.535773237253856, 22.599224115936327 42.65514191061566, 22.6115724378481 42.779997025059046, 22.622052202371663 42.88534781108929, 22.622790457778617 42.89274957861438, 22.78811907678862 42.90984229683727, 23.024278668718974 43.18379013522268, 22.733604094582184 43.399805715462584, 22.67527579156053 43.44479435221704, 22.63476932524545 43.475979404900365, 22.561729678839743 43.532092123751234, 22.519910085690523 44.026651747838585, 22.567755235204306 44.070514633788825, 22.71188710515618 44.20208181798908, 22.593366974146136 44.533726838505125, 22.73078493239991 44.52708766498607, 22.54874189036263 44.67142128064323, 22.306701037167805 44.63923921093852, 22.217046501778675 44.56852024755906, 22.07510248622978 44.62226842357575, 21.414879480914973 44.868510815353204, 21.379805193035644 44.88142055656552, 21.402376686313485 45.227935304335944, 21.104718197218173 45.35947177350528, 20.865010019961893 45.464371472285585, 20.67095433852226 45.76688297879132, 20.651492154166558 45.79703170804106, 20.29399253548735 46.092199612886674, 20.64135391358425 46.15287562222782, 20.739577974976182 46.24440419676442, 21.137693142776257 46.3154634260466, 21.44441601695038 46.66606212715697, 21.683171972422915 46.99150194421913, 22.172751859349642 47.56442114606939, 22.23091796467108 47.63146143295547, 22.975303412060914 47.986571694951266, 23.577634846671398 47.954117639876955, 24.481981160323716 47.91561677772361, 24.8193335737796 47.68044437871622, 24.93492294461554 47.701198486225735, 25.11009908268778 47.8427760639757, 25.96072227815736 47.966648737805954, 26.806392517035906 48.250690614538975, 27.07018360791194 48.076763050696, 27.385492526164455 47.56536491737843, 27.744930067684813 47.2117206180773, 27.841599730196492 47.11566469233267, 28.131635305429285 46.82504519089455, 28.332629551306 46.60437264324747, 28.254488369227296 46.335475984033394, 28.046390444830088 46.12473219905532, 28.30352660033479 45.43535441407193, 28.764069751059395 45.23591382882497, 28.842331028591666 45.32411944292932, 29.19953080795197 45.373262117348276, 29.50608122364143 45.41439595862072, 29.656036870405007 45.3163261445793, 29.65510527395926 45.27331648153781, 29.596314195651956 45.09097716541625, 29.51844387379163 44.84701954409862, 29.31818283582023 44.823594364795575, 29.177875934671434 44.80694075383419, 28.996161581993213 44.691175227419436, 28.867495300475053 44.60868984032797, 28.827241341749843 44.58279567986553, 28.760713208581258 44.476389240590386, 28.573016525261234 44.173422139118315, 28.577434756034634 43.97477094710761, 28.583473725937463 43.70876114429361, 28.58640245512099 43.581911736891655, 28.42134739074765 43.38211244456157, 28.158569675563886 43.41562123595456, 28.048139060617636 43.32827815925148, 27.87734291294074 43.19237739096906, 27.851354901072536 43.17161208312428, 27.850949249030766 43.16500395501409)), ((17.90808266849404 45.77579836538308, 18.130016134520304 45.75350332088225, 18.804241457270653 45.91172365054799, 18.842810565681024 45.924146642850275, 18.974865788115263 45.48319587868996, 19.063747794755947 45.18269633458368, 19.1104260801714 45.0236380067251, 19.06405782242929 44.87394819787882, 18.749938841175222 44.87243237389784, 18.741800286516085 44.87238069688947, 18.743566531422935 44.89903368525682, 18.74670266927839 44.94624878182961, 18.748747830724618 44.976963779796904, 18.544717623846598 45.017771861740066, 18.501281455196363 45.02640264589279, 18.482233837454306 45.03018094595912, 18.41495544263537 45.04349556185933, 18.38442946959086 45.04952102189517, 18.20711026930913 45.084322620555916, 18.158823470221332 45.08712847389592, 18.127967739598265 45.08891065208198, 17.154384886474936 45.1404727955987, 17.031689107600457 45.14286207895466, 16.00699301002515 45.1573197313563, 15.818090968970933 45.158908381598344, 15.740391300289255 45.15946966870406, 15.716987536268382 44.9800988751019, 15.67763088591042 44.89850261404534, 15.673829498798032 44.8906074762462, 15.998179954271672 44.48473307972513, 16.12770543743363 44.32075528364439, 16.165415219902616 44.272805235041616, 16.17909394828525 44.1704058132829, 16.183429480038342 44.137886256660096, 16.399908048186497 43.95016570724592, 16.68905203685428 43.69683154982944, 17.002116371489304 43.46467608163686, 17.32499061213855 43.22233494646645, 17.368534339786557 43.1894237113641, 17.38105781321664 43.153244340395105, 17.64045820372616 43.13482605556746, 17.823623669093763 42.89862095699224, 18.301667181889517 42.60969357435004, 18.40982783094885 42.61381998442028, 18.42440125751249 42.60406906411019, 18.4155968409497 42.57584769732708, 18.634854299605095 42.52341749431587, 18.718394420669174 42.294022614044586, 18.4107121094909 42.443507419299735, 17.851480013592216 42.727905660194125, 17.48395093966577 42.85430422120143, 17.31627168593795 42.911367474202606, 16.821093818850716 42.884720185622356, 16.708285506183824 42.971698836936405, 16.654549228828998 43.02232929580387, 16.52500445997009 43.14391958151973, 16.420542137902473 43.26577840496928, 16.36212020397029 43.333665518628905, 16.320645289608596 43.356741582410486, 16.23119054556751 43.406395619152356, 16.1402781740514 43.45326836736487, 16.03674153376313 43.479670022702614, 15.941590489146535 43.50382265609484, 15.943928888938009 43.649556073680664, 15.583967371961716 43.86199414772305, 15.127703207547873 44.127284692802206, 14.976180082023063 44.5643905069493, 14.958408008943492 44.579642995840494, 14.699746363134608 44.80036517100559, 14.55849736036438 44.84772789022865, 14.482062355791507 44.87324643755701, 14.384911593311287 44.90556878690968, 14.296536836944787 44.91549741707398, 14.115051409786604 44.935647495102735, 14.075341950040045 44.90587006411855, 13.90455313499432 44.77726896058003, 13.643944282571791 45.00489984731357, 13.560178670519324 45.410427381131356, 14.09066237553794 45.42148242153222, 14.104797446021283 45.421740889800276, 14.383990507932115 45.43890244620895, 14.563467255538315 45.59129309428274, 14.798980021919112 45.434568986787454, 15.13873603706452 45.371924123240646, 15.206874024435388 45.433170309724304, 15.337480626853802 45.55005735309483, 15.369510549758079 45.57862310878477, 15.268761927660899 45.68964257593236, 15.353295237788815 45.724569413075045, 15.43149912618855 45.756780956684274, 15.696160324351256 45.85471303849388, 15.70069780674937 45.965324319569866, 15.702304464223868 46.00433743703718, 15.647156027861469 46.13381343437104, 15.816845675377968 46.22642677635902, 15.877383171992598 46.24809549925472, 15.970141101567572 46.28119643585213, 16.250704232485624 46.38059309893094, 16.324824644445844 46.40666701160679, 16.619338605903827 46.46143865603252, 16.84173628330686 46.34136255278747, 16.904832732810018 46.30711658872393, 17.361830470499196 46.02447205530961, 17.618383086571068 45.863672723682704, 17.642693035258123 45.85461739715119, 17.8337418745902 45.783160724180284, 17.90808266849404 45.77579836538308)), ((43.71359856286507 40.13203481408156, 43.716797339863454 40.126857906438154, 44.357484786888215 40.04753847367781, 44.60003223220489 39.77749612146725, 44.60206299511219 39.7752254564143, 44.56334700163927 39.68667373075063, 44.43444823363416 39.38907576363065, 44.01826451927643 39.4170061797847, 44.04371637127123 39.34681829629373, 44.25252617971582 38.76788029983928, 44.394754893856664 38.399752877883984, 44.269734127129276 37.8886442176779, 44.548432222748495 37.77868184913819, 44.60963652023723 37.75438965992326, 44.78307222290014 37.21975049983653, 44.76875258248368 37.212563067695555, 44.268739890532046 36.95889228089151, 44.30529503603752 37.243382742013424, 44.01965913976252 37.33209685127093, 43.85830380868215 37.1706829440687, 43.33999504891073 37.26777108592498, 42.776023387443246 37.370019604184215, 42.522774677173445 37.14996771452096, 42.39283053778449 37.12554382917527, 42.373127885981134 37.212079797497594, 42.205436383822345 37.29448740600038, 41.916980291605526 37.15155489705304, 41.658369119865185 37.127219898680174, 41.172322238253734 37.07943798105243, 40.85099254214319 37.13420397992214, 40.167594858978696 36.905150139944766, 39.519573536099465 36.68132300059114, 39.06143200363654 36.69849018425599, 38.6936588792151 36.69081241547755, 38.41310018288383 36.89475499580128, 38.218732141314526 36.94257117479898, 38.05815876992319 36.87833911465857, 37.700037174582135 36.733519596134045, 37.55573069574441 36.70805133181614, 37.13717770440069 36.632757361525954, 36.953337496469594 36.7979699394627, 36.72886443887165 36.84960657325003, 36.70653487992835 36.854711421759184, 36.686789425801564 36.81603708816522, 36.68132481963178 36.805322856818904, 36.52451038197157 36.49581501759623, 36.698984373400826 36.3002154563371, 36.64736861367201 36.22306279791285, 36.441107763765146 36.22565016415774, 36.39677552924782 36.03556776138855, 36.214014048756425 35.97684016189517, 36.1896896553005 35.804475291840035, 35.9559020125238 35.92650603928067, 35.932388279608666 35.9387292828112, 35.95450089547466 36.0380782288049, 35.74891946118707 36.29949674602812, 36.16687064781326 36.60636717200418, 36.121033402473046 36.90583198671514, 35.98735097301973 36.83581535654866, 35.38547266336473 36.51598746016978, 35.36994301733432 36.5254851378152, 35.05925880738429 36.645658094116705, 34.89334726866949 36.73299599859539, 34.68749036928572 36.840715089083055, 34.22485145647588 36.60472703795964, 34.03543868327575 36.300299116280854, 32.772031404573085 36.02009272147289, 32.61075966515673 36.078786973470855, 32.28963350962411 36.19461712906781, 32.18545973454445 36.38417642936477, 31.32688833490435 36.76626232108428, 30.642466349279605 36.807517948860145, 30.389956856545815 36.20440171409733, 29.732258965993182 36.126179022114, 29.287203121748448 36.280144945987075, 29.10543756724921 36.342272399785905, 29.064672583302112 36.66355136265935, 28.81793652478578 36.62669638298003, 28.4664656112329 36.822038749204985, 27.979866022179998 36.537900826434736, 27.776343620929964 36.56217210242381, 27.643180725029502 36.65547952598566, 27.33056595313138 36.744494055403976, 27.910827382759678 36.813512330335094, 28.217919694906744 37.013913903200915, 27.489200635303007 36.96592331436802, 27.237905341587197 37.070689965166025, 27.489385207110576 37.135204300643444, 27.525260549334984 37.25147949208229, 27.212073055513425 37.35196411816033, 27.21085706097497 37.35584084103798, 27.12498806779015 37.628727352804596, 26.89201050359446 37.66229695431676, 26.914091246580572 37.681420390629874, 27.036433730724422 37.69624885661241, 27.0063425509935 37.761005081888634, 27.221968787333903 37.74947508642606, 27.218923804151512 37.850591776111095, 27.215413718109794 37.96774494754654, 26.808909038622595 38.162664922282694, 26.558283300121797 38.120209586226636, 26.279786142388637 38.273362259259265, 26.417208005110453 38.366003953490676, 26.43540358790365 38.653361245176285, 26.803268600192318 38.39266826268214, 26.711835552450534 38.65721079406008, 26.959937451023357 38.84455425785976, 26.737036972718915 39.15565722472121, 26.675923461866365 39.240413659423744, 26.919623246928868 39.56113680244987, 26.638797531809264 39.53153776440984, 26.11280116651066 39.47385049481173, 26.198262883339954 40.00347292197863, 26.51966386336225 40.19326725713779, 26.845213847691074 40.383174505646885, 26.897586467885507 40.41350758014977, 27.473760923293305 40.364915038523456, 27.71496284390025 40.3435774043927, 27.75269830077052 40.531851334189504, 28.10239881786749 40.4030529952669, 28.10544830935725 40.401922474370636, 29.016591007639217 40.37525921252326, 28.925120518400846 40.46724853954064, 28.834918842029914 40.55764986765387, 29.411140416840375 40.72273582645352, 29.429481540744927 40.72791894374363, 29.30013029498631 40.810720060996815, 29.039375176282316 40.97654716133934, 29.17013537638425 41.20005257128908, 29.85324243425251 41.16260575542111, 30.30044519866652 41.13558103768684, 30.96739385523016 41.091578713602004, 31.21239421945473 41.074300552078135, 31.28386580306272 41.16263060978475, 31.40399616313363 41.31031410874657, 32.042936321331034 41.63552523756724, 32.197534141044905 41.71300061966389, 32.70070201240404 41.85878340890714, 33.25403207255006 42.01522365171644, 34.213950577735496 41.96528880828651, 34.633086368587286 41.94063185713465, 35.0052159196982 42.112402788967394, 35.12595591702399 41.83149234260819, 35.47773138146103 41.65047294299651, 35.535982298874146 41.659786375882724, 35.95008039925205 41.72490127265967, 36.27977513241831 41.29972729924506, 36.550511035822225 41.27836983906822, 36.73450093817848 41.37148555934355, 37.19823656485736 41.16741274649884, 37.54668745930891 41.01193979799985, 38.07007826832834 40.94795042468369, 38.44825986737937 40.899959636625454, 39.07397863422623 41.02956932013005, 39.37989626945681 41.091211711230635, 40.17698397060322 40.849876700407385, 40.356658487074085 40.93818138615125, 41.19863482493806 41.343417716541936, 41.55107285301152 41.508909372875856, 41.84442024690135 41.42985561120568, 42.44625586954883 41.433343585855035, 42.49431845607397 41.43346317616591, 42.626960545754066 41.59292573992788, 42.89838788612069 41.55886977006967, 43.46458474812648 41.14385025041035, 43.48816930129802 41.11782783476714, 43.50044998944393 41.104268954182, 43.77480635917313 40.79978936046828, 43.56735251094456 40.36798976816719, 43.71359856286507 40.13203481408156)))"^^geo:wktLiteral ;
+      geo:is3D "false"^^xsd:boolean ;
+      geo:isEmpty "false"^^xsd:boolean ;
+      geo:isSimple "true"^^xsd:boolean ;
+      geo:spatialDimension
+              2 .
+# CC 2006
+map:Geometry_2
+      a       geo:Geometry ;
+      geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> MULTIPOLYGON (((17.90808266849404 45.77579836538308, 18.130016134520304 45.75350332088225, 18.804241457270653 45.91172365054799, 18.842810565681024 45.924146642850275, 18.974865788115263 45.48319587868996, 19.063747794755947 45.18269633458368, 19.1104260801714 45.0236380067251, 19.06405782242929 44.87394819787882, 18.749938841175222 44.87243237389784, 18.741800286516085 44.87238069688947, 18.743566531422935 44.89903368525682, 18.74670266927839 44.94624878182961, 18.748747830724618 44.976963779796904, 18.544717623846598 45.017771861740066, 18.501281455196363 45.02640264589279, 18.482233837454306 45.03018094595912, 18.41495544263537 45.04349556185933, 18.38442946959086 45.04952102189517, 18.20711026930913 45.084322620555916, 18.158823470221332 45.08712847389592, 18.127967739598265 45.08891065208198, 17.154384886474936 45.1404727955987, 17.031689107600457 45.14286207895466, 16.00699301002515 45.1573197313563, 15.818090968970933 45.158908381598344, 15.740391300289255 45.15946966870406, 15.716987536268382 44.9800988751019, 15.67763088591042 44.89850261404534, 15.673829498798032 44.8906074762462, 15.998179954271672 44.48473307972513, 16.12770543743363 44.32075528364439, 16.165415219902616 44.272805235041616, 16.17909394828525 44.1704058132829, 16.183429480038342 44.137886256660096, 16.399908048186497 43.95016570724592, 16.68905203685428 43.69683154982944, 17.002116371489304 43.46467608163686, 17.32499061213855 43.22233494646645, 17.368534339786557 43.1894237113641, 17.38105781321664 43.153244340395105, 17.64045820372616 43.13482605556746, 17.823623669093763 42.89862095699224, 18.301667181889517 42.60969357435004, 18.40982783094885 42.61381998442028, 18.42440125751249 42.60406906411019, 18.4155968409497 42.57584769732708, 18.634854299605095 42.52341749431587, 18.718394420669174 42.294022614044586, 18.4107121094909 42.443507419299735, 17.851480013592216 42.727905660194125, 17.48395093966577 42.85430422120143, 17.31627168593795 42.911367474202606, 16.821093818850716 42.884720185622356, 16.708285506183824 42.971698836936405, 16.654549228828998 43.02232929580387, 16.52500445997009 43.14391958151973, 16.420542137902473 43.26577840496928, 16.36212020397029 43.333665518628905, 16.320645289608596 43.356741582410486, 16.23119054556751 43.406395619152356, 16.1402781740514 43.45326836736487, 16.03674153376313 43.479670022702614, 15.941590489146535 43.50382265609484, 15.943928888938009 43.649556073680664, 15.583967371961716 43.86199414772305, 15.127703207547873 44.127284692802206, 14.976180082023063 44.5643905069493, 14.958408008943492 44.579642995840494, 14.699746363134608 44.80036517100559, 14.55849736036438 44.84772789022865, 14.482062355791507 44.87324643755701, 14.384911593311287 44.90556878690968, 14.296536836944787 44.91549741707398, 14.115051409786604 44.935647495102735, 14.075341950040045 44.90587006411855, 13.90455313499432 44.77726896058003, 13.643944282571791 45.00489984731357, 13.560178670519324 45.410427381131356, 14.09066237553794 45.42148242153222, 14.104797446021283 45.421740889800276, 14.383990507932115 45.43890244620895, 14.563467255538315 45.59129309428274, 14.798980021919112 45.434568986787454, 15.13873603706452 45.371924123240646, 15.206874024435388 45.433170309724304, 15.337480626853802 45.55005735309483, 15.369510549758079 45.57862310878477, 15.268761927660899 45.68964257593236, 15.353295237788815 45.724569413075045, 15.43149912618855 45.756780956684274, 15.696160324351256 45.85471303849388, 15.70069780674937 45.965324319569866, 15.702304464223868 46.00433743703718, 15.647156027861469 46.13381343437104, 15.816845675377968 46.22642677635902, 15.877383171992598 46.24809549925472, 15.970141101567572 46.28119643585213, 16.250704232485624 46.38059309893094, 16.324824644445844 46.40666701160679, 16.619338605903827 46.46143865603252, 16.84173628330686 46.34136255278747, 16.904832732810018 46.30711658872393, 17.361830470499196 46.02447205530961, 17.618383086571068 45.863672723682704, 17.642693035258123 45.85461739715119, 17.8337418745902 45.783160724180284, 17.90808266849404 45.77579836538308)), ((21.644636641062803 40.887612157707366, 21.018379198589148 40.851735502862965, 20.842972529209106 40.899833031417174, 20.749339651750024 40.925355327539236, 20.62819361110424 41.0637356180866, 20.443973990665977 41.27277552537995, 20.451197153954023 41.31587469652433, 20.504443146971074 41.63126444867192, 20.527075249792357 41.764070044970694, 20.525658649504535 41.77058354413616, 20.85658964483984 42.076285734593306, 21.171724115362423 42.12848895023789, 21.498185118782853 42.18143238615239, 21.60485096186555 42.19848940822902, 22.430826795343087 42.32643586371597, 22.42078921643976 42.31916023533627, 22.58969977491707 42.20502499303096, 22.886713632726043 42.00266400018289, 23.01571575813774 41.75808891157133, 23.00787925354018 41.50447041372477, 23.001918791670622 41.3072796690853, 22.93523446149056 41.29644026042548, 22.83020674024314 41.284377859941515, 22.778544579485278 41.1406183469603, 22.330359793807553 41.12666187356769, 22.208612096353505 41.122999138203085, 22.05181223376025 41.11806269652927, 21.985850666616713 41.1159139929339, 21.952691473257687 41.086148039394445, 21.79080626110581 40.94022050150128, 21.644636641062803 40.887612157707366)), ((27.028235271242266 40.597833767851036, 26.92491655046074 40.5528437809849, 26.441568951846943 40.27772272928341, 26.20328360061888 40.139033022739305, 26.132188871692186 40.09741146178669, 26.177697062363137 40.31880498907321, 26.760793617953883 40.62125032378603, 26.592526668813946 40.61703333031311, 26.082338900178318 40.60251645822189, 26.013862269128456 40.75504987161317, 26.094227035908506 40.72155679924486, 26.314346822467773 41.013900484371995, 26.310326971320006 41.2042869066246, 26.56271517493815 41.3113585951787, 26.516432550646808 41.598301542835934, 26.381426125189964 41.70994559219796, 26.57323699750782 41.8783786249204, 26.827304802502383 41.95922470651924, 26.93231853236699 41.99238509534513, 27.009147955344673 42.01654905361718, 27.332550993293125 42.10312017845692, 27.938953988648198 42.004660650994175, 27.93857531855819 42.005128069393464, 27.948444921544812 42.00325303822887, 27.91705186818005 41.85564638344471, 28.141303177729448 41.586190282987566, 28.141623111359568 41.58580400337012, 28.191432747075382 41.52560052248301, 28.98921094247131 41.25844510208992, 28.988866977126445 41.257820627612944, 28.859877281113594 41.02251503665459, 28.33731906688691 41.06392048205731, 27.97398796836669 41.03552778721248, 27.511642376882072 40.99744360462135, 27.34652131536414 40.73530448007806, 27.028235271242266 40.597833767851036)), ((43.71359856286507 40.13203481408156, 43.716797339863454 40.126857906438154, 44.357484786888215 40.04753847367781, 44.60003223220489 39.77749612146725, 44.60206299511219 39.7752254564143, 44.56334700163927 39.68667373075063, 44.43444823363416 39.38907576363065, 44.01826451927643 39.4170061797847, 44.04371637127123 39.34681829629373, 44.25252617971582 38.76788029983928, 44.394754893856664 38.399752877883984, 44.269734127129276 37.8886442176779, 44.548432222748495 37.77868184913819, 44.60963652023723 37.75438965992326, 44.78307222290014 37.21975049983653, 44.76875258248368 37.212563067695555, 44.268739890532046 36.95889228089151, 44.30529503603752 37.243382742013424, 44.01965913976252 37.33209685127093, 43.85830380868215 37.1706829440687, 43.33999504891073 37.26777108592498, 42.776023387443246 37.370019604184215, 42.522774677173445 37.14996771452096, 42.39283053778449 37.12554382917527, 42.373127885981134 37.212079797497594, 42.205436383822345 37.29448740600038, 41.916980291605526 37.15155489705304, 41.658369119865185 37.127219898680174, 41.172322238253734 37.07943798105243, 40.85099254214319 37.13420397992214, 40.167594858978696 36.905150139944766, 39.519573536099465 36.68132300059114, 39.06143200363654 36.69849018425599, 38.6936588792151 36.69081241547755, 38.41310018288383 36.89475499580128, 38.218732141314526 36.94257117479898, 38.05815876992319 36.87833911465857, 37.700037174582135 36.733519596134045, 37.55573069574441 36.70805133181614, 37.13717770440069 36.632757361525954, 36.953337496469594 36.7979699394627, 36.72886443887165 36.84960657325003, 36.70653487992835 36.854711421759184, 36.686789425801564 36.81603708816522, 36.68132481963178 36.805322856818904, 36.52451038197157 36.49581501759623, 36.698984373400826 36.3002154563371, 36.64736861367201 36.22306279791285, 36.441107763765146 36.22565016415774, 36.39677552924782 36.03556776138855, 36.214014048756425 35.97684016189517, 36.1896896553005 35.804475291840035, 35.9559020125238 35.92650603928067, 35.932388279608666 35.9387292828112, 35.95450089547466 36.0380782288049, 35.74891946118707 36.29949674602812, 36.16687064781326 36.60636717200418, 36.121033402473046 36.90583198671514, 35.98735097301973 36.83581535654866, 35.38547266336473 36.51598746016978, 35.36994301733432 36.5254851378152, 35.05925880738429 36.645658094116705, 34.89334726866949 36.73299599859539, 34.68749036928572 36.840715089083055, 34.22485145647588 36.60472703795964, 34.03543868327575 36.300299116280854, 32.772031404573085 36.02009272147289, 32.61075966515673 36.078786973470855, 32.28963350962411 36.19461712906781, 32.18545973454445 36.38417642936477, 31.32688833490435 36.76626232108428, 30.642466349279605 36.807517948860145, 30.389956856545815 36.20440171409733, 29.732258965993182 36.126179022114, 29.287203121748448 36.280144945987075, 29.10543756724921 36.342272399785905, 29.064672583302112 36.66355136265935, 28.81793652478578 36.62669638298003, 28.4664656112329 36.822038749204985, 27.979866022179998 36.537900826434736, 27.776343620929964 36.56217210242381, 27.643180725029502 36.65547952598566, 27.33056595313138 36.744494055403976, 27.910827382759678 36.813512330335094, 28.217919694906744 37.013913903200915, 27.489200635303007 36.96592331436802, 27.237905341587197 37.070689965166025, 27.489385207110576 37.135204300643444, 27.525260549334984 37.25147949208229, 27.212073055513425 37.35196411816033, 27.21085706097497 37.35584084103798, 27.12498806779015 37.628727352804596, 26.89201050359446 37.66229695431676, 26.914091246580572 37.681420390629874, 27.036433730724422 37.69624885661241, 27.0063425509935 37.761005081888634, 27.221968787333903 37.74947508642606, 27.218923804151512 37.850591776111095, 27.215413718109794 37.96774494754654, 26.808909038622595 38.162664922282694, 26.558283300121797 38.120209586226636, 26.279786142388637 38.273362259259265, 26.417208005110453 38.366003953490676, 26.43540358790365 38.653361245176285, 26.803268600192318 38.39266826268214, 26.711835552450534 38.65721079406008, 26.959937451023357 38.84455425785976, 26.737036972718915 39.15565722472121, 26.675923461866365 39.240413659423744, 26.919623246928868 39.56113680244987, 26.638797531809264 39.53153776440984, 26.11280116651066 39.47385049481173, 26.198262883339954 40.00347292197863, 26.51966386336225 40.19326725713779, 26.845213847691074 40.383174505646885, 26.897586467885507 40.41350758014977, 27.473760923293305 40.364915038523456, 27.71496284390025 40.3435774043927, 27.75269830077052 40.531851334189504, 28.10239881786749 40.4030529952669, 28.10544830935725 40.401922474370636, 29.016591007639217 40.37525921252326, 28.925120518400846 40.46724853954064, 28.834918842029914 40.55764986765387, 29.411140416840375 40.72273582645352, 29.429481540744927 40.72791894374363, 29.30013029498631 40.810720060996815, 29.039375176282316 40.97654716133934, 29.17013537638425 41.20005257128908, 29.85324243425251 41.16260575542111, 30.30044519866652 41.13558103768684, 30.96739385523016 41.091578713602004, 31.21239421945473 41.074300552078135, 31.28386580306272 41.16263060978475, 31.40399616313363 41.31031410874657, 32.042936321331034 41.63552523756724, 32.197534141044905 41.71300061966389, 32.70070201240404 41.85878340890714, 33.25403207255006 42.01522365171644, 34.213950577735496 41.96528880828651, 34.633086368587286 41.94063185713465, 35.0052159196982 42.112402788967394, 35.12595591702399 41.83149234260819, 35.47773138146103 41.65047294299651, 35.535982298874146 41.659786375882724, 35.95008039925205 41.72490127265967, 36.27977513241831 41.29972729924506, 36.550511035822225 41.27836983906822, 36.73450093817848 41.37148555934355, 37.19823656485736 41.16741274649884, 37.54668745930891 41.01193979799985, 38.07007826832834 40.94795042468369, 38.44825986737937 40.899959636625454, 39.07397863422623 41.02956932013005, 39.37989626945681 41.091211711230635, 40.17698397060322 40.849876700407385, 40.356658487074085 40.93818138615125, 41.19863482493806 41.343417716541936, 41.55107285301152 41.508909372875856, 41.84442024690135 41.42985561120568, 42.44625586954883 41.433343585855035, 42.49431845607397 41.43346317616591, 42.626960545754066 41.59292573992788, 42.89838788612069 41.55886977006967, 43.46458474812648 41.14385025041035, 43.48816930129802 41.11782783476714, 43.50044998944393 41.104268954182, 43.77480635917313 40.79978936046828, 43.56735251094456 40.36798976816719, 43.71359856286507 40.13203481408156)))"^^geo:wktLiteral ;
+      geo:is3D "false"^^xsd:boolean ;
+      geo:isEmpty "false"^^xsd:boolean ;
+      geo:isSimple "true"^^xsd:boolean ;
+      geo:spatialDimension
+              2 .
+
+# CC 2010
+map:Geometry_7558
+      a       geo:Geometry ;
+      geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/4326> MULTIPOLYGON (((21.644636641062803 40.887612157707366, 21.018379198589148 40.851735502862965, 20.842972529209106 40.899833031417174, 20.749339651750024 40.925355327539236, 20.62819361110424 41.0637356180866, 20.443973990665977 41.27277552537995, 20.451197153954023 41.31587469652433, 20.504443146971074 41.63126444867192, 20.527075249792357 41.764070044970694, 20.525658649504535 41.77058354413616, 20.85658964483984 42.076285734593306, 21.171724115362423 42.12848895023789, 21.498185118782853 42.18143238615239, 21.60485096186555 42.19848940822902, 22.430826795343087 42.32643586371597, 22.42078921643976 42.31916023533627, 22.58969977491707 42.20502499303096, 22.886713632726043 42.00266400018289, 23.01571575813774 41.75808891157133, 23.00787925354018 41.50447041372477, 23.001918791670622 41.3072796690853, 22.93523446149056 41.29644026042548, 22.83020674024314 41.284377859941515, 22.778544579485278 41.1406183469603, 22.330359793807553 41.12666187356769, 22.208612096353505 41.122999138203085, 22.05181223376025 41.11806269652927, 21.985850666616713 41.1159139929339, 21.952691473257687 41.086148039394445, 21.79080626110581 40.94022050150128, 21.644636641062803 40.887612157707366)), ((43.71359856286507 40.13203481408156, 43.716797339863454 40.126857906438154, 44.357484786888215 40.04753847367781, 44.60003223220489 39.77749612146725, 44.60206299511219 39.7752254564143, 44.56334700163927 39.68667373075063, 44.43444823363416 39.38907576363065, 44.01826451927643 39.4170061797847, 44.04371637127123 39.34681829629373, 44.25252617971582 38.76788029983928, 44.394754893856664 38.399752877883984, 44.269734127129276 37.8886442176779, 44.548432222748495 37.77868184913819, 44.60963652023723 37.75438965992326, 44.78307222290014 37.21975049983653, 44.76875258248368 37.212563067695555, 44.268739890532046 36.95889228089151, 44.30529503603752 37.243382742013424, 44.01965913976252 37.33209685127093, 43.85830380868215 37.1706829440687, 43.33999504891073 37.26777108592498, 42.776023387443246 37.370019604184215, 42.522774677173445 37.14996771452096, 42.39283053778449 37.12554382917527, 42.373127885981134 37.212079797497594, 42.205436383822345 37.29448740600038, 41.916980291605526 37.15155489705304, 41.658369119865185 37.127219898680174, 41.172322238253734 37.07943798105243, 40.85099254214319 37.13420397992214, 40.167594858978696 36.905150139944766, 39.519573536099465 36.68132300059114, 39.06143200363654 36.69849018425599, 38.6936588792151 36.69081241547755, 38.41310018288383 36.89475499580128, 38.218732141314526 36.94257117479898, 38.05815876992319 36.87833911465857, 37.700037174582135 36.733519596134045, 37.55573069574441 36.70805133181614, 37.13717770440069 36.632757361525954, 36.953337496469594 36.7979699394627, 36.72886443887165 36.84960657325003, 36.70653487992835 36.854711421759184, 36.686789425801564 36.81603708816522, 36.68132481963178 36.805322856818904, 36.52451038197157 36.49581501759623, 36.698984373400826 36.3002154563371, 36.64736861367201 36.22306279791285, 36.441107763765146 36.22565016415774, 36.39677552924782 36.03556776138855, 36.214014048756425 35.97684016189517, 36.1896896553005 35.804475291840035, 35.9559020125238 35.92650603928067, 35.932388279608666 35.9387292828112, 35.95450089547466 36.0380782288049, 35.74891946118707 36.29949674602812, 36.16687064781326 36.60636717200418, 36.121033402473046 36.90583198671514, 35.98735097301973 36.83581535654866, 35.38547266336473 36.51598746016978, 35.36994301733432 36.5254851378152, 35.05925880738429 36.645658094116705, 34.89334726866949 36.73299599859539, 34.68749036928572 36.840715089083055, 34.22485145647588 36.60472703795964, 34.03543868327575 36.300299116280854, 32.772031404573085 36.02009272147289, 32.61075966515673 36.078786973470855, 32.28963350962411 36.19461712906781, 32.18545973454445 36.38417642936477, 31.32688833490435 36.76626232108428, 30.642466349279605 36.807517948860145, 30.389956856545815 36.20440171409733, 29.732258965993182 36.126179022114, 29.287203121748448 36.280144945987075, 29.10543756724921 36.342272399785905, 29.064672583302112 36.66355136265935, 28.81793652478578 36.62669638298003, 28.4664656112329 36.822038749204985, 27.979866022179998 36.537900826434736, 27.776343620929964 36.56217210242381, 27.643180725029502 36.65547952598566, 27.33056595313138 36.744494055403976, 27.910827382759678 36.813512330335094, 28.217919694906744 37.013913903200915, 27.489200635303007 36.96592331436802, 27.237905341587197 37.070689965166025, 27.489385207110576 37.135204300643444, 27.525260549334984 37.25147949208229, 27.212073055513425 37.35196411816033, 27.21085706097497 37.35584084103798, 27.12498806779015 37.628727352804596, 26.89201050359446 37.66229695431676, 26.914091246580572 37.681420390629874, 27.036433730724422 37.69624885661241, 27.0063425509935 37.761005081888634, 27.221968787333903 37.74947508642606, 27.218923804151512 37.850591776111095, 27.215413718109794 37.96774494754654, 26.808909038622595 38.162664922282694, 26.558283300121797 38.120209586226636, 26.279786142388637 38.273362259259265, 26.417208005110453 38.366003953490676, 26.43540358790365 38.653361245176285, 26.803268600192318 38.39266826268214, 26.711835552450534 38.65721079406008, 26.959937451023357 38.84455425785976, 26.737036972718915 39.15565722472121, 26.675923461866365 39.240413659423744, 26.919623246928868 39.56113680244987, 26.638797531809264 39.53153776440984, 26.11280116651066 39.47385049481173, 26.198262883339954 40.00347292197863, 26.51966386336225 40.19326725713779, 26.845213847691074 40.383174505646885, 26.897586467885507 40.41350758014977, 27.473760923293305 40.364915038523456, 27.71496284390025 40.3435774043927, 27.75269830077052 40.531851334189504, 28.10239881786749 40.4030529952669, 28.10544830935725 40.401922474370636, 29.016591007639217 40.37525921252326, 28.925120518400846 40.46724853954064, 28.834918842029914 40.55764986765387, 29.411140416840375 40.72273582645352, 29.429481540744927 40.72791894374363, 29.30013029498631 40.810720060996815, 29.039375176282316 40.97654716133934, 29.17013537638425 41.20005257128908, 29.85324243425251 41.16260575542111, 30.30044519866652 41.13558103768684, 30.96739385523016 41.091578713602004, 31.21239421945473 41.074300552078135, 31.28386580306272 41.16263060978475, 31.40399616313363 41.31031410874657, 32.042936321331034 41.63552523756724, 32.197534141044905 41.71300061966389, 32.70070201240404 41.85878340890714, 33.25403207255006 42.01522365171644, 34.213950577735496 41.96528880828651, 34.633086368587286 41.94063185713465, 35.0052159196982 42.112402788967394, 35.12595591702399 41.83149234260819, 35.47773138146103 41.65047294299651, 35.535982298874146 41.659786375882724, 35.95008039925205 41.72490127265967, 36.27977513241831 41.29972729924506, 36.550511035822225 41.27836983906822, 36.73450093817848 41.37148555934355, 37.19823656485736 41.16741274649884, 37.54668745930891 41.01193979799985, 38.07007826832834 40.94795042468369, 38.44825986737937 40.899959636625454, 39.07397863422623 41.02956932013005, 39.37989626945681 41.091211711230635, 40.17698397060322 40.849876700407385, 40.356658487074085 40.93818138615125, 41.19863482493806 41.343417716541936, 41.55107285301152 41.508909372875856, 41.84442024690135 41.42985561120568, 42.44625586954883 41.433343585855035, 42.49431845607397 41.43346317616591, 42.626960545754066 41.59292573992788, 42.89838788612069 41.55886977006967, 43.46458474812648 41.14385025041035, 43.48816930129802 41.11782783476714, 43.50044998944393 41.104268954182, 43.77480635917313 40.79978936046828, 43.56735251094456 40.36798976816719, 43.71359856286507 40.13203481408156)), ((27.028235271242266 40.597833767851036, 26.92491655046074 40.5528437809849, 26.441568951846943 40.27772272928341, 26.20328360061888 40.139033022739305, 26.132188871692186 40.09741146178669, 26.177697062363137 40.31880498907321, 26.760793617953883 40.62125032378603, 26.592526668813946 40.61703333031311, 26.082338900178318 40.60251645822189, 26.013862269128456 40.75504987161317, 26.094227035908506 40.72155679924486, 26.314346822467773 41.013900484371995, 26.310326971320006 41.2042869066246, 26.56271517493815 41.3113585951787, 26.516432550646808 41.598301542835934, 26.381426125189964 41.70994559219796, 26.57323699750782 41.8783786249204, 26.827304802502383 41.95922470651924, 26.93231853236699 41.99238509534513, 27.009147955344673 42.01654905361718, 27.332550993293125 42.10312017845692, 27.938953988648198 42.004660650994175, 27.93857531855819 42.005128069393464, 27.948444921544812 42.00325303822887, 27.91705186818005 41.85564638344471, 28.141303177729448 41.586190282987566, 28.141623111359568 41.58580400337012, 28.191432747075382 41.52560052248301, 28.98921094247131 41.25844510208992, 28.988866977126445 41.257820627612944, 28.859877281113594 41.02251503665459, 28.33731906688691 41.06392048205731, 27.97398796836669 41.03552778721248, 27.511642376882072 40.99744360462135, 27.34652131536414 40.73530448007806, 27.028235271242266 40.597833767851036)), ((17.90808266849404 45.77579836538308, 18.130016134520304 45.75350332088225, 18.804241457270653 45.91172365054799, 18.842810565681024 45.924146642850275, 18.974865788115263 45.48319587868996, 19.063747794755947 45.18269633458368, 19.1104260801714 45.0236380067251, 19.06405782242929 44.87394819787882, 18.749938841175222 44.87243237389784, 18.741800286516085 44.87238069688947, 18.743566531422935 44.89903368525682, 18.74670266927839 44.94624878182961, 18.748747830724618 44.976963779796904, 18.544717623846598 45.017771861740066, 18.501281455196363 45.02640264589279, 18.482233837454306 45.03018094595912, 18.41495544263537 45.04349556185933, 18.38442946959086 45.04952102189517, 18.20711026930913 45.084322620555916, 18.158823470221332 45.08712847389592, 18.127967739598265 45.08891065208198, 17.154384886474936 45.1404727955987, 17.031689107600457 45.14286207895466, 16.00699301002515 45.1573197313563, 15.818090968970933 45.158908381598344, 15.740391300289255 45.15946966870406, 15.716987536268382 44.9800988751019, 15.67763088591042 44.89850261404534, 15.673829498798032 44.8906074762462, 15.998179954271672 44.48473307972513, 16.12770543743363 44.32075528364439, 16.165415219902616 44.272805235041616, 16.17909394828525 44.1704058132829, 16.183429480038342 44.137886256660096, 16.399908048186497 43.95016570724592, 16.68905203685428 43.69683154982944, 17.002116371489304 43.46467608163686, 17.32499061213855 43.22233494646645, 17.368534339786557 43.1894237113641, 17.38105781321664 43.153244340395105, 17.64045820372616 43.13482605556746, 17.823623669093763 42.89862095699224, 18.301667181889517 42.60969357435004, 18.40982783094885 42.61381998442028, 18.424397247260764 42.604071748032624, 18.424397247260767 42.60407174803263, 18.424397538703495 42.60407268219009, 18.56498767135719 43.050600686388364, 18.662269438314087 43.105947677502556, 18.988704887732737 43.290159236130926, 18.860431529957935 43.5197953648941, 19.167835078336253 43.50806428173388, 19.169078570586457 43.51583370553526, 19.57497029167557 43.23517594515165, 20.090913811074902 42.98084944134931, 20.09091707285695 42.98084781868532, 20.081577322905723 42.97022578409404, 20.35554208178929 42.846191291267516, 19.958945569351705 42.69057737866982, 19.95281793799074 42.53942139932019, 19.95281790158064 42.53942049558971, 19.937677381717144 42.53835662945644, 19.482312655461026 42.50526931688801, 19.393048157893617 42.38906609612877, 19.39304815175858 42.38906603323554, 19.370653671349228 41.8529305427431, 19.208131977507204 41.90303386430459, 19.02900642435507 42.14144535866519, 18.718394420669227 42.294022613843374, 18.718394420580488 42.294022614087915, 18.4107121094909 42.443507419299735, 17.851480013592216 42.727905660194125, 17.48395093966577 42.85430422120143, 17.31627168593795 42.911367474202606, 16.821093818850716 42.884720185622356, 16.708285506183824 42.971698836936405, 16.654549228828998 43.02232929580387, 16.52500445997009 43.14391958151973, 16.420542137902473 43.26577840496928, 16.36212020397029 43.333665518628905, 16.320645289608596 43.356741582410486, 16.23119054556751 43.406395619152356, 16.1402781740514 43.45326836736487, 16.03674153376313 43.479670022702614, 15.941590489146535 43.50382265609484, 15.943928888938009 43.649556073680664, 15.583967371961716 43.86199414772305, 15.127703207547873 44.127284692802206, 14.976180082023063 44.5643905069493, 14.958408008943492 44.579642995840494, 14.699746363134608 44.80036517100559, 14.55849736036438 44.84772789022865, 14.482062355791507 44.87324643755701, 14.384911593311287 44.90556878690968, 14.296536836944787 44.91549741707398, 14.115051409786604 44.935647495102735, 14.075341950040045 44.90587006411855, 13.90455313499432 44.77726896058003, 13.643944282571791 45.00489984731357, 13.560178670519324 45.410427381131356, 14.09066237553794 45.42148242153222, 14.104797446021283 45.421740889800276, 14.383990507932115 45.43890244620895, 14.563467255538315 45.59129309428274, 14.798980021919112 45.434568986787454, 15.13873603706452 45.371924123240646, 15.206874024435388 45.433170309724304, 15.337480626853802 45.55005735309483, 15.369510549758079 45.57862310878477, 15.268761927660899 45.68964257593236, 15.353295237788815 45.724569413075045, 15.43149912618855 45.756780956684274, 15.696160324351256 45.85471303849388, 15.70069780674937 45.965324319569866, 15.702304464223868 46.00433743703718, 15.647156027861469 46.13381343437104, 15.816845675377968 46.22642677635902, 15.877383171992598 46.24809549925472, 15.970141101567572 46.28119643585213, 16.250704232485624 46.38059309893094, 16.324824644445844 46.40666701160679, 16.619338605903827 46.46143865603252, 16.84173628330686 46.34136255278747, 16.904832732810018 46.30711658872393, 17.361830470499196 46.02447205530961, 17.618383086571068 45.863672723682704, 17.642693035258123 45.85461739715119, 17.8337418745902 45.783160724180284, 17.90808266849404 45.77579836538308), (18.41559695495602 42.57584806296904, 18.4155968409497 42.57584769732708, 18.41559684100814 42.57584769731317, 18.41559695495602 42.57584806296904)), ((-22.235464743097715 66.47176965248852, -21.58062651564522 66.15525875110701, -21.155974014375133 65.95139540171584, -21.300088194571288 65.62773191032305, -20.993858051193506 65.45967109904291, -20.541032414274593 65.68254326582957, -20.0658924438633 65.79170516526918, -20.256812222059473 66.04251078638019, -20.24343591791092 66.04579678283586, -19.8962461173861 66.13046457631181, -19.20964323104148 66.07813517840125, -18.656396873156904 66.1843087412133, -18.070414776295266 66.17342839041378, -17.32253207736456 65.99288459119404, -17.03561510459302 66.1717075855014, -16.322369450600956 66.20715850610193, -16.351953965804377 66.45421873313771, -15.913806525856065 66.52565622517479, -15.283695688059021 66.23620686266624, -14.851930030606916 66.31580591042459, -14.456144076627496 65.96820450883128, -14.133390840017963 65.75232159174739, -13.55011310341235 65.44070417771248, -13.816895724018865 65.20936110227062, -13.48441467867677 64.996852469381, -13.888192845533387 64.72658540012094, -14.547684517666445 64.3654783805856, -15.44996326745878 64.22575816153072, -16.50651676670213 63.861568555394705, -17.748536985102625 63.710448029523405, -17.875802523466167 63.49517347957083, -18.87329311451017 63.37273795935568, -20.04427511253461 63.56542465329816, -20.963362413966543 63.87044454764917, -22.518168216902723 63.80376078329212, -22.614251984436873 64.08330253937855, -22.080591107696282 64.02774163690619, -22.063727400014226 64.03690292968412, -21.59569102372677 64.28847309317369, -21.772904673700964 64.38506282320725, -22.259743918158374 64.64551304423293, -22.29211248381204 64.81743519279365, -23.60639523569714 64.74273639858727, -23.68716452010952 64.87567351752837, -22.609702133613222 65.04256751046636, -22.334338055402903 65.20916992785828, -22.078260280742487 65.42962438440026, -22.711856658893417 65.57407297133005, -23.624387704791815 65.43981145392887, -24.290428811316826 65.54784519755073, -23.71572195654223 65.86666721220932, -23.203479889784337 66.20720470616658, -22.747188314372618 66.20797936397736, -22.939070437862405 66.42702801877289, -22.235464743097715 66.47176965248852)))"^^geo:wktLiteral ;
       geo:is3D "false"^^xsd:boolean ;
       geo:isEmpty "false"^^xsd:boolean ;
       geo:isSimple "true"^^xsd:boolean ;

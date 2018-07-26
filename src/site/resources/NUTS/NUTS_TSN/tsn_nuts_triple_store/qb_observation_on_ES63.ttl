@@ -1,0 +1,49 @@
+@prefix st-stat: <http://purl.org/steamer/statistics/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdmx-dimension:  <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-attribute:  <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix qb:              <http://purl.org/linked-data/cube#> .
+@prefix tsn:        <http://purl.org/net/tsn#> .
+@prefix tsnchange:  <http://purl.org/net/tsnchange#> .
+@prefix nuts:       <http://purl.org/steamer/nuts/> .
+@prefix geosparql:  <http://www.opengis.net/ont/geosparql#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+
+st-stat:dataset-poptot-eurostat a qb:DataSet;
+	rdfs:label "Population, total"@en;
+	rdfs:comment "Total population, both sexes."@en;
+	qb:structure st-stat:dsd-dataset-poptot-eurostat;
+	sdmx-attribute:unitMeasure <http://dbpedia.org/resource/Year>.
+
+st-stat:dsd-dataset-poptot-eurostat a qb:DataStructureDefinition;
+	    #The dimensions
+        qb:component [qb:dimension sdmx-dimension:refArea];
+        qb:component [qb:dimension sdmx-dimension:refPeriod];
+
+        #The measures
+        qb:component [qb:measure st-stat:totalPopulation];
+
+        #The attributes
+        qb:component [qb:attribute sdmx-attribute:UnitMeasure];
+        qb:component [qb:attribute sdmx-attribute:DataSource].
+
+st-stat:observation-ES63-2001-nuts1999 a qb:Observation;
+	qb:dataset st-stat:dataset-poptot-eurostat;
+	sdmx-dimension:refArea nuts:V1999_L2_ES63;
+	sdmx-dimension:refPeriod [time:year "2001"^^xsd:gYear] ;
+	st-stat:totalPopulation 142000 .
+
+st-stat:observation-ES63-2001-nuts2003 a qb:Observation;
+	qb:dataset st-stat:dataset-poptot-eurostat;
+	sdmx-dimension:refArea nuts:V2003_L2_ES63;
+	sdmx-dimension:refPeriod [time:year "2001"^^xsd:gYear] ;
+	st-stat:totalPopulation 74000 .
+
+st-stat:observation-ES64-2001-nuts2003 a qb:Observation;
+	qb:dataset st-stat:dataset-poptot-eurostat;
+	sdmx-dimension:refArea nuts:V2003_L2_ES64;
+	sdmx-dimension:refPeriod [time:year "2001"^^xsd:gYear] ;
+	st-stat:totalPopulation 68000 .
+
+

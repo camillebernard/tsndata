@@ -1,0 +1,1 @@
+data available from : http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1270.0.55.001July%202016?OpenDocument and www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1270.0.55.001July 2011 (version 2011 and 2016 Statistical Area Level 1 (SA1) ASGS Ed 2011 Digital Boundaries in ESRI Shapefile Format).

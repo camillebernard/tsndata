@@ -1,0 +1,680 @@
+@prefix geof:    <http://www.opengis.net/def/function/geosparql/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo:     <http://www.opengis.net/ont/geosparql#> .
+@prefix strdf:   <http://strdf.di.uoa.gr/ontology#> .
+@prefix rrx:     <http://www.w3.org/ns/r2rml-ext#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix map:     <http://purl.org/steamer/asgs/> .
+@prefix territory:     <http://purl.org/steamer/territory#> .
+@prefix rdf:     <http://www.w3.org/2011/02/22-rdf-syntax-ns#> .
+@prefix tsn:     <http://purl.org/net/tsn#> .
+@prefix tsnchange:     <http://purl.org/net/tsnchange#> .
+@prefix time:    <http://www.w3.org/2006/time#> .
+@prefix rrxf:    <http://www.w3.org/ns/r2rml-ext/functions/def/> .
+@prefix map:     <http://purl.org/steamer/asgs/> .
+
+#################################################################
+# TSN ASGS
+#################################################################
+<http://purl.org/steamer/asgs>
+      a       tsn:Nomenclature ;
+      tsn:hasIdentifier "ASGS"^^xsd:string ;
+      tsn:hasName "Australian Statistical Geography Standard"^^xsd:string ;
+      tsn:hasAcronym "ASGS"^^xsd:string ;
+      tsn:hasDescription "The Australian Statistical Geography Standard (ASGS) provides a framework of statistical areas used by the Australian Bureau of Statistics (ABS) and other organisations to enable the publication of statistics that are comparable and spatially integrated. First introduced in 2011, the ASGS replaced the Australian Standard Geographical Classification (ASGC) that had been in use since 1984. The ASGS provides users with an integrated set of standard areas that can be used for analysing, visualising and integrating statistics produced by the ABS and other organisations. The ASGS is split into two parts, the ABS Structures and the Non ABS Structures. The ABS Structures are areas that the ABS designs specifically for outputting statistics. This means that the statistical areas are designed to meet the requirements of specific statistical collections as well as geographic concepts relevant to those statistics such as remoteness and urban/rural definitions. This helps to ensure the confidentiality, accuracy and relevance of the data. The ABS Structures are stable for five years to enable better comparison of data over time. The Non ABS Structures represent administrative areas for which the ABS is committed to providing a range of statistics. These areas can change regularly as they are not defined by the ABS. As a result the Non ABS Structures are updated annually if significant changes to the areas have occurred. This improves the relevance of ABS data released on these areas. For example, the Local Government Areas (LGAs) are released annually: these represent LGAs that are defined by the State and Territory governments. ABS statistics such as Estimated Resident Population (ERP) are output on these LGA approximations. Separating the ABS and Non ABS Structures in the ASGS ensures that the ABS can provide statistics on both stable, purpose built statistical areas as well as important administrative areas. This is a key difference to the previous ASGC where all areas were related to LGAs and consequently needed to be updated annually to reflect changes in the LGAs. This key difference is possible because the ASGS uses Mesh Blocks as a common building block for all structures. Mesh Blocks, like other ABS Structures, are stable for 5 years. However, they are small enough that they can accurately approximate the changing administrative areas without changing themselves. Mesh Blocks also provide an additional level of confidentiality for data released on the ASGS, as the difference in data released on multiple statistical areas is always at least one Mesh Block. (Source http://www.abs.gov.au/websitedbs/D3310114.nsf/home/Australian+Statistical+Geography+Standard+(ASGS) )« ^^xsd:string ;
+      tsn:hasVersion <http://purl.org/steamer/asgs/V2011> ;
+      tsn:hasVersion <http://purl.org/steamer/asgs/V2016> ;
+
+#################################################################
+# ASGS VERSIONS
+#################################################################
+<http://purl.org/steamer/asgs/V2011>
+      a       tsn:NomenclatureVersion ;
+      tsn:hasIdentifier "ASGS_V2011"^^xsd:string ;
+      tsn:hasName "Nomenclature of Territorial Units for Statistics version 2011"^^xsd:string ;
+      tsn:hasAcronym "ASGS_V2011"^^xsd:string   ;
+      tsn:hasDescription "This publication is the first volume of a series detailing the new Australian Statistical Geography Standard (ASGS). It deals with the ASGS Main Structure (Statistical Area Levels 1 - 4) and the Greater Capital City Statistical Areas. The ASGS brings all the regions for which the ABS publishes statistics within the one framework and will be used by the ABS for the collection and dissemination of geographically classified statistics from 1 July 2011. It is the framework for understanding and interpreting the geographical context of statistics published by the ABS. The ABS also encourages the use of the ASGS by other organisations to improve the comparability and usefulness of statistics generally."^^xsd:string  ;
+      tsn:isVersionOf <http://purl.org/steamer/asgs> ;
+      tsnchange:hasNextVersion <http://purl.org/steamer/asgs/V2016> ;
+      tsnchange:hasPreviousVersion <http://www.abs.gov.au/websitedbs/D3310114.nsf/home/Australian+Standard+Geographical+Classification+(ASGC)> ;
+      tsn:covers <http://purl.org/steamer/asgs/V2011_Territory_1> ; 
+      tsn:covers <http://purl.org/steamer/asgs/V2011_Territory_2> ; 
+      tsn:covers <http://purl.org/steamer/asgs/V2011_Territory_3> ; 
+      tsn:covers <http://purl.org/steamer/asgs/V2011_Territory_4> ; 
+      tsn:covers <http://purl.org/steamer/asgs/V2011_Territory_5> ; 
+      tsn:covers <http://purl.org/steamer/asgs/V2011_Territory_6> ; 
+      tsn:covers <http://purl.org/steamer/asgs/V2011_Territory_7> ; 
+      tsn:covers <http://purl.org/steamer/asgs/V2011_Territory_8> ; 
+      tsn:covers <http://purl.org/steamer/asgs/V2011_Territory_9> ; 
+      tsn:hasDivision <http://purl.org/steamer/asgs/V2011_L_Territory> ;
+      tsn:hasDivision <http://purl.org/steamer/asgs/V2011_L4> ;
+      tsn:hasDivision <http://purl.org/steamer/asgs/V2011_L3> ;
+      tsn:hasDivision <http://purl.org/steamer/asgs/V2011_L2> ;
+      tsn:nomenclatureVersionSource <http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1270.0.55.001July%202011> ;
+      tsn:referencePeriod map:V2011_ref_period .
+
+      map:V2011_ref_period a time:Interval ;
+      	  time:hasBeginning map:V2011_ref_period_begin ;
+          time:hasEnd map:V2011_ref_period_end .
+
+      map:V2011_ref_period_begin a time:Instant ;
+      	time:inXSDDateTime "2011-07-01T00:00:00Z"^^xsd:dateTime .
+
+      map:V2011_ref_period_end a time:Instant ;
+      	time:inXSDDateTime "2016-06-31T00:00:00Z"^^xsd:dateTime .
+
+<http://purl.org/steamer/asgs/V2016>
+      a       tsn:NomenclatureVersion ;
+      tsn:hasIdentifier "ASGS_V2016"^^xsd:string ;
+      tsn:hasName "Nomenclature of Territorial Units for Statistics version 2016"^^xsd:string ;
+      tsn:hasAcronym "ASGS_V2016"^^xsd:string   ;
+      tsn:hasDescription " The compilation of this nomenclature relates to the situation observed in 2016 (anticipation of the EU25 creation). This nomenclature derives firstly from the official ASGS 2016 nomenclature (EU25), it is prepared according to the specification from the ASGS changes files found in EUROSTAT Web site (URL: http://ec.europa.eu/eurostat/documents/345175/629341/2011-2016.xls and http://ec.europa.eu/eurostat/web/asgs/history). Secondly, it derives from the official EFTA & CC 2016 nomenclature, it is prepared according to the specification from the respective files Found in EUROSTAT Web site (URL: http://ec.europa.eu/eurostat/ramon/statmanuals/files/KS-41-01-616-EN-N.pdf)."^^xsd:string  ;
+      tsn:isVersionOf <http://purl.org/steamer/asgs> ;
+      tsnchange:hasPreviousVersion <http://purl.org/steamer/asgs/V2011> ;
+      tsn:covers <http://purl.org/steamer/asgs/V2016_Territory_1> ; 
+      tsn:covers <http://purl.org/steamer/asgs/V2016_Territory_2> ; 
+      tsn:covers <http://purl.org/steamer/asgs/V2016_Territory_3> ; 
+      tsn:covers <http://purl.org/steamer/asgs/V2016_Territory_4> ; 
+      tsn:covers <http://purl.org/steamer/asgs/V2016_Territory_5> ; 
+      tsn:covers <http://purl.org/steamer/asgs/V2016_Territory_6> ; 
+      tsn:covers <http://purl.org/steamer/asgs/V2016_Territory_7> ; 
+      tsn:covers <http://purl.org/steamer/asgs/V2016_Territory_8> ; 
+      tsn:covers <http://purl.org/steamer/asgs/V2016_Territory_9> ; 
+      tsn:hasDivision <http://purl.org/steamer/asgs/V2016_L_Territory> ;
+      tsn:hasDivision <http://purl.org/steamer/asgs/V2016_L4> ;
+      tsn:hasDivision <http://purl.org/steamer/asgs/V2016_L3> ;
+      tsn:hasDivision <http://purl.org/steamer/asgs/V2016_L2> ;
+      tsn:nomenclatureVersionSource <http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1270.0.55.001July%202016?OpenDocument> ;
+      tsn:referencePeriod map:V2016_ref_period .
+
+      map:V2016_ref_period  a time:Interval ;
+      	  time:hasBeginning map:V2016_ref_period_begin ;
+          time:hasEnd map:V2016_ref_period_end .
+
+      map:V2016_ref_period_begin a time:Instant ;
+      	time:inXSDDateTime "2016-07-01T00:00:00Z"^^xsd:dateTime .
+
+      map:V2016_ref_period_end a time:Instant ;
+      	time:inXSDDateTime "2007-12-31T00:00:00Z"^^xsd:dateTime .
+
+
+#################################################################
+# ASGS LEVELS
+#################################################################
+<http://purl.org/steamer/asgs/level_territory>
+    a       tsn:Level ;
+    tsn:hasIdentifier "ASGS_L_Territory"^^xsd:string ;
+    tsn:hasName "ASGS Level Territories"^^xsd:string ;
+    tsn:hasAcronym "ASGS_L_Territory"  ;
+    tsn:hasDescription "Territories Level";
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2011_L_Territory> ;
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2016_L_Territory> .
+
+
+<http://purl.org/steamer/asgs/leveL4>
+    a       tsn:Level ;
+    tsn:hasIdentifier "ASGS_L4"^^xsd:string ;
+    tsn:hasName "ASGS Level 0"^^xsd:string ;
+    tsn:hasAcronym "ASGS_L4"  ;
+    tsn:hasDescription "States regions.";
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2011_L4> ;
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2016_L4> .
+
+<http://purl.org/steamer/asgs/leveL3>
+    a       tsn:Level ;
+    tsn:hasIdentifier "ASGS_L3"^^xsd:string ;
+    tsn:hasName "ASGS Level 1"^^xsd:string ;
+    tsn:hasAcronym "ASGS_L3"  ;
+    tsn:hasDescription "Major socio-economic regions.";
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2011_L3> ;
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2016_L3> .
+
+<http://purl.org/steamer/asgs/level2>
+    a       tsn:Level ;
+    tsn:hasIdentifier "ASGS_L_2"^^xsd:string ;
+    tsn:hasName "ASGS Level 2"^^xsd:string ;
+    tsn:hasAcronym "ASGS_L_2"  ;
+    tsn:hasDescription "Basic regions for the application of regional policies.";
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2011_L2> ;
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2016_L2> .
+
+
+#################################################################
+# ASGS LEVELS VERSIONS
+#################################################################
+################################################################# LEVEL Terrritory
+<http://purl.org/steamer/asgs/V2011_L_Territory>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "ASGS_V2011_L_Territory"^^xsd:string ;
+    tsn:hasName "ASGS version 2011 Level Territory"^^xsd:string ;
+    tsn:hasAcronym "ASGS_V2011_L_Territory"  ;
+    tsn:hasDescription "Territories in Europe.";
+    tsn:isVersionOf <http://purl.org/steamer/asgs/level_territory> ;
+    tsnchange:hasNextVersion <http://purl.org/steamer/asgs/V2016_L_Territory> ;
+    tsnchange:hasPreviousVersion <http://purl.org/steamer/asgs/V1995_L_Territory> ;
+    tsn:isDivisionOf <http://purl.org/steamer/asgs/V2011> ;
+    tsn:hasSubFeature <http://purl.org/steamer/asgs/V2011_L4>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/asgs/V2011_L3>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/asgs/V2011_L2>  .
+
+<http://purl.org/steamer/asgs/V2016_L_Territory>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "ASGS_V2016_L_Territory"^^xsd:string ;
+    tsn:hasName "ASGS version 2016 Level Territory"^^xsd:string ;
+    tsn:hasAcronym "ASGS_V2016_L_Territory"  ;
+    tsn:hasDescription "Territories in Europe.";
+    tsn:isVersionOf <http://purl.org/steamer/asgs/level_territory> ;
+    tsnchange:hasNextVersion <http://purl.org/steamer/asgs/V2006_L_Territory> ;
+    tsnchange:hasPreviousVersion <http://purl.org/steamer/asgs/V2011_L_Territory> ;
+    tsn:isDivisionOf <http://purl.org/steamer/asgs/V2016> ;
+    tsn:hasSubFeature <http://purl.org/steamer/asgs/V2016_L4>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/asgs/V2016_L3>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/asgs/V2016_L2>  .
+
+
+################################################################# LEVEL 4
+
+
+<http://purl.org/steamer/asgs/V2011_L4>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "ASGS_V2011_L4"^^xsd:string ;
+    tsn:hasName "ASGS version 2011 Level 0"^^xsd:string ;
+    tsn:hasAcronym "ASGS_V2011_L4"  ;
+    tsn:hasDescription "States regions in Europe, situation observed in 2011.";
+    tsn:isVersionOf <http://purl.org/steamer/asgs/leveL4> ;
+    tsnchange:hasNextVersion <http://purl.org/steamer/asgs/V2016_L4> ;
+    tsnchange:hasPreviousVersion <http://purl.org/steamer/asgs/V1995_L4> ;
+    tsn:isDivisionOf <http://purl.org/steamer/asgs/V2011> ;
+    tsn:hasSubFeature <http://purl.org/steamer/asgs/V2011_L3>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/asgs/V2011_L2>  ;
+    tsn:hasSuperFeature <http://purl.org/steamer/asgs/V2011_L_Territory>  .
+
+<http://purl.org/steamer/asgs/V2016_L4>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "ASGS_V2016_L4"^^xsd:string ;
+    tsn:hasName "ASGS version 2016 Level 0"^^xsd:string ;
+    tsn:hasAcronym "ASGS_V2016_L4"  ;
+    tsn:hasDescription "States regions in Europe, situation observed in 2016.";
+    tsn:isVersionOf <http://purl.org/steamer/asgs/leveL4> ;
+    tsnchange:hasNextVersion <http://purl.org/steamer/asgs/V2006_L4> ;
+    tsnchange:hasPreviousVersion <http://purl.org/steamer/asgs/V2011_L4> ;
+    #tsn:hasUnit ;
+    tsn:isDivisionOf <http://purl.org/steamer/asgs/V2016> ;
+    tsn:hasSubFeature <http://purl.org/steamer/asgs/V2016_L3>  ;
+    tsn:hasSubFeature <http://purl.org/steamer/asgs/V2016_L2>  ;
+    tsn:hasSuperFeature <http://purl.org/steamer/asgs/V2016_L_Territory>  .
+
+
+################################################################# LEVEL 3
+<http://purl.org/steamer/asgs/V2011_L3>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "ASGS_V2011_L3"^^xsd:string ;
+    tsn:hasName "ASGS version 2011 Level 1"^^xsd:string ;
+    tsn:hasAcronym "ASGS_V2011_L3"  ;
+    tsn:hasDescription "Major socio-economic in Europe, situation observed in 2011.";
+    tsn:isVersionOf <http://purl.org/steamer/asgs/leveL3> ;
+    tsnchange:hasNextVersion <http://purl.org/steamer/asgs/V2016_L3> ;
+    tsnchange:hasPreviousVersion <http://purl.org/steamer/asgs/V1995_L3> ;
+    #tsn:hasUnit ;
+    tsn:isDivisionOf <http://purl.org/steamer/asgs/V2011> ;
+    tsn:hasSubFeature <http://purl.org/steamer/asgs/V2011_L2>  ;
+    tsn:hasSuperFeature <http://purl.org/steamer/asgs/V2011_L4> ;
+    tsn:hasSuperFeature <http://purl.org/steamer/asgs/V2011_L_Territory>  .
+
+<http://purl.org/steamer/asgs/V2016_L3>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "ASGS_V2016_L3"^^xsd:string ;
+    tsn:hasName "ASGS version 2016 Level 1"^^xsd:string ;
+    tsn:hasAcronym "ASGS_V2016_L3"  ;
+    tsn:hasDescription "Major socio-economic in Europe, situation observed in 2016.";
+    tsn:isVersionOf <http://purl.org/steamer/asgs/leveL3> ;
+    tsnchange:hasNextVersion <http://purl.org/steamer/asgs/V2006_L3> ;
+    tsnchange:hasPreviousVersion <http://purl.org/steamer/asgs/V2011_L3> ;
+    #tsn:hasUnit ;
+    tsn:isDivisionOf <http://purl.org/steamer/asgs/V2016> ;
+    tsn:hasSubFeature <http://purl.org/steamer/asgs/V2016_L2>  ;
+    tsn:hasSuperFeature <http://purl.org/steamer/asgs/V2016_L4> ;
+    tsn:hasSuperFeature <http://purl.org/steamer/asgs/V2016_L_Territory>  .
+
+
+################################################################# LEVEL 2
+<http://purl.org/steamer/asgs/V2011_L2>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "ASGS_V2011_L2"^^xsd:string ;
+    tsn:hasName "ASGS version 2011 Level 2"^^xsd:string ;
+    tsn:hasAcronym "ASGS_V2011_L2"  ;
+    tsn:hasDescription "Basic regions for the application of regional policies in Europe, situation observed in 2011.";
+    tsn:isVersionOf <http://purl.org/steamer/asgs/level2> ;
+    tsnchange:hasNextVersion <http://purl.org/steamer/asgs/V2016_L2> ;
+    tsnchange:hasPreviousVersion <http://purl.org/steamer/asgs/V1995_L2> ;
+    #tsn:hasUnit ;
+    tsn:isDivisionOf <http://purl.org/steamer/asgs/V2011> ;
+    tsn:hasSuperFeature <http://purl.org/steamer/asgs/V2011_L4> ;
+    tsn:hasSuperFeature <http://purl.org/steamer/asgs/V2011_L3> ;
+    tsn:hasSuperFeature <http://purl.org/steamer/asgs/V2011_L_Territory>  .
+
+<http://purl.org/steamer/asgs/V2016_L2>
+    a       tsn:LevelVersion ;
+    tsn:hasIdentifier "ASGS_V2016_L2"^^xsd:string ;
+    tsn:hasName "ASGS version 2016 Level 2"^^xsd:string ;
+    tsn:hasAcronym "ASGS_V2016_L2"  ;
+    tsn:hasDescription "Basic regions for the application of regional policies in Europe, situation observed in 2016.";
+    tsn:isVersionOf <http://purl.org/steamer/asgs/level2> ;
+    tsnchange:hasNextVersion <http://purl.org/steamer/asgs/V2006_L2> ;
+    tsnchange:hasPreviousVersion <http://purl.org/steamer/asgs/V2011_L2> ;
+    #tsn:hasUnit ;
+    tsn:isDivisionOf <http://purl.org/steamer/asgs/V2016> ;
+    tsn:hasSuperFeature <http://purl.org/steamer/asgs/V2016_L4> ;
+    tsn:hasSuperFeature <http://purl.org/steamer/asgs/V2016_L3> ;
+    tsn:hasSuperFeature <http://purl.org/steamer/asgs/V2016_L_Territory>  .
+
+
+#################################################################
+# ASGS TERRITORY
+#################################################################
+<http://purl.org/steamer/asgs/Territory_EU>
+    a       tsn:Territory ;
+    tsn:hasIdentifier "EU"^^xsd:string ;
+    tsn:hasName "European Union"^^xsd:string ;
+    tsn:hasAcronym  "EU"^^xsd:string ;
+    tsn:hasDescription "The European Union (EU) is a political and economic union of member states that are located primarily in Europe."^^xsd:string ;
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2011_Territory_EU> ;
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2016_Territory_EU>  ;
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2006_Territory_EU>  ;
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2010_Territory_EU>  ;
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2013_Territory_EU>  .
+
+<http://purl.org/steamer/asgs/Territory_EFTA>
+    a       tsn:Territory ;
+    tsn:hasIdentifier "EFTA"^^xsd:string ;
+    tsn:hasName "European Free Trade Association"^^xsd:string ;
+    tsn:hasAcronym "EFTA"^^xsd:string ;
+    tsn:hasDescription "The European Free Trade Association (EFTA) is a regional trade organisation and free trade area consisting of four European states: Iceland, Liechtenstein, Norway, and Switzerland. The organisation operates in parallel with the European Union (EU), and all four member states participate in the European single market (Source: https://en.wikipedia.org/wiki/European_Free_Trade_Association)."  ;
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2011_Territory_EFTA> ;
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2016_Territory_EFTA>  ;
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2006_Territory_EFTA>  ;
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2010_Territory_EFTA>  ;
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2013_Territory_EFTA>  . 
+
+<http://purl.org/steamer/asgs/Territory_CC>
+    a       tsn:Territory ;
+    tsn:hasIdentifier "CC"^^xsd:string ;
+    tsn:hasName "European Union Candidate Countries"^^xsd:string ;
+    tsn:hasAcronym "CC"^^xsd:string ;
+    tsn:hasDescription "EU candidate countries are those whose EU membership application has been accepted by the EU, and are moving toward or actually negotiating their accessions (Source: http://www.euintheus.org/what-we-do/policy-areas/european-enlargement-neighborhood/)."  ;
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2011_Territory_CC> ;
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2016_Territory_CC>  ;
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2006_Territory_CC>  ;
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2010_Territory_CC>  ;
+    tsn:hasVersion <http://purl.org/steamer/asgs/V2013_Territory_CC>  .
+
+#################################################################
+# ASGS TERRITORY VERSIONS
+#################################################################
+################################################################# European Union
+<http://purl.org/steamer/asgs/V2011_Territory_EU>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "V2011_Territory_EU"^^xsd:string ;
+    tsn:hasName "European Union 15 from 1995 to 2004"^^xsd:string ;
+    tsn:hasAcronym  "V2011_Territory_EU"^^xsd:string ;
+    tsn:hasDescription "The European Union 15 (EU15) territory relates to the situation of the EU territory observed  from 1995 to 2004. The 1995 enlargement of the European Union saw  Austria (AT), Finland (FI) and Sweden (SE) join the European Union. EU15 was the number of member countries in the European Union prior to the accession of ten candidate countries on 1 May 2004. The EU15 comprised the following 15 countries:  Belgium (BE), Denmark (DK), France (FR), Germany (DE), Greece (EL), Ireland (IE), Italy (IT), Luxembourg (LU), Netherlands (NL), Portugal (PT), Spain (ES), United Kingdom (UK), Austria (AT), Finland (FI), Sweden (SE) (Source: https://stats.oecd.org/glossary/detail.asp?ID=6805). "^^xsd:string ;
+     tsn:isMemberOf map:V2011_L_Territory ;
+     tsn:isVersionOf map:Territory_EU ;
+     geo:hasGeometry map:Geometry_29 ;
+     tsn:isCoveredBy <http://purl.org/steamer/asgs/V2011> ;
+     <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+    tsn:referencePeriod map:EU2011refperiod .
+
+    map:EU2011refperiod a time:Interval ;
+        time:hasBeginning map:EU2011begin ;
+        time:hasEnd map:EU2011end .
+
+    map:EU2011begin a time:Instant ;
+      time:inXSDDateTime "1995-01-01T00:00:00Z"^^xsd:dateTime .
+
+    map:EU2011end a time:Instant ;
+      time:inXSDDateTime "2004-05-01T00:00:00Z"^^xsd:dateTime .
+
+
+
+<http://purl.org/steamer/asgs/V2016_Territory_EU>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "V2016_Territory_EU"^^xsd:string ;
+    tsn:hasName "European Union 25 from 2004 to 2007"^^xsd:string ;
+    tsn:hasAcronym  "V2016_Territory_EU"^^xsd:string ;
+    tsn:hasDescription "The European Union 25 (EU25) territory relates to the situation of the EU territory observed in 2004 (EU25, from 2004 to 2007). The 2004 enlargement of the European Union saw Cyprus (CY), Czech Republic (CZ), Estonia (EE), Hungary (HU), Latvia (LV), Lithuania (LT), Malta (MT), Poland (PL), Slovakia (SK) and Slovenia (SI)Austria (AT), Finland (FI) and Sweden (SE) join the European Union. The EU25 comprised the following 25 countries: Belgium (BE), Denmark (DK), France (FR), Germany (DE), Greece (EL), Ireland (IE), Italy (IT), Luxembourg (LU), Netherlands (NL), Portugal (PT), Spain (ES), United Kingdom (UK), Austria (AT), Finland (FI), Sweden (SE), Cyprus (CY), Czech Republic (CZ), Estonia (EE), Hungary (HU), Latvia (LV), Lithuania (LT), Malta (MT), Poland (PL), Slovakia (SK), Slovenia (SI). "^^xsd:string ;
+     <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+    tsn:isMemberOf map:V2016_L_Territory ;
+    tsn:isVersionOf map:Territory_EU ;
+    geo:hasGeometry map:Geometry_30 ;
+    tsn:isCoveredBy <http://purl.org/steamer/asgs/V2016> ;
+    tsn:referencePeriod map:EU2016refperiod .
+
+    map:EU2016refperiod a time:Interval ;
+        time:hasBeginning map:EU2016begin ;
+        time:hasEnd map:EU2016end .
+
+    map:EU2016begin a time:Instant ;
+      time:inXSDDateTime "2004-05-01T00:00:00Z"^^xsd:dateTime .
+
+    map:EU2016end a time:Instant ;
+      time:inXSDDateTime "2007-01-01T00:00:00Z"^^xsd:dateTime .
+
+
+
+
+
+<http://purl.org/steamer/asgs/V2006_Territory_EU>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "V2006_Territory_EU"^^xsd:string ;
+    tsn:hasName "European Union 27 from 2007 to 2013"^^xsd:string ;
+    tsn:hasAcronym  "V2006_Territory_EU"^^xsd:string ;
+    tsn:hasDescription "The European Union 27 (EU27) territory relates to the situation of the EU territory observed from 2007 to 2013. The 2007 enlargement of the European Union saw Bulgaria and Romania join the European Union. The EU27 comprised the following 27 countries: Belgium (BE), Denmark (DK), France (FR), Germany (DE), Greece (EL), Ireland (IE), Italy (IT), Luxembourg (LU), Netherlands (NL), Portugal (PT), Spain (ES), United Kingdom (UK), Austria (AT), Finland (FI), Sweden (SE), Cyprus (CY), Czech Republic (CZ), Estonia (EE), Hungary (HU), Latvia (LV), Lithuania (LT), Malta (MT), Poland (PL), Slovakia (SK), Slovenia (SI), Bulgaria (BG), Romania (RO). "^^xsd:string ;
+    <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V2006_L_Territory ;
+      tsn:isVersionOf map:Territory_EU ;
+      geo:hasGeometry map:Geometry_31 ;
+    tsn:isCoveredBy <http://purl.org/steamer/asgs/V2006> ;
+    tsn:isCoveredBy <http://purl.org/steamer/asgs/V2010> ;
+    tsn:referencePeriod map:EU2006refperiod .
+
+    map:EU2006refperiod a time:Interval ;
+        time:hasBeginning map:EU2006begin ;
+        time:hasEnd map:EU2006end .
+
+    map:EU2006begin a time:Instant ;
+      time:inXSDDateTime "2007-01-01T00:00:00Z"^^xsd:dateTime .
+
+    map:EU2006end a time:Instant ;
+      time:inXSDDateTime "2013-06-30T00:00:00Z"^^xsd:dateTime .
+
+
+
+
+<http://purl.org/steamer/asgs/V2010_Territory_EU>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "V2010_Territory_EU"^^xsd:string ;
+    tsn:hasName "European Union 27 from 2007 to 2013"^^xsd:string ;
+    tsn:hasAcronym  "V2010_Territory_EU"^^xsd:string ;
+    tsn:hasDescription "The European Union 27 (EU27) territory relates to the situation of the EU territory observed from 2007 to 2013. The 2007 enlargement of the European Union saw Bulgaria and Romania join the European Union. The EU27 comprised the following 27 countries: Belgium (BE), Denmark (DK), France (FR), Germany (DE), Greece (EL), Ireland (IE), Italy (IT), Luxembourg (LU), Netherlands (NL), Portugal (PT), Spain (ES), United Kingdom (UK), Austria (AT), Finland (FI), Sweden (SE), Cyprus (CY), Czech Republic (CZ), Estonia (EE), Hungary (HU), Latvia (LV), Lithuania (LT), Malta (MT), Poland (PL), Slovakia (SK), Slovenia (SI), Bulgaria (BG), Romania (RO). "^^xsd:string ;
+     <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V2010_L_Territory ;
+      tsn:isVersionOf map:Territory_EU ;
+      geo:hasGeometry map:Geometry_32 ;
+    tsn:isCoveredBy <http://purl.org/steamer/asgs/V2006> ;
+    tsn:isCoveredBy <http://purl.org/steamer/asgs/V2010> ;
+    tsn:referencePeriod map:EU2006refperiod .
+
+    map:EU2006refperiod a time:Interval ;
+        time:hasBeginning map:EU2006begin ;
+        time:hasEnd map:EU2006end .
+
+    map:EU2006begin a time:Instant ;
+      time:inXSDDateTime "2007-01-01T00:00:00Z"^^xsd:dateTime .
+
+    map:EU2006end a time:Instant ;
+      time:inXSDDateTime "2013-06-30T00:00:00Z"^^xsd:dateTime .
+
+
+
+<http://purl.org/steamer/asgs/V2013_Territory_EU>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "V2013_Territory_EU"^^xsd:string ;
+    tsn:hasName "European Union 28 from 2013 to 2018"^^xsd:string ;
+    tsn:hasAcronym  "V2013_Territory_EU"^^xsd:string ;
+    tsn:hasDescription "The European Union 28 (EU28) territory relates to the situation of the EU territory observed from 2013 to 2018. The 2013 enlargement of the European Union saw Croatia (HR) join the European Union. The EU28 comprised the following 28 countries: Belgium (BE), Denmark (DK), France (FR), Germany (DE), Greece (EL), Ireland (IE), Italy (IT), Luxembourg (LU), Netherlands (NL), Portugal (PT), Spain (ES), United Kingdom (UK), Austria (AT), Finland (FI), Sweden (SE), Cyprus (CY), Czech Republic (CZ), Estonia (EE), Hungary (HU), Latvia (LV), Lithuania (LT), Malta (MT), Poland (PL), Slovakia (SK), Slovenia (SI), Bulgaria (BG), Romania (RO), Croatia (HR). "^^xsd:string ;
+    tsn:isVersionOf <http://purl.org/steamer/asgs/Territory_EU> ;
+    tsn:isCoveredBy <http://purl.org/steamer/asgs/V2013> ;
+    tsn:referencePeriod map:EU2013refperiod .
+
+    map:EU2013refperiod a time:Interval ;
+        time:hasBeginning map:EU2013begin ;
+        time:hasEnd map:EU2013end .
+
+    map:EU2013begin a time:Instant ;
+      time:inXSDDateTime "2013-07-01T00:00:00Z"^^xsd:dateTime .
+
+    map:EU2013end a time:Instant ;
+      time:inXSDDateTime "2018-01-01T00:00:00Z"^^xsd:dateTime .
+
+
+
+################################################################# EFTA
+<http://purl.org/steamer/asgs/V2011_Territory_EFTA>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "V2011_Territory_EFTA"^^xsd:string ;
+    tsn:hasName "European Free Trade Association from 1995 to now"^^xsd:string ;
+    tsn:hasAcronym  "V2011_Territory_EFTA"^^xsd:string ;
+    tsn:hasDescription "The European Free Trade Association (EFTA) is a regional trade organisation and free trade area consisting of four European states: Iceland, Liechtenstein, Norway, and Switzerland. The organisation operates in parallel with the European Union (EU), and all four member states participate in the European single market (Source: https://en.wikipedia.org/wiki/European_Free_Trade_Association). In 1995 Austria, Finland and Sweden leave EFTA to join the EU. Liechtenstein becomes a full participant in the EEA Agreement together with Iceland and Norway (Source: http://www.efta.int/about-efta/history). "^^xsd:string ;
+    <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V2011_L_Territory ;
+      tsn:isVersionOf map:Territory_EFTA ;
+      geo:hasGeometry map:Geometry_11 ;
+    tsn:isCoveredBy <http://purl.org/steamer/asgs/V2011> ;
+    tsn:referencePeriod map:EFTA4refperiod .
+
+    map:EFTA4refperiod a time:Interval ;
+        time:hasBeginning map:EFTA4begin ;
+        time:hasEnd map:EFTA4end .
+
+    map:EFTA4begin a time:Instant ;
+      time:inXSDDateTime "1995-01-01T00:00:00Z"^^xsd:dateTime .
+
+
+
+<http://purl.org/steamer/asgs/V2016_Territory_EFTA>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "V2016_Territory_EFTA"^^xsd:string ;
+    tsn:hasName "European Free Trade Association from 1995 to now"^^xsd:string ;
+    tsn:hasAcronym  "V2016_Territory_EFTA"^^xsd:string ;
+    tsn:hasDescription "The European Free Trade Association (EFTA) is a regional trade organisation and free trade area consisting of four European states: Iceland, Liechtenstein, Norway, and Switzerland. The organisation operates in parallel with the European Union (EU), and all four member states participate in the European single market (Source: https://en.wikipedia.org/wiki/European_Free_Trade_Association). In 1995 Austria, Finland and Sweden leave EFTA to join the EU. Liechtenstein becomes a full participant in the EEA Agreement together with Iceland and Norway (Source: http://www.efta.int/about-efta/history). "^^xsd:string ;
+     <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V2016_L_Territory ;
+      tsn:isVersionOf map:Territory_EFTA ;
+      geo:hasGeometry map:Geometry_17 ;
+    tsn:isCoveredBy <http://purl.org/steamer/asgs/V2016> ;
+    tsn:referencePeriod map:EFTA4refperiod .
+
+    map:EFTA4refperiod a time:Interval ;
+        time:hasBeginning map:EFTA4begin ;
+        time:hasEnd map:EFTA4end .
+
+    map:EFTA4begin a time:Instant ;
+      time:inXSDDateTime "1995-01-01T00:00:00Z"^^xsd:dateTime .
+
+
+
+<http://purl.org/steamer/asgs/V2006_Territory_EFTA>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "V2006_Territory_EFTA"^^xsd:string ;
+    tsn:hasName "European Free Trade Association from 1995 to now"^^xsd:string ;
+    tsn:hasAcronym  "V2006_Territory_EFTA"^^xsd:string ;
+    tsn:hasDescription "The European Free Trade Association (EFTA) is a regional trade organisation and free trade area consisting of four European states: Iceland, Liechtenstein, Norway, and Switzerland. The organisation operates in parallel with the European Union (EU), and all four member states participate in the European single market (Source: https://en.wikipedia.org/wiki/European_Free_Trade_Association). In 1995 Austria, Finland and Sweden leave EFTA to join the EU. Liechtenstein becomes a full participant in the EEA Agreement together with Iceland and Norway (Source: http://www.efta.int/about-efta/history). "^^xsd:string ;
+    <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V2006_L_Territory ;
+      tsn:isVersionOf map:Territory_EFTA ;
+      geo:hasGeometry map:Geometry_23 ;
+    tsn:isCoveredBy <http://purl.org/steamer/asgs/V2006> ;
+    tsn:referencePeriod map:EFTA4refperiod .
+
+    map:EFTA4refperiod a time:Interval ;
+        time:hasBeginning map:EFTA4begin ;
+        time:hasEnd map:EFTA4end .
+
+    map:EFTA4begin a time:Instant ;
+      time:inXSDDateTime "1995-01-01T00:00:00Z"^^xsd:dateTime .
+
+
+
+<http://purl.org/steamer/asgs/V2010_Territory_EFTA>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "V2010_Territory_EFTA"^^xsd:string ;
+    tsn:hasName "European Free Trade Association from 1995 to now"^^xsd:string ;
+    tsn:hasAcronym  "V2010_Territory_EFTA"^^xsd:string ;
+    tsn:hasDescription "The European Free Trade Association (EFTA) is a regional trade organisation and free trade area consisting of four European states: Iceland, Liechtenstein, Norway, and Switzerland. The organisation operates in parallel with the European Union (EU), and all four member states participate in the European single market (Source: https://en.wikipedia.org/wiki/European_Free_Trade_Association). In 1995 Austria, Finland and Sweden leave EFTA to join the EU. Liechtenstein becomes a full participant in the EEA Agreement together with Iceland and Norway (Source: http://www.efta.int/about-efta/history). "^^xsd:string ;
+    <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V2010_L_Territory ;
+      tsn:isVersionOf map:Territory_EFTA ;
+      geo:hasGeometry map:Geometry_28 ;
+    tsn:isCoveredBy <http://purl.org/steamer/asgs/V2010> ;
+    tsn:referencePeriod map:EFTA4refperiod .
+
+    map:EFTA4refperiod a time:Interval ;
+        time:hasBeginning map:EFTA4begin ;
+        time:hasEnd map:EFTA4end .
+
+    map:EFTA4begin a time:Instant ;
+      time:inXSDDateTime "1995-01-01T00:00:00Z"^^xsd:dateTime .
+
+
+
+
+<http://purl.org/steamer/asgs/V2013_Territory_EFTA>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "V2013_Territory_EFTA"^^xsd:string ;
+    tsn:hasName "European Free Trade Association from 1995 to now"^^xsd:string ;
+    tsn:hasAcronym  "V2013_Territory_EFTA"^^xsd:string ;
+    tsn:hasDescription "The European Free Trade Association (EFTA) is a regional trade organisation and free trade area consisting of four European states: Iceland, Liechtenstein, Norway, and Switzerland. The organisation operates in parallel with the European Union (EU), and all four member states participate in the European single market (Source: https://en.wikipedia.org/wiki/European_Free_Trade_Association). In 1995 Austria, Finland and Sweden leave EFTA to join the EU. Liechtenstein becomes a full participant in the EEA Agreement together with Iceland and Norway (Source: http://www.efta.int/about-efta/history). "^^xsd:string ;
+    tsn:isVersionOf <http://purl.org/steamer/asgs/Territory_EFTA> ;
+    tsn:isCoveredBy <http://purl.org/steamer/asgs/V2013> ;
+    tsn:referencePeriod map:EFTA4refperiod .
+
+    map:EFTA4refperiod a time:Interval ;
+        time:hasBeginning map:EFTA4begin ;
+        time:hasEnd map:EFTA4end .
+
+    map:EFTA4begin a time:Instant ;
+      time:inXSDDateTime "1995-01-01T00:00:00Z"^^xsd:dateTime .
+
+
+################################################################# European Union CC
+<http://purl.org/steamer/asgs/V2011_Territory_CC>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "V2011_Territory_CC"^^xsd:string ;
+    tsn:hasName "European Union Candidate Countries from 2011 to 2016"^^xsd:string ;
+    tsn:hasAcronym  "V2011_Territory_CC"^^xsd:string ;
+    tsn:hasDescription "The European Union Candidate Countries 13 (EUCC13) territory relates to the situation of the EU territory observed from 2011 to 2016 (Warning: the countries cited here are not necessarily candidates throughout the all period). The EUCC13 comprised the following 13 countries: Turkey (TR), Slovenia (SI), Czech Republic (CZ), Bulgaria (BG), Lithuania (LT), Estonia (EE), Latvia (LV), Slovakia (SK), Romania (RO), Poland (PL), Hungary (HU), Malta (MT), Cyprus (CY). "^^xsd:string ;
+     <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V2011_L_Territory ;
+      tsn:isVersionOf map:Territory_CC ;
+      geo:hasGeometry map:Geometry_1 ;
+    tsn:isCoveredBy <http://purl.org/steamer/asgs/V2011> ;
+    tsn:referencePeriod map:EUCC2011refperiod .
+
+    map:EUCC2011refperiod a time:Interval ;
+        time:hasBeginning map:EUCC2011begin ;
+        time:hasEnd map:EUCC2011end .
+
+    map:EUCC2011begin a time:Instant ;
+      time:inXSDDateTime "2011-01-01T00:00:00Z"^^xsd:dateTime .
+
+    map:EUCC2011end a time:Instant ;
+      time:inXSDDateTime "2016-06-30T00:00:00Z"^^xsd:dateTime .
+
+
+
+
+<http://purl.org/steamer/asgs/V2016_Territory_CC>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "V2016_Territory_CC"^^xsd:string ;
+    tsn:hasName "European Union Candidate Countries from 2016 to 2007"^^xsd:string ;
+    tsn:hasAcronym  "V2016_Territory_CC"^^xsd:string ;
+    tsn:hasDescription "The European Union Candidate Countries 5 (EUCC5) territory relates to the situation of the EU territory observed from 2016 to 2007 (Warning: the countries cited here are not necessarily candidates throughout the all period). The EUCC5 comprised the following 5 countries: Turkey (TR), Bulgaria (BG), Romania (RO), CROATIA (HR). "^^xsd:string ;
+    <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V2016_L_Territory ;
+      tsn:isVersionOf map:Territory_CC ;
+      geo:hasGeometry map:Geometry_5 ;
+    tsn:isCoveredBy <http://purl.org/steamer/asgs/V2016> ;
+    tsn:referencePeriod map:EUCC2016refperiod .
+
+    map:EUCC2016refperiod a time:Interval ;
+        time:hasBeginning map:EUCC2016begin ;
+        time:hasEnd map:EUCC2016end .
+
+    map:EUCC2016begin a time:Instant ;
+      time:inXSDDateTime "2016-07-01T00:00:00Z"^^xsd:dateTime .
+
+    map:EUCC2016end a time:Instant ;
+      time:inXSDDateTime "2007-12-31T00:00:00Z"^^xsd:dateTime .
+
+
+
+
+<http://purl.org/steamer/asgs/V2006_Territory_CC>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "V2006_Territory_CC"^^xsd:string ;
+    tsn:hasName "European Union Candidate Countries from 2008 to 2011"^^xsd:string ;
+    tsn:hasAcronym  "V2006_Territory_CC"^^xsd:string ;
+    tsn:hasDescription "The European Union Candidate Countries 3 (EUCC3) territory relates to the situation of the EU territory observed from 2008 to 2011 (Warning: the countries cited here are not necessarily candidates throughout the all period). The EUCC3 comprised the following 3 countries: Turkey (TR), CROATIA (HR), Macedonia (MK). "^^xsd:string ;
+     <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V2006_L_Territory ;
+      tsn:isVersionOf map:Territory_CC ;
+      geo:hasGeometry map:Geometry_2 ;
+    tsn:isCoveredBy <http://purl.org/steamer/asgs/V2006> ;
+    tsn:referencePeriod map:EUCC2008refperiod .
+
+    map:EUCC2008refperiod a time:Interval ;
+        time:hasBeginning map:EUCC2008begin ;
+        time:hasEnd map:EUCC2008end .
+
+    map:EUCC2008begin a time:Instant ;
+      time:inXSDDateTime "2008-01-01T00:00:00Z"^^xsd:dateTime .
+
+    map:EUCC2008end a time:Instant ;
+      time:inXSDDateTime "2011-12-31T00:00:00Z"^^xsd:dateTime .
+
+
+
+<http://purl.org/steamer/asgs/V2010_Territory_CC>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "V2010_Territory_CC"^^xsd:string ;
+    tsn:hasName "European Union Candidate Countries from 2012 to 2014"^^xsd:string ;
+    tsn:hasAcronym  "V2010_Territory_CC"^^xsd:string ;
+    tsn:hasDescription "The European Union Candidate Countries 7 (EUCC7) territory relates to the situation of the EU territory observed from 2012 to 2014 (Warning: the countries cited here are not necessarily candidates throughout the all period). The EUCC7 comprised the following 7 countries: Turkey (TR), CROATIA (HR), Macedonia (MK), Montenegro (ME), Albania (AL), Serbia (RS), Iceland (IS)."^^xsd:string ;
+     <http://dbpedia.org/ontology/languageCode>
+              "en"^^xsd:string ;
+      tsn:isMemberOf map:V2010_L_Territory ;
+      tsn:isVersionOf map:Territory_CC ;
+      geo:hasGeometry map:Geometry_7558 ;
+    tsn:isCoveredBy <http://purl.org/steamer/asgs/V2010> ;
+    tsn:referencePeriod map:EUCC2012refperiod .
+
+    map:EUCC2012refperiod a time:Interval ;
+        time:hasBeginning map:EUCC2012begin ;
+        time:hasEnd map:EUCC2012end .
+
+    map:EUCC2012begin a time:Instant ;
+      time:inXSDDateTime "2012-01-01T00:00:00Z"^^xsd:dateTime .
+
+    map:EUCC2012end a time:Instant ;
+      time:inXSDDateTime "2014-12-31T00:00:00Z"^^xsd:dateTime .
+
+
+
+<http://purl.org/steamer/asgs/V2013_Territory_CC>
+    a       tsn:TerritoryVersion ;
+    tsn:hasIdentifier "V2013_Territory_CC"^^xsd:string ;
+    tsn:hasName "European Union Candidate Countries from 2015"^^xsd:string ;
+    tsn:hasAcronym  "V2013_Territory_CC"^^xsd:string ;
+    tsn:hasDescription "The European Union Candidate Countries 5 (EUCC5) territory relates to the situation of the EU territory observed from 2015 (Warning: the countries cited here are not necessarily candidates throughout the all period). The EUCC5 comprised the following 5 countries: Montenegro (ME), The former Yugoslav Republic of Macedonia (MK), Albania (AL), Serbia (RS), Turkey (TR)."^^xsd:string ;
+    tsn:isVersionOf <http://purl.org/steamer/asgs/Territory_CC> ;
+    tsn:isCoveredBy <http://purl.org/steamer/asgs/V2013> ;
+    tsn:referencePeriod map:EUCC2015refperiod .
+
+    map:EUCC2015refperiod a time:Interval ;
+        time:hasBeginning map:EUCC2015begin .
+
+    map:EUCC2015begin a time:Instant ;
+      time:inXSDDateTime "2015-01-01T00:00:00Z"^^xsd:dateTime .
+
